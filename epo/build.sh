@@ -17,7 +17,9 @@ build_emacs () {
 
 install_emacs () {
     (cd ${WRKSRC}; \
-	make EMACS=${emacs} PREFIX=${EMACS_PREFIX} EMACSDIR=${EMACS_PREFIX}/share/emacs install)
+	make EMACS=${emacs} PREFIX=${EMACS_PREFIX} \
+	     LISPDIR=${SITELISPDIR}/epo HELPDIR=${SITELISPDIR} \
+	     INFODIR=${INFODIR} install)
     install-info --section='Miscellaneous' \
 	--entry='* EPO: (epoj).	EPO - Editing Process Organizer (Japanese).' \
 	${INFODIR}/epoj ${INFODIR}/dir

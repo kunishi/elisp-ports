@@ -23,7 +23,7 @@ build_emacs () {
 
 install_emacs () {
 	local sitelispdir=${SITELISPDIR}
-	cp -p ${WRKSRC}/etc/*.el[c] ${sitelispdir}
+	cp -p ${WRKSRC}/etc/*.el ${WRKSRC}/etc/*.elc ${sitelispdir}
 }
 
 init

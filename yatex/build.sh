@@ -16,7 +16,9 @@ build_emacs () {
 
 install_emacs () {
     (cd ${WRKSRC}; \
-	make EMACS=${emacs} PREFIX=${EMACS_PREFIX} EMACSDIR=${EMACS_PREFIX}/share/emacs/ install)
+	make EMACS=${emacs} PREFIX=${EMACS_PREFIX} \
+	     LISPDIR=${SITELISPDIR}/yatex HELPDIR=${SITELISPDIR} \
+	     INFODIR=${INFODIR} install)
     install-info --dir-file=${INFODIR}/dir \
 	--info-file=${INFODIR}/yatexj \
 	--entry='* YaTeX: (yatexj).	Yet Another tex-mode for Emacs. (Japanese).' \

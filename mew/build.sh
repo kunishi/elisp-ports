@@ -13,14 +13,15 @@ EMACS_BUILD_TARGET=''
 EMACS_INSTALL_TARGET='install install-info install-jinfo install-etc'
 
 build_emacs () {
-    (cd ${WRKSRC}; make emacs=${emacs} ${EMACS_BUILD_TARGET})
+    (cd ${WRKSRC}; make emacs=${emacs} prefix=${EMACS_PREFIX} ${EMACS_BUILD_TARGET})
 }
 
 install_emacs () {
     (cd ${WRKSRC}; make emacs=${emacs} \
+	prefix=${EMACS_PREFIX} \
 	elispdir=${SITELISPDIR}/mew \
 	infodir=${EMACS_PREFIX}/info \
-	etcdir=${EMACS_PREFIX}/share/mew ${EMACS_INSTALL_TARGET})
+	etcdir=${EMACS_PREFIX}/etc/mew ${EMACS_INSTALL_TARGET})
 }
 
 install_init () {

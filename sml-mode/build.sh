@@ -11,11 +11,15 @@ USE_EMACS=true
 ELC_SHAREABLE=true
 
 build_emacs () {
-    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${EMACS_PREFIX} elcfiles)
+    (cd ${WRKSRC}; \
+	make EMACS=${emacs} prefix=${EMACS_PREFIX} \
+	    lispdir=${SITELISPDIR} elcfiles)
 }
 
 install_emacs () {
-    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${EMACS_PREFIX} install_el install)
+    (cd ${WRKSRC}; \
+	make EMACS=${emacs} prefix=${EMACS_PREFIX} \
+	    lispdir=${SITELISPDIR} install_el install)
 }
 
 init

@@ -5,8 +5,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.python.org/ftp/python/2.2.3/Python-2.2.3.tgz'
-WRKSRC="${WRKDIR}/Python-2.2.3/Misc"
+DISTFILES='http://www.python.org/ftp/python/2.3/Python-2.3.tgz'
+WRKSRC="${WRKDIR}/Python-2.3/Misc"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=true
 ELC_SHAREABLE=true

@@ -12,14 +12,15 @@ ELC_SHAREABLE=true
 
 build_emacs () {
     (cd ${WRKSRC}; \
-	make EMACS=${emacs} PIXMAPDIR=${EMACS_PREFIX}/share/wanderlust elc info)
+	make EMACS=${emacs} PIXMAPDIR=${EMACS_PREFIX}/etc/wl elc info)
 }
 
 install_emacs () {
     (cd ${WRKSRC}; \
 	make EMACS=${emacs} \
-	     PIXMAPDIR=${EMACS_PREFIX}/share/wanderlust \
-	     INFODIR=${INFODIR} install install-info)
+	     PIXMAPDIR=${EMACS_PREFIX}/etc/wl \
+	     INFODIR=${INFODIR} \
+	     LISPDIR=${SITELISPDIR} install install-info)
     install-info --dir-file=${INFODIR}/dir --info-file=${INFODIR}/wl-ja.info
     install-info --dir-file=${INFODIR}/dir --info-file=${INFODIR}/wl.info
 }

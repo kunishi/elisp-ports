@@ -5,7 +5,7 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://nwalsh.com/emacs/docbookide/docbookide01.zip'
+DISTFILES='ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/docbookide01.zip'
 WRKSRC="${WRKDIR}/docbookide"
 USE_EMACS=true
 ELC_SHAREABLE=true
