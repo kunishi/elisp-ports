@@ -21,7 +21,7 @@ build_emacs () {
 
 install_emacs () {
     : write how to install package
-    cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${BASEDIR}/share/emacs/site-lisp
+    cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${SITELISPDIR}
 }
 
 build_target () {
