@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,14 +10,12 @@ WRKSRC="${WRKDIR}/sml-mode-3.9.5"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
-    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${BASEDIR} elcfiles)
+    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${EMACS_PREFIX} elcfiles)
 }
 
 install_emacs () {
-    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${BASEDIR} install_el install)
+    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${EMACS_PREFIX} install_el install)
 }
 
 init

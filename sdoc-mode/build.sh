@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -8,8 +9,6 @@ DISTFILES='http://www.xmlsmartdoc.org/download/beta.zip'
 WRKSRC="${WRKDIR}"
 USE_EMACS=true
 ELC_SHAREABLE=true
-
-. ../target.sh
 
 patch () {
 	:
@@ -23,7 +22,7 @@ build_emacs () {
 }
 
 install_emacs () {
-	local sitelispdir=${BASEDIR}/share/emacs/site-lisp
+	local sitelispdir=${SITELISPDIR}
 	cp -p ${WRKSRC}/etc/*.el[c] ${sitelispdir}
 }
 

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -10,18 +11,16 @@ WRKSRC="${WRKDIR}/epo-1.4h"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
 :
 }
 
 install_emacs () {
     (cd ${WRKSRC}; \
-	make EMACS=${emacs} PREFIX=${BASEDIR} EMACSDIR=${BASEDIR}/share/emacs install)
+	make EMACS=${emacs} PREFIX=${EMACS_PREFIX} EMACSDIR=${EMACS_PREFIX}/share/emacs install)
     install-info --section='Miscellaneous' \
 	--entry='* EPO: (epoj).	EPO - Editing Process Organizer (Japanese).' \
-	${BASEDIR}/info/epoj ${BASEDIR}/info/dir
+	${INFODIR}/epoj ${INFODIR}/dir
 }
 
 init

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,14 +10,12 @@ WRKSRC="${WRKDIR}/elib-1.0"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
-    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${BASEDIR})
+    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${EMACS_PREFIX})
 }
 
 install_emacs () {
-    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${BASEDIR} install)
+    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${EMACS_PREFIX} install)
 }
 
 init

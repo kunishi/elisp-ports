@@ -2,6 +2,7 @@
 # $Id: build.sh.sample,v 1.4 2003/05/31 07:07:09 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -11,8 +12,6 @@ WRKSRC="${WRKDIR}"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
     : write how to build package
     (cd ${WRKSRC}; \
@@ -21,8 +20,8 @@ build_emacs () {
 
 install_emacs () {
     : write how to install package
-    cp -p ${WRKSRC}/psvn.el ${BASEDIR}/share/emacs/site-lisp
-    cp -p ${WRKSRC}/psvn.elc ${BASEDIR}/share/emacs/site-lisp
+    cp -p ${WRKSRC}/psvn.el ${SITELISPDIR}
+    cp -p ${WRKSRC}/psvn.elc ${SITELISPDIR}
 }
 
 init

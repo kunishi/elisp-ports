@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -10,14 +11,12 @@ WRKSRC="${WRKDIR}/xslt-process-2.2"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
 :
 }
 
 install_emacs () {
-    local sitelispdir=${BASEDIR}/share/emacs/site-lisp/xslt-process
+    local sitelispdir=${SITELISPDIR}/xslt-process
     mkdir -p ${sitelispdir}
     cp -pR ${WRKSRC}/* ${sitelispdir}
 }

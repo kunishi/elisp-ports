@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,18 +10,16 @@ WRKSRC="${WRKDIR}/EDE-1.0.beta2"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; ${GMAKE} EMACS=${emacs})
 }
 
 install_emacs () {
-    local sitelispdir=${BASEDIR}/share/emacs/site-lisp/ede
+    local sitelispdir=${SITELISPDIR}/ede
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${sitelispdir}
-    cp -p ${WRKSRC}/ede.info* ${BASEDIR}/info
-    install-info ${BASEDIR}/info/ede.info ${BASEDIR}/info/dir
+    cp -p ${WRKSRC}/ede.info* ${INFODIR}
+    install-info ${INFODIR}/ede.info ${INFODIR}/dir
 }
 
 init

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -8,8 +9,6 @@ DISTFILES='ftp://TypeHack.aial.hiroshima-u.ac.jp/pub/Emacs/MagicPoint/mgp-mode.e
 WRKSRC=${WRKDIR}
 USE_EMACS=true
 ELC_SHAREABLE=true
-
-. ../target.sh
 
 build_emacs () {
 	# write how to build package
@@ -19,7 +18,7 @@ build_emacs () {
 
 install_emacs () {
 	# write how to install package
-	local sitelispdir=${BASEDIR}/share/emacs/site-lisp
+	local sitelispdir=${SITELISPDIR}
 	cp -p ${WRKSRC}/*.el[c] ${sitelispdir}
 }
 

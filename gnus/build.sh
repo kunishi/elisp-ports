@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,10 +10,8 @@ WRKSRC="${WRKDIR}/gnus-5.10.2"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
-    (cd ${WRKSRC}; ./configure --prefix=${BASEDIR} --with-emacs=${emacs})
+    (cd ${WRKSRC}; ./configure --prefix=${EMACS_PREFIX} --with-emacs=${emacs})
     (cd ${WRKSRC}; ${GMAKE})
 }
 

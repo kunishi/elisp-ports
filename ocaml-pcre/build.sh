@@ -2,6 +2,7 @@
 # $Id: build.sh,v 1.1 2003/07/04 07:19:58 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -19,8 +20,6 @@ case `uname` in
 	INCDIRS=${BASEDIR}/include
 	LIBDIRS=${BASEDIR}/lib
 esac
-
-. ../target.sh
 
 build_target () {
     : targets for non-Emacsen ports

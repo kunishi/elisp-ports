@@ -2,6 +2,7 @@
 # $Id: build.sh.sample,v 1.4 2003/05/31 07:07:09 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -10,8 +11,6 @@ WRKSRC="${WRKDIR}"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=true
 ELC_SHAREABLE=true
-
-. ../target.sh
 
 build_emacs () {
     : write how to build package

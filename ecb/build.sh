@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,19 +10,17 @@ WRKSRC=${WRKDIR}/ecb-1.95.1
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; ${GMAKE} all EMACS=${emacs} \
-	LOADPATH="${BASEDIR}/share/emacs/site-lisp/eieio ${BASEDIR}/share/emacs/site-lisp/semantic ${BASEDIR}/share/emacs/site-lisp/jde/lisp")
+	LOADPATH="${SITELISPDIR}/eieio ${SITELISPDIR}/semantic ${SITELISPDIR}/jde/lisp")
 }
 
 install_emacs () {
-    local sitelispdir=${BASEDIR}/share/emacs/site-lisp/ecb
+    local sitelispdir=${SITELISPDIR}/ecb
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${sitelispdir}
-    cp -p ${WRKSRC}/info-help/ecb.info* ${BASEDIR}/info
-    install-info ${BASEDIR}/info/ecb.info ${BASEDIR}/info/dir
+    cp -p ${WRKSRC}/info-help/ecb.info* ${INFODIR}
+    install-info ${INFODIR}/ecb.info ${INFODIR}/dir
 }
 
 init

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,12 +10,10 @@ WRKSRC="${WRKDIR}/emacs-w3m-1.3.6"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; \
-	./configure --prefix=${BASEDIR} \
-	            --with-icondir=${BASEDIR}/share/emacs-w3m \
+	./configure --prefix=${EMACS_PREFIX} \
+	            --with-icondir=${EMACS_PREFIX}/share/emacs-w3m \
 	            --with-emacs=${emacs})
     (cd ${WRKSRC}; ${GMAKE})
 }

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -14,8 +15,6 @@ USE_EMACS=false
 if [ `uname -s` = 'Darwin' ]; then
     PATCHFILES="${DISTURL}/ocaml-3.06-macosx-5.patch"
 fi
-
-. ../target.sh
 
 if [ `uname -s` = 'Darwin' ]; then
     patch_dist () {

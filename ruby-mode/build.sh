@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -8,8 +9,6 @@ DISTFILES='ftp://ftp.ruby-lang.org/pub/ruby/stable/ruby-1.6.8.tar.gz'
 WRKSRC="${WRKDIR}/ruby-1.6.8/misc"
 USE_EMACS=true
 ELC_SHAREABLE=true
-
-. ../target.sh
 
 build_emacs () {
     (cd ${WRKSRC}; \
@@ -19,7 +18,7 @@ build_emacs () {
 }
 
 install_emacs () {
-    local sitelispdir=${BASEDIR}/share/emacs/site-lisp/ruby-mode
+    local sitelispdir=${SITELISPDIR}/ruby-mode
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${sitelispdir}
 }

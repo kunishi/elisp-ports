@@ -2,6 +2,13 @@
 # $Id: target.sh,v 1.13 2003/06/11 09:26:13 kunishi Exp $
 #
 
+### variables
+
+DISTDIR=${HOME}/distfiles
+WRKDIR=work
+PATCHDIR=patch
+EMACS_COMPILE_ARGS='-q --no-site-file -batch'
+
 ### common targets
 
 init () {

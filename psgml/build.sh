@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,8 +10,6 @@ WRKSRC="${WRKDIR}/psgml-1.3.1"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; \
 	for file in *.el *.info *.texi; do \
@@ -18,15 +17,15 @@ build_emacs () {
 	    sed -e 's|\([^-p]\)sgml-|\1psgml-|g' \
 	        -e 's|\([^-p]\)xml-|\1pxml-|g' ${file}.bak > ${file}; \
 	done)
-    (cd ${WRKSRC}; ./configure --prefix=${BASEDIR})
+    (cd ${WRKSRC}; ./configure --prefix=${EMACS_PREFIX})
     (cd ${WRKSRC}; ${GMAKE} EMACS=${emacs})
 }
 
 install_emacs () {
     (cd ${WRKSRC}; \
-	make lispdir=${BASEDIR}/share/emacs/site-lisp/psgml \
-	     infodir=${BASEDIR}/info EMACS=${emacs} install install-info)
-    cp -p ${WRKSRC}/*.el ${BASEDIR}/share/emacs/site-lisp/psgml
+	make lispdir=${SITELISPDIR}/psgml \
+	     infodir=${INFODIR} EMACS=${emacs} install install-info)
+    cp -p ${WRKSRC}/*.el ${SITELISPDIR}/psgml
 }
 
 init

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,14 +10,12 @@ WRKSRC="${WRKDIR}/apel-10.6"
 USE_EMACS=true
 ELC_SHAREABLE=false
 
-. ../target.sh
-
 build_emacs () {
-    (cd ${WRKSRC}; make EMACS=${emacs} elc)
+    (cd ${WRKSRC}; make EMACS=${emacs} LISPDIR=${SITELISPDIR} VERSION_SPECIFIC_LISPDIR=${VERSION_SPECIFIC_SITELISPDIR} elc)
 }
 
 install_emacs () {
-    (cd ${WRKSRC}; make EMACS=${emacs} install)
+    (cd ${WRKSRC}; make EMACS=${emacs} LISPDIR=${SITELISPDIR} VERSION_SPECIFIC_LISPDIR=${VERSION_SPECIFIC_SITELISPDIR} install)
 }
 
 init

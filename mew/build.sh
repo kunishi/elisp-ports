@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -11,14 +12,12 @@ ELC_SHAREABLE=true
 EMACS_BUILD_TARGET=''
 EMACS_INSTALL_TARGET='install install-info install-jinfo install-etc'
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; make emacs=${emacs} ${EMACS_BUILD_TARGET})
 }
 
 install_emacs () {
-    (cd ${WRKSRC}; make emacs=${emacs} prefix=${BASEDIR} ${EMACS_INSTALL_TARGET})
+    (cd ${WRKSRC}; make emacs=${emacs} prefix=${EMACS_PREFIX} ${EMACS_INSTALL_TARGET})
 }
 
 init

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,14 +10,12 @@ WRKSRC=${WRKDIR}
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
 :
 }
 
 install_emacs () {
-    local sitelispdir=${BASEDIR}/share/emacs/site-lisp/tdtd
+    local sitelispdir=${SITELISPDIR}/tdtd
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${sitelispdir}
 }

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,20 +10,18 @@ WRKSRC="${WRKDIR}/wl-2.10.1"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; \
-	make EMACS=${emacs} PIXMAPDIR=${BASEDIR}/share/wanderlust elc info)
+	make EMACS=${emacs} PIXMAPDIR=${EMACS_PREFIX}/share/wanderlust elc info)
 }
 
 install_emacs () {
     (cd ${WRKSRC}; \
 	make EMACS=${emacs} \
-	     PIXMAPDIR=${BASEDIR}/share/wanderlust \
-	     INFODIR=${BASEDIR}/info install install-info)
-    install-info --dir-file=${BASEDIR}/info/dir --info-file=${BASEDIR}/info/wl-ja.info
-    install-info --dir-file=${BASEDIR}/info/dir --info-file=${BASEDIR}/info/wl.info
+	     PIXMAPDIR=${EMACS_PREFIX}/share/wanderlust \
+	     INFODIR=${INFODIR} install install-info)
+    install-info --dir-file=${INFODIR}/dir --info-file=${INFODIR}/wl-ja.info
+    install-info --dir-file=${INFODIR}/dir --info-file=${INFODIR}/wl.info
 }
 
 init

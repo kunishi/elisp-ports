@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -8,8 +9,6 @@ DISTFILES='http://www.haskell.org/haskell-mode/haskell-mode-1.44.tar.gz'
 WRKSRC="${WRKDIR}/haskell-mode-1.44"
 USE_EMACS=true
 ELC_SHAREABLE=true
-
-. ../target.sh
 
 build_emacs () {
 :

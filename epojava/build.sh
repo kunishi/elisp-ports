@@ -2,6 +2,7 @@
 # $Id: build.sh,v 1.1 2003/06/02 03:48:07 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -10,8 +11,6 @@ WRKSRC="${WRKDIR}/epojava"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=true
 ELC_SHAREABLE=true
-
-. ../target.sh
 
 build_emacs () {
     : write how to build package

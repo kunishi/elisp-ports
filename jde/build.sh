@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -10,10 +11,8 @@ WRKSRC="${WRKDIR}/jde-2.3.2"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
-    local sitelispbase=${BASEDIR}/share/emacs/site-lisp
+    local sitelispbase=${SITELISPDIR}
     (cd ${WRKSRC}/lisp; \
 	make EMACS=${emacs} \
 	     EIEIO=${sitelispbase}/eieio \
@@ -23,7 +22,7 @@ build_emacs () {
 }
 
 install_emacs () {
-    local sitelispdir=${BASEDIR}/share/emacs/site-lisp/jde
+    local sitelispdir=${SITELISPDIR}/jde
     mkdir -p ${sitelispdir}/lisp
     cp -p ${WRKSRC}/lisp/*.el ${WRKSRC}/lisp/*.elc ${sitelispdir}/lisp
     cp -p ${WRKSRC}/lisp/*.bnf ${sitelispdir}/lisp
@@ -31,8 +30,8 @@ install_emacs () {
     cp -pR ${WRKSRC}/doc ${sitelispdir}/doc
     cp -p ${WRKSRC}/lisp/ReleaseNotes.txt ${sitelispdir}/doc
     cp -p ${WRKSRC}/lisp/ChangeLog ${sitelispdir}/doc
-    cp -p ${WRKSRC}/lisp/jtags ${BASEDIR}/bin
-    chmod 755 ${BASEDIR}/bin/jtags
+    cp -p ${WRKSRC}/lisp/jtags ${EMACS_PREFIX}/bin
+    chmod 755 ${EMACS_PREFIX}/bin/jtags
 }
 
 init

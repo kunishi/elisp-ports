@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,8 +10,6 @@ WRKSRC="${WRKDIR}/x-face-1.3.6.20"
 USE_EMACS=true
 ELC_SHAREABLE=false
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; make EMACS=${emacs} all)
 }
@@ -18,7 +17,7 @@ build_emacs () {
 install_emacs () {
     (cd ${WRKSRC}; \
 	make EMACS=${emacs} \
-	     LISPDIR=${BASEDIR}/share/emacs/${version_num}/site-lisp \
+	     LISPDIR=${VERSION_SPECIFIC_SITELISPDIR} \
 	     install)
 }
 

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -8,8 +9,6 @@ DISTFILES='http://nwalsh.com/emacs/docbookide/docbookide01.zip'
 WRKSRC="${WRKDIR}/docbookide"
 USE_EMACS=true
 ELC_SHAREABLE=true
-
-. ../target.sh
 
 build_emacs () {
     (cd ${WRKSRC}; \
@@ -19,9 +18,9 @@ build_emacs () {
 }
 
 install_emacs () {
-    mkdir -p ${BASEDIR}/share/emacs/site-lisp/docbookide
-    cp -p ${WRKSRC}/*.el ${BASEDIR}/share/emacs/site-lisp/docbookide
-    cp -p ${WRKSRC}/*.elc ${BASEDIR}/share/emacs/site-lisp/docbookide
+    mkdir -p ${SITELISPDIR}/docbookide
+    cp -p ${WRKSRC}/*.el ${SITELISPDIR}/docbookide
+    cp -p ${WRKSRC}/*.elc ${SITELISPDIR}/docbookide
 }
 
 init

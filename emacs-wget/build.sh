@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,8 +10,6 @@ WRKSRC="${WRKDIR}/emacs-wget-0.4.1"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; \
 	${emacs} ${EMACS_COMPILE_ARGS} -l wget-sysdep.el \
@@ -18,7 +17,7 @@ build_emacs () {
 }
 
 install_emacs () {
-    local sitelispdir=${BASEDIR}/share/emacs/site-lisp
+    local sitelispdir=${SITELISPDIR}
     mkdir -p ${sitelispdir}/emacs-wget
     cp -p ${WRKSRC}/*.el ${sitelispdir}/emacs-wget/
     cp -p ${WRKSRC}/*.elc ${sitelispdir}/emacs-wget/

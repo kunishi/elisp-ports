@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,17 +10,15 @@ WRKSRC="${WRKDIR}/eieio-0.17"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; ${GMAKE} EMACS=${emacs})
 }
 
 install_emacs () {
-    mkdir -p ${BASEDIR}/share/emacs/site-lisp/eieio
-    cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${BASEDIR}/share/emacs/site-lisp/eieio
-    cp -p ${WRKSRC}/eieio.info ${BASEDIR}/info
-    install-info ${BASEDIR}/info/eieio.info ${BASEDIR}/info/dir
+    mkdir -p ${SITELISPDIR}/eieio
+    cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${SITELISPDIR}/eieio
+    cp -p ${WRKSRC}/eieio.info ${INFODIR}
+    install-info ${INFODIR}/eieio.info ${INFODIR}/dir
 }
 
 init

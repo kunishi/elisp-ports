@@ -2,6 +2,7 @@
 # $Id: build.sh,v 1.1 2003/07/04 06:56:41 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,8 +10,6 @@ DISTFILES='http://www.eleves.ens.fr/home/frisch/info/wlex-20021107.tar.gz http:/
 WRKSRC="${WRKDIR}/wlex-20021107"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
-
-. ../target.sh
 
 build_target () {
     : targets for non-Emacsen ports

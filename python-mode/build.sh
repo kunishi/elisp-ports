@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -10,16 +11,13 @@ WRKSRC="${WRKDIR}/Python-2.2.3/Misc"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; \
 	${emacs} ${EMACS_COMPILE_ARGS} -f batch-byte-compile python-mode.el)
 }
 
 install_emacs () {
-    cp -p ${WRKSRC}/python-mode.el ${WRKSRC}/python-mode.elc \
-	${BASEDIR}/share/emacs/site-lisp
+    cp -p ${WRKSRC}/python-mode.el ${WRKSRC}/python-mode.elc ${SITELISPDIR}
 }
 
 init

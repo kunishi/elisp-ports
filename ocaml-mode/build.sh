@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,8 +10,6 @@ WRKSRC="${WRKDIR}/ocaml-mode-3.01"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
 :
 }
@@ -18,7 +17,7 @@ build_emacs () {
 install_emacs () {
     (cd ${WRKSRC}; \
 	make EMACS=${emacs} \
-	     EMACSDIR=${BASEDIR}/share/emacs/site-lisp/ocaml-mode \
+	     EMACSDIR=${SITELISPDIR}/ocaml-mode \
 	     install install-ocamltags)
 }
 

@@ -2,6 +2,7 @@
 # $Id: build.sh,v 1.1 2003/06/11 08:58:15 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -12,8 +13,6 @@ USE_EMACS=false
 
 DIST_BASEURI="http://www.w3.org/TR/xhtml1/DTD/"
 LOCAL_BASEURI="file://${BASEDIR}/share/xml/xhtml1-20020801/"
-
-. ../target.sh
 
 build_target () {
     : targets for non-Emacsen ports

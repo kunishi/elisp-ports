@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -8,8 +9,6 @@ DISTFILES='ftp://ftp.m17n.org/pub/mule/Mule-UCS/test/Mule-UCS-current.tar.gz'
 WRKSRC="${WRKDIR}/Mule-UCS-current"
 USE_EMACS=true
 ELC_SHAREABLE=false
-
-. ../target.sh
 
 #patch_dist () {
 #    local tats_patch='mule-ucs-0.84+tats20021216.diff'
@@ -28,7 +27,7 @@ build_emacs () {
 }
 
 install_emacs () {
-    local sitelispdir=${BASEDIR}/share/emacs/${version_num}/site-lisp
+    local sitelispdir=${VERSION_SPECIFIC_SITELISPDIR}
     mkdir -p ${sitelispdir}/mule-ucs
     (cd ${WRKSRC}/lisp; \
 	for dir in . big5conv jisx0213;	do \

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -8,8 +9,6 @@ DISTFILES='ftp://ftp.jpl.org/pub/elisp/x-face-e21.el.gz'
 WRKSRC=${WRKDIR}
 USE_EMACS=true
 ELC_SHAREABLE=false
-
-. ../target.sh
 
 build_emacs () {
     cp ${DISTDIR}/x-face-e21.el.gz ${WRKSRC}
@@ -19,8 +18,8 @@ build_emacs () {
 }
 
 install_emacs () {
-    cp -p ${WRKSRC}/x-face-e21.el ${BASEDIR}/share/emacs/${version_num}/site-lisp
-    cp -p ${WRKSRC}/x-face-e21.elc ${BASEDIR}/share/emacs/${version_num}/site-lisp
+    cp -p ${WRKSRC}/x-face-e21.el ${VERSION_SPECIFIC_SITELISPDIR}
+    cp -p ${WRKSRC}/x-face-e21.elc ${VERSION_SPECIFIC_SITELISPDIR}
 }
 
 init

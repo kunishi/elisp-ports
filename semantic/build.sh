@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -9,18 +10,16 @@ WRKSRC="${WRKDIR}/semantic-1.4.4"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; ${GMAKE} EMACS=${emacs})
 }
 
 install_emacs () {
-    local sitelispdir=${BASEDIR}/share/emacs/site-lisp/semantic
+    local sitelispdir=${SITELISPDIR}/semantic
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${WRKSRC}/*.bnf ${sitelispdir}
-    cp -p ${WRKSRC}/semantic.info* ${BASEDIR}/info
-    install-info ${BASEDIR}/info/semantic.info ${BASEDIR}/info/dir
+    cp -p ${WRKSRC}/semantic.info* ${INFODIR}
+    install-info ${INFODIR}/semantic.info ${INFODIR}/dir
 }
 
 init

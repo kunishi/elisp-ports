@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . ../${CONFIG_SH:-config.sh}
+. ../target.sh
 
 PKG_TOPDIR=`pwd`
 
@@ -10,14 +11,12 @@ WRKSRC=${WRKDIR}
 USE_EMACS=true
 ELC_SHAREABLE=true
 
-. ../target.sh
-
 build_emacs () {
     (cd ${WRKSRC}; ${emacs} ${EMACS_COMPILE_ARGS} -f batch-byte-compile *.el)
 }
 
 install_emacs () {
-    local sitelispdir=${BASEDIR}/share/emacs/site-lisp/xslide
+    local sitelispdir=${SITELISPDIR}/xslide
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${sitelispdir}
     cp -p ${WRKSRC}/*.elc ${sitelispdir}
