@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/06/02 02:40:34 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/06/02 03:07:27 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
@@ -18,11 +18,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    mkdir -p ${BASEDIR}/share/java/fop-0.20.5rc3a
-    (cd ${WRKSRC}; tar cvf - .) | \
-	(cd ${BASEDIR}/share/java/fop-0.20.5rc3a; tar xfBp -)
-    rm -f ${BASEDIR}/share/java/fop
-    ln -s fop-0.20.5rc3a ${BASEDIR}/share/java/fop
+    install_java fop-0.20.5rc3a fop
 }
 
 init
