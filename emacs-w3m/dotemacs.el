@@ -24,4 +24,7 @@
   (setq mew-use-w3m-minor-mode t)
   (add-hook 'mew-message-hook 'mew-w3m-minor-mode-setter)
   (setq mew-w3m-auto-insert-image nil)
-  (define-key mew-summary-mode-map "T" 'mew-w3m-view-inline-image))
+  (define-key mew-summary-mode-map "T" 'mew-w3m-view-inline-image)
+  ;; browse-url
+  (setq browse-url-browser-function 'w3m-browse-url)
+  (global-set-key "\C-xm" 'browse-url-at-point))

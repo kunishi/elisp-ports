@@ -166,3 +166,76 @@
   (prefer-coding-system 'utf-8)
   (custom-set-variables
    '(utf-translate-cjk t)))
+
+;;; various major mode settings
+
+;;; cc-mode
+(defconst my-c-style
+  '((c-basic-offset . 8)
+    (c-tab-always-indent . t)
+    (c-hanging-braces-alist . ((class-open after)
+			       (inline-open after)
+			       (func-decl-cont after)
+			       (block-open after)
+			       (substatement-open after)
+			       (brace-list-open)))
+    (c-hanging-colons-alist . ((member-init-intro before)
+			       (inher-intro)
+			       (case-label after)
+			       (label after)
+			       (access-label after)))
+    (c-cleanup-list . (scope-operator
+		       empty-defun-braces
+		       defun-close-semi))
+    (c-offsets-alist . ((arglist-close . c-lineup-arglist)
+			(substatement-open . 0)
+			(case-label . 4)
+			(block-open . 0)
+			(knr-argdecl-intro . -)))
+    (c-echo-syntactic-information-p . t))
+  "My C Programming Style")
+;; Customizations for all of c-mode, c++-mode, and objc-mode
+(defun my-c-mode-common-hook ()
+  (c-add-style "PERSONAL" my-c-style t)
+  (c-set-offset 'member-init-intro '++)
+  (setq tab-width 8
+	indent-tabs-mode t)
+  (c-toggle-auto-hungry-state 1)
+  (define-key c-mode-base-map "\C-m" 'newline-and-indent))
+(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
+;;; Scheme
+(setq scheme-program-name "gosh")
+
+;;; eaXie (now under development)
+;; (if (file-exists-p "~/Documents/modules/eaxie")
+;;     (add-to-list 'load-path "~/Documents/modules/eaxie/"))
+;; (when (autoload-if-found 'eaxie-mode "eaxie"
+;; 			 "Emacs-Aided XML Integrated Environment.")
+;;   (add-to-list 'auto-mode-alist (cons "\\.xml\\'" 'eaxie-mode))
+;;   (add-to-list 'auto-mode-alist (cons "\\.xhtml\\'" 'eaxie-mode))
+;;   (add-to-list 'auto-mode-alist (cons "\\.rxm\\'" 'eaxie-mode))
+;;   (add-to-list 'auto-mode-alist (cons "\\.rxg\\'" 'eaxie-mode)))
+
+;;; reftex
+(autoload-if-found 'reftex-mode "reftex" "RefTeX Minor Mode" t)
+(autoload-if-found 'turn-on-reftex "reftex" "RefTeX Minor Mode" nil)
+(autoload-if-found 'reftex-citation "reftex-cite" "Make citation" nil)
+(add-hook 'yatex-mode-hook 'turn-on-reftex)
+
+;;; Bibtex mode
+(setq bibtex-user-optional-fields
+      '(("yomi" "Japanese Yomi1 [and Yomi2 ...] [and others]")))
+(setq bibtex-string-files
+      '(("~/Documents/svn/private/Research/bibtex/mydef.bib"
+	 "~/Documents/svn/private/Research/bibtex/mydef-j.bib")))
+
+;;; diff-mode
+(when (autoload-if-found 'diff-mode "diff-mode" "Diff major mode" t)
+  (add-to-list 'auto-mode-alist
+	       '("\\.\\(diffs?\\|patch\\|rej\\)\\'" . diff-mode)))
+
+;;; my Elisp libraries
+(if (file-exists-p "~/Documents/modules/private/src/elisp/utils/")
+    (add-to-list 'load-path "~/Documents/modules/private/src/elisp/utils/"))
+(load-safe "my-japan-util")

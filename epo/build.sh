@@ -25,5 +25,10 @@ install_emacs () {
 	${INFODIR}/epoj ${INFODIR}/dir
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/epo-init.el
+}
+
 init
 eval $1

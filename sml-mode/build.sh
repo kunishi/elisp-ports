@@ -22,5 +22,10 @@ install_emacs () {
 	    lispdir=${SITELISPDIR} install_el install)
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/sml-mode-init.el
+}
+
 init
 eval $1

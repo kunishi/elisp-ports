@@ -34,5 +34,10 @@ install_emacs () {
     chmod 755 ${EMACS_PREFIX}/bin/jtags
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/jde-init.el
+}
+
 init
 eval $1

@@ -23,5 +23,10 @@ install_emacs () {
     cp -p ${WRKSRC}/*.elc ${SITELISPDIR}/docbookide
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/docbookide-init.el
+}
+
 init
 eval $1

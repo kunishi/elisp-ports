@@ -22,5 +22,10 @@ install_emacs () {
     install-info ${INFODIR}/semantic.info ${INFODIR}/dir
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/semantic-init.el
+}
+
 init
 eval $1

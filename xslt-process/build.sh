@@ -21,5 +21,10 @@ install_emacs () {
     cp -pR ${WRKSRC}/* ${sitelispdir}
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/xslt-process-init.el
+}
+
 init
 eval $1

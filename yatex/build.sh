@@ -37,5 +37,10 @@ install_emacs () {
 	--section='Miscellaneous'
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/yatex-init.el
+}
+
 init
 eval $1

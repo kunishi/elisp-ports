@@ -20,5 +20,10 @@ install_emacs () {
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.hs ${sitelispdir}
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/haskell-mode-init.el
+}
+
 init
 eval $1

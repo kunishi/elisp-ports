@@ -1,4 +1,5 @@
 #!/bin/sh
+# $Id$
 
 . ../${CONFIG_SH:-config.sh}
 . ../target.sh
@@ -18,6 +19,11 @@ build_emacs () {
 install_emacs () {
     cp -p ${WRKSRC}/css-mode.el ${SITELISPDIR}
     cp -p ${WRKSRC}/css-mode.elc ${SITELISPDIR}
+}
+
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/css-mode-init.el
 }
 
 init

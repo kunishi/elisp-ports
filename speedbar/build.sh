@@ -22,5 +22,10 @@ install_emacs () {
     install-info ${INFODIR}/speedbar.info ${INFODIR}/dir
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/speedbar-init.el
+}
+
 init
 eval $1

@@ -26,5 +26,10 @@ install_emacs () {
 	cp -p ${WRKSRC}/etc/*.el ${WRKSRC}/etc/*.elc ${sitelispdir}
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/sdoc-mode-init.el
+}
+
 init
 eval $1
