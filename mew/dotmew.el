@@ -174,6 +174,7 @@
 	 ("owner-freebsd-gnome@FreeBSD.ORG" . "%comp.freebsd.freebsd-gnome")
 	 ("owner-cvs-all@FreeBSD.ORG" . "%comp.freebsd.cvs-all"))
 	("list-post:"
+	 ("dbjapan@dbsj.org" . "%research.dbjapan")
 	 ("announcements@xml.apache.org" . "%comp.xml.apache.announcements")
 	 ("general@xml.apache.org" . "%comp.xml.apache.general")
 	 ("xerces-j-user" . "%comp.xml.apache.xerces-j-user")
@@ -182,6 +183,7 @@
 	 ("xindice-dev" . "%comp.xml.apache.xindice-dev")
 	 ("xml-dev" . "%comp.xml.xml-dev"))
 	("list-id"
+	 ("members.sigmodj.org" . "%assoc.acm.sigmodj.members")
 	 ("dbworld.cs.wisc.edu" . "%research.dbworld")
 	 ("freebsd-announce.freebsd.org" . "%comp.freebsd.freebsd-announce")
 	 ("freebsd-current.freebsd.org" . "%comp.freebsd.freebsd-current")
