@@ -10,12 +10,12 @@ ELC_SHAREABLE=false
 
 . ../target.sh
 
-build-emacs () {
-    (cd ${WRKSRC}; make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs elc)
+build_emacs () {
+    (cd ${WRKSRC}; make EMACS=${emacs} elc)
 }
 
-install-emacs () {
-    (cd ${WRKSRC}; make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs install)
+install_emacs () {
+    (cd ${WRKSRC}; make EMACS=${emacs} install)
 }
 
 init

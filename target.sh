@@ -59,19 +59,19 @@ extract () {
     done
 }
 
-patch-emacs () {
+patch_emacs () {
     if [ "${PATCHFILES}" != '' ]; then
 	patch-dist
     fi
     if [ -f ${PKG_TOPDIR}/${PATCHDIR}/patch-common ]; then
 	(cd ${WRKSRC}; patch -p1 -N < ${PKG_TOPDIR}/${PATCHDIR}/patch-common)
     fi
-    if [ -f ${PKG_TOPDIR}/${PATCHDIR}/patch-emacs ]; then
-	(cd ${WRKSRC}; patch -p1 -N < ${PKG_TOPDIR}/${PATCHDIR}/patch-emacs)
+    if [ -f ${PKG_TOPDIR}/${PATCHDIR}/patch_emacs ]; then
+	(cd ${WRKSRC}; patch -p1 -N < ${PKG_TOPDIR}/${PATCHDIR}/patch_emacs)
     fi
 }
 
-clean-workdir () {
+clean_workdir () {
     rm -rf ${WRKDIR}
 }
 
@@ -79,30 +79,31 @@ build () {
     local emacs_ver version_num
     fetch
     if [ "${ELC_SHAREABLE}" = 'true' ]; then
-	emacs_ver="${PREFERRED_FSF_EMACS}"
+	emacs="${PREFERRED_FSF_EMACS}"
+	emacs_ver=`basename "${emacs}"`
 	version_num=`echo ${emacs_ver} | sed -e 's|.*-\(.*\)|\1|'`
-	clean-workdir
+	clean_workdir
 	extract
-	patch-emacs
+	patch_emacs
 	echo "Building with emacs_ver=${emacs_ver} version_num=${version_num}"
-	build-emacs
+	build_emacs
 	if [ "${do_install}" = 'true' ]; then
 	    echo "Installing with emacs_ver=${emacs_ver}"
-	    install-emacs
+	    install_emacs
 	fi
     else
 	for emacs in ${FSF_EMACSEN}
 	  do
-	  emacs_ver="${emacs}"
+	  emacs_ver=`basename "${emacs}"`
 	  version_num=`echo ${emacs_ver} | sed -e 's|.*-\(.*\)|\1|'`
-	  clean-workdir
+	  clean_workdir
 	  extract
-	  patch-emacs
+	  patch_emacs
 	  echo "Building with emacs_ver=${emacs_ver} version_num=${version_num}"
-	  build-emacs
+	  build_emacs
 	  if [ "${do_install}" = 'true' ]; then
 	      echo "Installing with emacs_ver=${emacs_ver}"
-	      install-emacs
+	      install_emacs
 	  fi
 	done
     fi
