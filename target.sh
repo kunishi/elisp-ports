@@ -1,3 +1,7 @@
+#
+# $Id: target.sh,v 1.7 2002/12/10 14:19:05 kunishi Exp $
+#
+
 init () {
     local file
     for url in ${DISTFILES}
@@ -71,7 +75,7 @@ patch_emacs () {
     fi
 }
 
-clean_workdir () {
+clean () {
     rm -rf ${WRKDIR}
 }
 
@@ -114,3 +118,9 @@ install () {
     build
 }
 
+distclean () {
+    for file in ${srcs}
+    do
+      rm -f ${DISTDIR}/${file}
+    done
+}
