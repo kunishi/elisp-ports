@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. ../config.sh
+. ../${CONFIG_SH:-config.sh}
 
 PKG_TOPDIR=`pwd`
 
