@@ -6,8 +6,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.apache.org/dist/jakarta/oro/jakarta-oro-2.0.7.zip'
-WRKSRC="${WRKDIR}/jakarta-oro-2.0.7"
+DISTFILES='http://www.apache.org/dist/jakarta/oro/jakarta-oro-2.0.8.zip'
+WRKSRC="${WRKDIR}/jakarta-oro-2.0.8"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
 
@@ -17,7 +17,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    install_java jakarta-oro-2.0.7 jakarta-oro
+    install_java jakarta-oro-2.0.8 jakarta-oro
 }
 
 init
