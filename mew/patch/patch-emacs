@@ -19,3 +19,16 @@ diff -ru mew-3.0.66.orig/Makefile mew-3.0.66/Makefile
  
  ################################################################
  ##
+--- mew-3.0.51/info/Makefile.orig	Wed Dec  4 17:07:50 2002
++++ mew-3.0.51/info/Makefile	Mon Jan 20 13:53:30 2003
+@@ -22,8 +22,8 @@
+ #EMACS = xemacs
+ #EMACS = mule
+ 
+-INSTALLINFO = `which install-info`
+-#INSTALLINFO = /usr/local/bin/install-info
++#INSTALLINFO = `which install-info`
++INSTALLINFO = /usr/local/bin/install-info
+ 
+ #INSTALLINFO_OPTIONS = --section Emacs Emacs
+ #INSTALLINFO_JOPTIONS =
