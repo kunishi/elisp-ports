@@ -20,6 +20,11 @@
 (setq mew-inbox-action-alist
       '(("X-Bogosity:" mew-spam-bogofilter)))
 
+;;; [mew-dist 24219]
+(setq mew-imap-spam-field "X-Bogosity")
+(setq mew-imap-spam-word "Yes")
+(setq mew-imap-trash-folder "%Trash")
+
 ;; Optional setup (Read Mail menu for Emacs 21)
 (if (boundp 'read-mail-command)
     (setq read-mail-command 'mew))

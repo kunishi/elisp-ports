@@ -224,6 +224,9 @@
       (setq subj (substring subj 0 (match-beginning 1))))
     subj))
 
+;;; [mew-dist 24466]
+(setq mew-connection-type-for-scan nil)
+
 (cond
  ((and (string-match "XEmacs" emacs-version))
   (setq mew-icon-directory "/usr/local/lib/xemacs/etc/mew/"))
