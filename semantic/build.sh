@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://us.dl.sourceforge.net/cedet/semantic-1.4.tar.gz'
-WRKSRC=${WRKDIR}/semantic-1.4
+DISTFILES='http://us.dl.sourceforge.net/cedet/semantic-1.4beta14.tar.gz'
+WRKSRC=${WRKDIR}/semantic-1.4beta14
 ELC_SHAREABLE=true
 EMACSEN='emacs-21.2'
 
