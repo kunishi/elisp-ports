@@ -6,7 +6,7 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.xmlsmartdoc.org/download/beta.zip'
+DISTFILES='http://www.xmlsmartdoc.org/download/smartdoc-1.1.zip'
 WRKSRC="${WRKDIR}"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
@@ -21,7 +21,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    java -jar ${DISTDIR}/beta.zip setup
+    java -jar ${DISTDIR}/smartdoc-1.1.zip setup
     chmod 755 ${BASEDIR}/bin/sdoc
 }
 
