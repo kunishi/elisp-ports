@@ -6,7 +6,7 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='http://www.apache.org/~andyc/neko/nekoxni-latest.tar.gz'
-WRKSRC="${WRKDIR}/nekoxni-2003.06.25"
+WRKSRC="${WRKDIR}/nekoxni-2003.08.05"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
 
@@ -18,7 +18,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    install_java nekoxni-2003.06.25 nekoxni
+    install_java nekoxni-2003.08.05 nekoxni
 }
 
 init
