@@ -1,11 +1,11 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/06/02 03:38:44 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/06/16 23:18:04 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.relaxer.org/download/beta.zip'
+DISTFILES='http://www.relaxer.org/download/setup.zip'
 WRKSRC="${WRKDIR}"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
@@ -22,7 +22,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    java -jar ${DISTDIR}/beta.zip setup
+    java -jar ${DISTDIR}/setup.zip setup
     chmod 755 ${BASEDIR}/bin/relaxer
 }
 
