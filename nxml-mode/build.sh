@@ -6,8 +6,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.thaiopensource.com/download/nxml-mode-20031031.tar.gz'
-WRKSRC="${WRKDIR}/nxml-mode-20031031"
+DISTFILES='http://www.thaiopensource.com/download/nxml-mode-20040726.tar.gz'
+WRKSRC="${WRKDIR}/nxml-mode-20040726"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=true
 ELC_SHAREABLE=true
