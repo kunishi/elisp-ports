@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://us.dl.sourceforge.net/cedet/eieio-0.17.tar.gz'
-WRKSRC=${WRKDIR}/eieio-0.17
+DISTFILES='http://us.dl.sourceforge.net/cedet/eieio-0.17beta4.tar.gz'
+WRKSRC=${WRKDIR}/eieio-0.17beta4
 ELC_SHAREABLE=true
 EMACSEN='emacs-21.2'
 
