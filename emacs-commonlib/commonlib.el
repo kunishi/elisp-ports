@@ -127,20 +127,18 @@
     "chinese-gb2312:-apple-hei-medium-r-normal--16-160-75-75-m-160-gb2312.1980-0," 
     "chinese-big5-1:-apple-apple ligothic medium-medium-r-normal--16-160-75-75-m-160-big5-0," 
     "korean-ksc5601:-apple-applegothic-medium-r-normal--16-160-75-75-m-160-ksc5601.1989-0," 
-    "tis620:-etl-fixed--16-*-tis620*-*,"
-    "latin-1:-etl-fixed--16-*-iso8859-1,"
-    "latin-2:-etl-fixed--16-*-iso8859-2,"
-    "latin-3:-etl-fixed--16-*-iso8859-3,"
-    "latin-4:-etl-fixed--16-*-iso8859-4,"
-    "latin-5:-etl-fixed--16-*-iso8859-5,"
-    "latin-7:-etl-fixed--16-*-iso8859-7,"
-    "latin-8:-etl-fixed--16-*-iso8859-8,"
-    "latin-9:-etl-fixed--16-*-iso8859-9,"
-    "vietnamese-viscii-lower:-etl-fixed--16-*-viscii1.1*-*,"
-    "vietnamese-viscii-upper:-etl-fixed--16-*-viscii1.1*-*,"
-    "koi8-r:-etl-fixed--16-*-koi8-r,"
-    "arabic:-apple-*-medium-r-normal-*-160-mac-roman"))
-;  (set-default-font "fontset-osaka14")
+    "latin-1:-etl-fixed-medium-r-normal-*-16-*-iso8859-1,"
+    "latin-2:-etl-fixed-medium-r-normal-*-16-*-iso8859-2,"
+    "latin-3:-etl-fixed-medium-r-normal-*-16-*-iso8859-3,"
+    "latin-4:-etl-fixed-medium-r-normal-*-16-*-iso8859-4,"
+    "latin-5:-etl-fixed-medium-r-normal-*-16-*-iso8859-5,"
+    "latin-7:-etl-fixed-medium-r-normal-*-16-*-iso8859-7,"
+    "latin-8:-etl-fixed-medium-r-normal-*-16-*-iso8859-8,"
+    "latin-9:-etl-fixed-medium-r-normal-*-16-*-iso8859-9,"
+    "vietnamese-viscii-lower:-etl-fixed-medium-r-normal-*-16-*-viscii1.1*-*,"
+    "vietnamese-viscii-upper:-etl-fixed-medium-r-normal-*-16-*-viscii1.1*-*,"
+    "koi8-r:-etl-fixed-medium-r-normal-*-16-*-koi8-r,"
+    "ascii:-etl-fixed-medium-r-normal-*-16-*-iso8859-1"))
   (set-default-font "fontset-osaka16")
   (setq mew-cs-samba 'utf-8))
 ;; Windows (NTEmacs)
