@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+  <uri pathSuffix=".sdoc" uri="smartdoc.rnc"/>
+  <uri pathSuffix=".rss" uri="rng4rss10/rss-1_0.rnc"/>
+</locatingRules>
