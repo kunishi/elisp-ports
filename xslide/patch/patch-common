@@ -1,5 +1,5 @@
---- xslide.el~	Wed Sep  5 17:39:04 2001
-+++ xslide.el	Sun Dec  8 16:16:43 2002
+--- xslide/xslide.el~	Wed Sep  5 17:39:04 2001
++++ xslide/xslide.el	Sun Dec  8 16:16:43 2002
 @@ -42,7 +42,8 @@
  ;;;; Code:
  (provide 'xslide)

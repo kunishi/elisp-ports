@@ -1,5 +1,5 @@
---- css-mode.el.orig	Mon Sep 23 00:30:15 2002
-+++ css-mode.el	Mon Sep 23 00:31:03 2002
+--- css-mode/css-mode.el.orig	Mon Sep 23 00:30:15 2002
++++ css-mode/css-mode.el	Mon Sep 23 00:31:03 2002
 @@ -58,7 +58,7 @@
  
  (require 'apropos)
