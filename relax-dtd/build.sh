@@ -14,7 +14,7 @@ USE_EMACS=false
 build_target () {
     : targets for non-Emacsen ports
     local trangjar=${BASEDIR}/share/java/trang/trang.jar
-    if [ -f ${trngjar} ]; then
+    if [ -f ${trangjar} ]; then
 	(cd ${WRKSRC}; \
 	    java -jar ${trangjar} -I dtd -O rng relaxCore.dtd relaxCore.rng; \
 	    java -jar ${trangjar} -I dtd -O rng relaxNamespace.dtd relaxNamespace.rng; \

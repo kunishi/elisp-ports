@@ -27,7 +27,6 @@ xslt-process
 tdtd
 docbookide
 css-mode
-sdoc-mode
 mgp-mode
 haskell-mode
 ocaml-mode
