@@ -5,7 +5,7 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://xml.apache.org/dist/fop/fop-0.20.5-bin.tar.gz'
+DISTFILES='http://www.apache.org/dist/xml/fop/fop-0.20.5-bin.tar.gz'
 WRKSRC="${WRKDIR}/fop-0.20.5"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
