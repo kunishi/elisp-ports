@@ -1,0 +1,20 @@
+*** Mule-UCS-0.84/lisp/mucs.el	2002/12/05 07:53:41	1.1
+--- Mule-UCS-0.84/lisp/mucs.el	2002/12/05 07:55:59
+***************
+*** 196,203 ****
+  		    (funcall (car hookval))
+  		    result)
+  	    hookval (cdr hookval)))
+!     (cons 'progn
+! 	  result)))
+  
+  (defmacro mucs-define-package (package &rest form)
+    "Enclose a unit of package with this.
+--- 196,202 ----
+  		    (funcall (car hookval))
+  		    result)
+  	    hookval (cdr hookval)))
+!     result))
+  
+  (defmacro mucs-define-package (package &rest form)
+    "Enclose a unit of package with this.
