@@ -14,6 +14,10 @@
 (and (not (boundp 'utf-translate-cjk))
      (load-safe "~/.emacs.d/init.d/mule-ucs-init.el"))
 
+;; font-setup
+(and (featurep 'meadow)
+     (load-safe "~/.emacs.d/init.d/font-setup-init.el"))
+
 ;; SKK
 (load-safe "~/.emacs.d/init.d/ddskk-init.el")
 
