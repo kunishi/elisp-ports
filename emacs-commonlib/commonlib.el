@@ -125,7 +125,8 @@
     "latin-jisx0201:-apple-osaka-medium-r-normal-*-160-*-jisx0201*-*,"
     "japanese-jisx0208-1978:-apple-osaka-medium-r-normal-*-160-*-jisx0208.1978-*,"
 `   "latin-1:-etl-fixed--16-*-iso8859-1"))
-  (set-default-font "fontset-osaka14")
+;  (set-default-font "fontset-osaka14")
+  (set-default-font "fontset-osaka16")
   (setq mew-cs-samba 'utf-8))
 ;; Windows (NTEmacs)
 (when (and (eq system-type 'windows-nt)
