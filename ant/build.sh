@@ -5,8 +5,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.apache.org/dist/ant/binaries/apache-ant-1.5.3-1-bin.zip'
-WRKSRC="${WRKDIR}/apache-ant-1.5.3-1"
+DISTFILES='http://www.apache.org/dist/ant/binaries/apache-ant-1.5.4-bin.zip'
+WRKSRC="${WRKDIR}/apache-ant-1.5.4"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
 
@@ -18,7 +18,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    install_java apache-ant-1.5.3-1 apache-ant
+    install_java apache-ant-1.5.4 apache-ant
     rm -f ${BASEDIR}/bin/ant && \
 	ln -s ${BASEDIR}/share/java/apache-ant/bin/ant ${BASEDIR}/bin/ant
 }
