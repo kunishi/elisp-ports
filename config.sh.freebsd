@@ -1,8 +1,8 @@
-BASEDIR=/usr/opt
+BASEDIR=/usr/local
 DISTDIR=/home/kunishi/src/elisp
 WRKDIR=work
 PATCHDIR=patch
 EMACS_COMPILE_ARGS='-q --no-site-file -batch'
 GMAKE=gmake
-FSF_EMACSEN='/usr/opt/bin/emacs-21.3.50'
-PREFERRED_FSF_EMACS='/usr/opt/bin/emacs-21.3.50'
+FSF_EMACSEN='/usr/local/bin/emacs-21.3'
+PREFERRED_FSF_EMACS='/usr/local/bin/emacs-21.3'
