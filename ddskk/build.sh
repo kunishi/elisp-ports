@@ -21,6 +21,7 @@ install_emacs () {
 install_init () {
     [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
     cp -p dotemacs.el ${EMACS_INIT_D}/ddskk-init.el
+    cp -p dotskk.el ${HOME}/.skk
 }
 
 init
