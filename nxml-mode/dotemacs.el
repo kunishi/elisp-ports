@@ -1,4 +1,4 @@
-(load "rng-auto")
+(load-safe "rng-auto")
 (setq auto-mode-alist
       (cons '("\\.\\(xml\\|xsl\\|rng\\|rxm\\|rxg\\|xhtml\\)\\'" . nxml-mode)
 	    auto-mode-alist))
