@@ -6,8 +6,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.thaiopensource.com/download/nxml-mode-20030928.tar.gz'
-WRKSRC="${WRKDIR}/nxml-mode-20030928"
+DISTFILES='http://www.thaiopensource.com/download/nxml-mode-20030929.tar.gz'
+WRKSRC="${WRKDIR}/nxml-mode-20030929"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=true
 ELC_SHAREABLE=true
@@ -26,14 +26,6 @@ install_emacs () {
     cp -rp ${WRKSRC}/schema ${SITELISPDIR}/nxml-mode
     cp -p ${WRKSRC}/nxml-mode.info ${INFODIR}
     install-info --info-dir=${INFODIR} ${INFODIR}/nxml-mode.info
-}
-
-build_target () {
-    : targets for non-Emacsen ports
-}
-
-install_target () {
-    : install targets for non-Emacsen ports
 }
 
 install_init () {
