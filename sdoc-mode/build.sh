@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='http://www.xmlsmartdoc.org/download/beta.zip'
-WRKSRC=${WRKDIR}
+WRKSRC="${WRKDIR}"
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

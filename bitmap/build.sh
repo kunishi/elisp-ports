@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='ftp://ftp.jpl.org/pub/elisp/bitmap/bitmap-mule-8.5.tar.gz'
-WRKSRC=${WRKDIR}/bitmap-mule-8.5
+WRKSRC="${WRKDIR}/bitmap-mule-8.5"
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

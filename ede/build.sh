@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='http://us.dl.sourceforge.net/cedet/EDE-1.0.beta2.tar.gz'
-WRKSRC=${WRKDIR}/EDE-1.0.beta2
+WRKSRC="${WRKDIR}/EDE-1.0.beta2"
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

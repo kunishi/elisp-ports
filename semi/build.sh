@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='ftp://ftp.m17n.org/pub/mule/semi/semi-1.14-for-flim-1.14/semi-1.14.4.tar.gz'
-WRKSRC=${WRKDIR}/semi-1.14.4
+WRKSRC="${WRKDIR}/semi-1.14.4"
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

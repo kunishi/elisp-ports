@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='ftp://ftp.m17n.org/pub/mule/Mule-UCS/test/Mule-UCS-current.tar.gz'
-WRKSRC=${WRKDIR}/Mule-UCS-current
+WRKSRC="${WRKDIR}/Mule-UCS-current"
+USE_EMACS=true
 ELC_SHAREABLE=false
 
 . ../target.sh

@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='ftp://ftp.gohome.org/wl/stable/wl-2.10.0.tar.gz'
-WRKSRC=${WRKDIR}/wl-2.10.0
+WRKSRC="${WRKDIR}/wl-2.10.0"
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='ftp://ftp.lysator.liu.se/pub/sgml/ALPHA/psgml-1.3.1.tar.gz'
-WRKSRC=${WRKDIR}/psgml-1.3.1
+WRKSRC="${WRKDIR}/psgml-1.3.1"
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

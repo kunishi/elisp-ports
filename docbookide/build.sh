@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='http://nwalsh.com/emacs/docbookide/docbookide01.zip'
-WRKSRC=${WRKDIR}/docbookide
+WRKSRC="${WRKDIR}/docbookide"
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='http://us.dl.sourceforge.net/cedet/eieio-0.17.tar.gz'
-WRKSRC=${WRKDIR}/eieio-0.17
+WRKSRC="${WRKDIR}/eieio-0.17"
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

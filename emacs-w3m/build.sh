@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='http://emacs-w3m.namazu.org/emacs-w3m-1.3.3.tar.gz'
-WRKSRC=${WRKDIR}/emacs-w3m-1.3.3
+WRKSRC="${WRKDIR}/emacs-w3m-1.3.3"
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

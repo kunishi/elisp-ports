@@ -1,6 +1,6 @@
-diff -ruN elib-1.0.orig/Makefile elib-1.0/Makefile
---- elib-1.0.orig/Makefile	Mon Dec 11 09:50:56 1995
-+++ elib-1.0/Makefile	Sun Sep 22 19:01:12 2002
+diff -ruN ../elib-1.0.orig/Makefile Makefile
+--- ../elib-1.0.orig/Makefile	Mon Dec 11 09:50:56 1995
++++ Makefile	Sun Sep 22 19:01:12 2002
 @@ -61,16 +61,16 @@
  install: all installdirs install-info
  	$(INSTALL_DATA) $(ELFILES) $(ELIBDIR)
@@ -21,9 +21,9 @@ diff -ruN elib-1.0.orig/Makefile elib-1.0/Makefile
  	else true; fi
  
  clean:
-diff -ruN elib-1.0.orig/elib.texi elib-1.0/elib.texi
---- elib-1.0.orig/elib.texi	Mon Dec 11 09:50:55 1995
-+++ elib-1.0/elib.texi	Sun Sep 22 19:00:54 2002
+diff -ruN ../elib-1.0.orig/elib.texi elib.texi
+--- ../elib-1.0.orig/elib.texi	Mon Dec 11 09:50:55 1995
++++ elib.texi	Sun Sep 22 19:00:54 2002
 @@ -21,6 +21,10 @@
  @comment the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
  @setfilename elib.info

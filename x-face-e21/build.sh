@@ -6,6 +6,7 @@ PKG_TOPDIR=`pwd`
 
 DISTFILES='ftp://ftp.jpl.org/pub/elisp/x-face-e21.el.gz'
 WRKSRC=${WRKDIR}
+USE_EMACS=true
 ELC_SHAREABLE=false
 
 . ../target.sh

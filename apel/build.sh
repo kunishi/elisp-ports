@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='ftp://ftp.m17n.org/pub/mule/apel/apel-10.4.tar.gz'
-WRKSRC=${WRKDIR}/apel-10.4
+WRKSRC="${WRKDIR}/apel-10.4"
+USE_EMACS=true
 ELC_SHAREABLE=false
 
 . ../target.sh

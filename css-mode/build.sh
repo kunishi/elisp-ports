@@ -6,6 +6,7 @@ PKG_TOPDIR=`pwd`
 
 DISTFILES='http://www.garshol.priv.no/download/software/css-mode/css-mode.el'
 WRKSRC=${WRKDIR}
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

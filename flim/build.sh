@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/flim/flim-1.14/flim-1.14.5.tar.gz'
-WRKSRC=${WRKDIR}/flim-1.14.5
+WRKSRC="${WRKDIR}/flim-1.14.5"
+USE_EMACS=true
 ELC_SHAREABLE=false
 
 . ../target.sh

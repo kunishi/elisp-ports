@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='http://pop-club.hp.infoseek.co.jp/emacs/emacs-wget/emacs-wget-0.4.0.tar.gz'
-WRKSRC=${WRKDIR}/emacs-wget-0.4.0
+WRKSRC="${WRKDIR}/emacs-wget-0.4.0"
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

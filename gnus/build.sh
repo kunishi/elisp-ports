@@ -5,7 +5,8 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES=http://quimby.gnus.org/gnus/dist/gnus-5.10.2.tar.gz
-WRKSRC=${WRKDIR}/gnus-5.10.2
+WRKSRC="${WRKDIR}/gnus-5.10.2"
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh

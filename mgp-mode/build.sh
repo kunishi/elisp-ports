@@ -6,6 +6,7 @@ PKG_TOPDIR=`pwd`
 
 DISTFILES='ftp://TypeHack.aial.hiroshima-u.ac.jp/pub/Emacs/MagicPoint/mgp-mode.el'
 WRKSRC=${WRKDIR}
+USE_EMACS=true
 ELC_SHAREABLE=true
 
 . ../target.sh
