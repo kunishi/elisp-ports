@@ -6,8 +6,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://macemacsjp.sourceforge.jp/downloads/elips/carbon-font.el'
-WRKSRC="${WRKDIR}"
+DISTFILES='http://keihanna.dl.sourceforge.jp/macemacsjp/9433/carbon_font-20040509.tar.gz'
+WRKSRC="${WRKDIR}/carbon_font"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=true
 ELC_SHAREABLE=true
