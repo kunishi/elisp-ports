@@ -5,8 +5,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://us.dl.sourceforge.net/gauche/Gauche-0.7.tgz'
-WRKSRC="${WRKDIR}/Gauche-0.7"
+DISTFILES='http://us.dl.sourceforge.net/gauche/Gauche-0.7.1.tgz'
+WRKSRC="${WRKDIR}/Gauche-0.7.1"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
 
