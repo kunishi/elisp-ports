@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://jdee.sunsite.dk/jde-beta.tar.gz'
-WRKSRC=${WRKDIR}/jde-2.2.9beta12
+DISTFILES='http://jdee.sunsite.dk/jde-latest.tar.gz'
+WRKSRC=${WRKDIR}/jde-2.2.9.1
 #PATCHFILES='If you have some official patch, write them'
 ELC_SHAREABLE=true
 
