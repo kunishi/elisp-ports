@@ -169,6 +169,17 @@
 
 ;;; various major mode settings
 
+;;; browse-url
+(cond ((eq system-type 'windows-nt)
+       (setq browse-url-browser-function 'browse-url-default-windows-browse))
+      ((eq system-type 'darwin)
+       (setq browse-url-browser-function 'browse-url-default-macosx-browser))
+      ((boundp 'browse-url-mozilla)
+       (setq browse-url-browser-function 'browse-url-mozilla))
+      (t
+       (setq browse-url-browser-function 'browse-url-netscape)
+       (setq browse-url-netscape-program "mozilla")))
+
 ;;; cc-mode
 (defconst my-c-style
   '((c-basic-offset . 8)
