@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://quimby.gnus.org/gnus/dist/ognus-0.17.tar.gz'
-WRKSRC=${WRKDIR}/ognus-0.17
+DISTFILES='http://quimby.gnus.org/gnus/dist/ognus-0.19.tar.gz'
+WRKSRC=${WRKDIR}/ognus-0.19
 ELC_SHAREABLE=true
 
 . ../target.sh
