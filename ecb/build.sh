@@ -11,7 +11,8 @@ ELC_SHAREABLE=true
 . ../target.sh
 
 build_emacs () {
-    (cd ${WRKSRC}; ${GMAKE} EMACS=${emacs})
+    (cd ${WRKSRC}; ${GMAKE} EMACS=${emacs} \
+	LOADPATH="${BASEDIR}/share/emacs/site-lisp/eieio ${BASEDIR}/share/emacs/site-lisp/semantic ${BASEDIR}/share/emacs/site-lisp/jde/lisp")
 }
 
 install_emacs () {
