@@ -161,11 +161,11 @@
 	  )))
 
 ;; Emacs 21.3.50 native UTF-8 support
-(when (boundp 'utf-translate-cjk)
-  (setq utf-translate-cjk t)
+(when (boundp 'utf-translate-cjk-mode)
+  (setq utf-translate-cjk-mode t)
   (prefer-coding-system 'utf-8)
   (custom-set-variables
-   '(utf-translate-cjk t)))
+   '(utf-translate-cjk-mode t)))
 
 ;;; various major mode settings
 
