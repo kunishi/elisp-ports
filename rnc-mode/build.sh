@@ -23,12 +23,9 @@ install_emacs () {
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${SITELISPDIR}
 }
 
-build_target () {
-    : targets for non-Emacsen ports
-}
-
-install_target () {
-    : install targets for non-Emacsen ports
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/rnc-mode-init.el
 }
 
 init

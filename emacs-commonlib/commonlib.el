@@ -8,15 +8,13 @@
    (substring emacs-version (match-beginning 1) (match-end 1))))
 ;;; borrowed from install.el in APEL
 (defvar my-install-prefix
-  (if (featurep 'meadow)
+  (if (string= system-configuration-options "NT")
       (expand-file-name "../.." exec-directory)
     (if (or (<= emacs-major-version 18)
 	    (featurep 'xemacs)
-	    (and (boundp 'system-configuration-options)	; 19.29 or lator
-		 (string= system-configuration-options "NT"))) ; for Meadow
-	(expand-file-name "../../.." exec-directory)
+	(expand-file-name "../../.." exec-directory))
       (expand-file-name "../../../.." data-directory))))
-  (defmacro my-emacs-expand-prefix (path)
+(defmacro my-emacs-expand-prefix (path)
   `(concat my-install-prefix "/" ,path))
 (defvar my-emacs-lispdir
   (my-emacs-expand-prefix "share/emacs/site-lisp"))
@@ -118,26 +116,29 @@
   (setq bdf-directory-list
 	'("c:/intlfonts-1.2.1/Asian"
 	  "c:/intlfonts-1.2.1/Chinese"
-	  "c:/intlfonts-1.2.1/Chinese-X"
+	  "c:/intlfonts-1.2.1/Chinese.X"
 	  "c:/intlfonts-1.2.1/Ethiopic"
 	  "c:/intlfonts-1.2.1/European"
 	  "c:/intlfonts-1.2.1/Japanese"
-	  "c:/intlfonts-1.2.1/Japanese-X"
-	  "c:/intlfonts-1.2.1/Korean-X"
-	  "c:/intlfonts-1.2.1/Misc"))
+	  "c:/intlfonts-1.2.1/Japanese.X"
+	  "c:/intlfonts-1.2.1/Korean.X"
+	  "c:/intlfonts-1.2.1/Misc"
+	  "c:/intlfonts-1.2.1"
+	  "c:/m17nfonts"))
   (setq w32-bdf-filename-alist
 	(w32-find-bdf-fonts bdf-directory-list))
   (create-fontset-from-fontset-spec
-   "-*-fixed-medium-r-normal-*-16-*-*-*-c-*-fontset-bdf,
- japanese-jisx0208:-*-*-medium-r-normal-*-16-*-*-*-c-*-jisx0208.1983-*,
- katakana-jisx0201:-*-*-medium-r-normal-*-16-*-*-*-c-*-jisx0201*-*,
- latin-jisx0201:-*-*-medium-r-normal-*-16-*-*-*-c-*-jisx0201*-*,
- japanese-jisx0208-1978:-*-*-medium-r-normal-*-16-*-*-*-c-*-jisx0208.1978-*,
- thai-tis620:-misc-fixed-medium-r-normal--16-160-72-72-m-80-tis620.2529-1,
- lao:-misc-fixed-medium-r-normal--16-160-72-72-m-80-MuleLao-1,
- tibetan-1-column:-TibMdXA-fixed-medium-r-normal--16-160-72-72-m-80-MuleTibetan-1,
- ethiopic:-Admas-Ethiomx16f-Medium-R-Normal--16-150-100-100-M-160-Ethiopic-Unicode,
- tibetan:-TibMdXA-fixed-medium-r-normal--16-160-72-72-m-160-MuleTibetan-0")
+   (concat
+    "-*-fixed-medium-r-normal-*-16-*-*-*-c-*-fontset-bdf,"
+    "japanese-jisx0208:-*-*-medium-r-normal-*-16-*-*-*-c-*-jisx0208.*-*,"
+    "katakana-jisx0201:-*-*-medium-r-normal-*-16-*-*-*-c-*-jisx0201*-*,"
+    "latin-jisx0201:-*-*-medium-r-normal-*-16-*-*-*-c-*-jisx0201*-*,"
+    "japanese-jisx0208-1978:-*-*-medium-r-normal-*-16-*-*-*-c-*-jisx0208.1978-*,"
+    "thai-tis620:-misc-fixed-medium-r-normal--16-160-72-72-m-80-tis620.2529-1,"
+    "lao:-misc-fixed-medium-r-normal--16-160-72-72-m-80-MuleLao-1,"
+    "tibetan-1-column:-TibMdXA-fixed-medium-r-normal--16-160-72-72-m-80-MuleTibetan-1,"
+    "ethiopic:-Admas-Ethiomx16f-Medium-R-Normal--16-150-100-100-M-160-Ethiopic-Unicode,"
+    "tibetan:-TibMdXA-fixed-medium-r-normal--16-160-72-72-m-160-MuleTibetan-0"))
   (setq font-encoding-alist
 	(append '(("MuleTibetan-0" (tibetan . 0))
 		  ("GB2312" (chinese-gb2312 . 0))

@@ -17,15 +17,16 @@ build_emacs () {
 }
 
 install_emacs () {
-    (cd ${WRKSRC}; make emacs=${emacs} prefix=${EMACS_PREFIX} ${EMACS_INSTALL_TARGET})
+    (cd ${WRKSRC}; make emacs=${emacs} \
+	elispdir=${SITELISPDIR}/mew \
+	infodir=${EMACS_PREFIX}/info \
+	etcdir=${EMACS_PREFIX}/share/mew ${EMACS_INSTALL_TARGET})
 }
 
 install_init () {
-    mkdir -p ${WRKSRC}
     [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
     cp -p dotemacs.el ${EMACS_INIT_D}/mew-setup.el
-    diff -e ${HOME}/.mew.el dotmew.el > ${WRKSRC}/dotmew.ed
-    ed ${HOME}/.mew.el < ${WRKSRC}/dotmew.ed
+    cp -p dotmew.el ${HOME}/.mew.el
 }
 
 init

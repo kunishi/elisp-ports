@@ -24,5 +24,10 @@ install_emacs () {
     cp -p ${WRKSRC}/psvn.elc ${SITELISPDIR}
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/psvn-init.el
+}
+
 init
 eval $1
