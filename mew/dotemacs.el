@@ -6,6 +6,11 @@
 (autoload-if-found 'mew-send "mew" nil t)
 (autoload-if-found 'mew-user-agent-compose "mew" nil t)
 
+;; SPAM filtering using bogofilter
+(setq mew-spam-prog "ssh")
+(setq mew-spam-prog-args
+      '("imap.chorusroom.org" "bogofilter" "-s" "-v"))
+
 ;; Optional setup (Read Mail menu for Emacs 21)
 (if (boundp 'read-mail-command)
     (setq read-mail-command 'mew))
