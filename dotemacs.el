@@ -86,7 +86,7 @@
 (load-safe "~/.emacs.d/init.d/xslt-process-init.el")
 
 ;;; SmartDoc
-(load-safe "~/.emacs.d/init.d/sdoc-mode-init.el")
+;; (load-safe "~/.emacs.d/init.d/sdoc-mode-init.el")
 
 ;;; docbookide
 ;; (load-safe "~/.emacs.d/init.d/docbookide-init.el")
