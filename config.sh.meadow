@@ -1,4 +1,5 @@
 BASEDIR='c:/usr/local'
+SYSTEM=win32
 GMAKE=make
 GTAR=tar
 GZCAT=zcat

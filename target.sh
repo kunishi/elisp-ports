@@ -176,7 +176,11 @@ install_java () {
     (cd ${WRKSRC}; ${GTAR} cvf - .) | (cd ${javabase}/$1; ${GTAR} xfBp -)
     if [ "$2" != '' ]; then
 	rm -rf ${javabase}/$2
-	ln -s $1 ${javabase}/$2
+	if [ ${SYSTEM} = 'win32' ]; then
+	    mk_shcut -folder ${javabase} -name "$2" `cygpath -w ${javabase}/$1`
+	else
+	    ln -s $1 ${javabase}/$2
+	fi
     fi
 }
 
@@ -188,6 +192,10 @@ install_xml () {
     (cd ${WRKSRC}; ${GTAR} cvf - .) | (cd ${basedir}/$1; ${GTAR} xfBp -)
     if [ "$2" != '' ]; then
 	rm -rf ${basedir}/$2
-	ln -s $1 ${basedir}/$2
+	if [ ${SYSTEM} = 'win32' ]; then
+	    mk_shcut -folder ${basedir} -name "$2" `cygpath -w ${basedir}/$1`
+	else
+	    ln -s $1 ${basedir}/$2
+	fi
     fi
 }

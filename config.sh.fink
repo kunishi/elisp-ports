@@ -1,4 +1,5 @@
 BASEDIR=/sw
+SYSTEM=unix
 GMAKE=make
 GTAR=gtar
 GZCAT=gzcat

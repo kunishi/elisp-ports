@@ -1,4 +1,5 @@
 BASEDIR=/opt/local
+SYSTEM=unix
 GMAKE=make
 GTAR=gnutar
 GZCAT=gzcat

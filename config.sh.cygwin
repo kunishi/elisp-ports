@@ -1,4 +1,5 @@
 BASEDIR=/usr
+SYSTEM=unix
 GMAKE=make
 GTAR=tar
 GZCAT=zcat
