@@ -21,6 +21,8 @@
 ;; font-setup
 (and (featurep 'meadow)
      (load-safe "~/.emacs.d/init.d/font-setup-init.el"))
+(and (eq window-system 'mac)
+     (load-safe "~/.emacs.d/init.d/carbon-font-init.el"))
 
 ;; SKK
 (load-safe "~/.emacs.d/init.d/ddskk-init.el")
