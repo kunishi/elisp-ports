@@ -18,5 +18,10 @@ install_emacs () {
     (cd ${WRKSRC}; make EMACS=${emacs} LISPDIR=${SITELISPDIR} VERSION_SPECIFIC_LISPDIR=${VERSION_SPECIFIC_SITELISPDIR} install)
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/semi-init.el
+}
+
 init
 eval $1

@@ -1,7 +1,7 @@
 ;; all the settings are included in ~/.mew.el.
 (if (eq system-type 'windows-nt)
     (setq mew-icon-directory (concat my-install-prefix "/etc/mew"))
-  (setq mew-icon-directory (concat my-install-prefix "/share/mew")))
+  (setq mew-icon-directory (concat my-install-prefix "/share/emacs/etc/mew")))
 (autoload-if-found 'mew "mew" nil t)
 (autoload-if-found 'mew-send "mew" nil t)
 (autoload-if-found 'mew-user-agent-compose "mew" nil t)

@@ -1,0 +1,36 @@
+#
+# Folder definition file
+# This file is generated automatically by Wanderlust/2.8.1 (Something).
+#
+
+chorusroom.org {
+	%inbox
+	%INBOX.Sent
+	%INBOX.opu.com-staff
+	BSD{
+		%INBOX.comp.freebsd.announce-jp
+		%INBOX.comp.freebsd.FreeBSD-users-jp
+		%INBOX.comp.bsd.bsd-nomads
+		%INBOX.comp.freebsd.ports-jp
+	}
+	Security{
+		%INBOX.comp.security.jpcert.announce
+		%INBOX.comp.security.cert-advisory
+	}
+	Emacs {
+		%INBOX.comp.emacs.emacs-w3m
+		%INBOX.comp.emacs.jde
+		%INBOX.comp.emacs.mew-dist
+		%INBOX.comp.emacs.wl
+	}
+	XML{
+		%INBOX.comp.xml.jgxml
+		%INBOX.comp.xml.relusrj
+		%INBOX.comp.xml.sdocusersj
+		%INBOX.comp.xml.xmluser
+	}
+}
+
+# petname definition (group, folder in access group)
+
+# end of file.

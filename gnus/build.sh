@@ -14,7 +14,7 @@ build_emacs () {
     (cd ${WRKSRC}; \
 	./configure --prefix=${EMACS_PREFIX} \
 	    --with-emacs=${emacs} \
-	    --with-etcdir=${EMACS_PREFIX}/etc/gnus \
+	    --with-etcdir=${EMACS_ETCDIR}/gnus \
 	    --with-lispdir=${SITELISPDIR}/gnus \
 	    --infodir=${INFODIR})
     (cd ${WRKSRC}; ${GMAKE})

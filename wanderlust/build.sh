@@ -18,11 +18,18 @@ build_emacs () {
 install_emacs () {
     (cd ${WRKSRC}; \
 	make EMACS=${emacs} \
-	     PIXMAPDIR=${EMACS_PREFIX}/etc/wl \
+	     PIXMAPDIR=${EMACS_ETCDIR}/wl \
 	     INFODIR=${INFODIR} \
 	     LISPDIR=${SITELISPDIR} install install-info)
     install-info --dir-file=${INFODIR}/dir --info-file=${INFODIR}/wl-ja.info
     install-info --dir-file=${INFODIR}/dir --info-file=${INFODIR}/wl.info
+}
+
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/wl-init.el
+    cp -p dotwl.el ${HOME}/.wl
+    cp -p dotfolders ${HOME}/.folders
 }
 
 init

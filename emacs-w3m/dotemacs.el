@@ -14,7 +14,7 @@
       (setq w3m-icon-directory
 	    (concat my-install-prefix "/etc/w3m/icons/"))
     (setq w3m-icon-directory
-	  (concat my-install-prefix "/share/emacs-w3m/")))
+	  (concat my-install-prefix "/share/emacs/etc/w3m/")))
   (setq w3m-type 'w3m-m17n)
   (cond ((eq system-type 'freebsd)
 	 (setq w3m-command "w3m")))

@@ -13,7 +13,7 @@ ELC_SHAREABLE=true
 build_emacs () {
     (cd ${WRKSRC}; \
 	./configure --prefix=${EMACS_PREFIX} \
-	            --with-icondir=${EMACS_PREFIX}/etc/w3m \
+	            --with-icondir=${EMACS_ETCDIR}/w3m \
 	            --with-emacs=${emacs} \
 		    --with-lispdir=${SITELISPDIR}/w3m \
 		    --infodir=${INFODIR})
