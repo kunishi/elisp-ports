@@ -5,7 +5,7 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='http://jdee.sunsite.dk/jde-latest.tar.gz'
-WRKSRC=${WRKDIR}/jde-2.3.1
+WRKSRC=${WRKDIR}/jde-2.3.2
 #PATCHFILES='If you have some official patch, write them'
 ELC_SHAREABLE=true
 
