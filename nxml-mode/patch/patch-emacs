@@ -1,0 +1,23 @@
+*** nxml-mode.el.~1.109.~	2003-10-30 18:31:01.000000000 +0700
+--- nxml-mode.el	2003-11-01 08:03:58.000000000 +0700
+***************
+*** 1045,1051 ****
+  	  (save-match-data
+  	    (nxml-with-invisible-motion
+  	      (nxml-with-unmodifying-text-property-changes
+! 		(if nxml-degraded
+  		    (nxml-set-fontified start (point-max))
+  		  (nxml-fontify1 start)))))))
+      (error
+--- 1045,1055 ----
+  	  (save-match-data
+  	    (nxml-with-invisible-motion
+  	      (nxml-with-unmodifying-text-property-changes
+! 		(if (or nxml-degraded
+! 			;; Work around bug in emacs 21.3.50 on
+! 			;; 2003-11-01: it calls our fontification
+! 			;; function in the minibuffer and echo window.
+! 			(not nxml-prolog-end))
+  		    (nxml-set-fontified start (point-max))
+  		  (nxml-fontify1 start)))))))
+      (error
