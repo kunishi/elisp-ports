@@ -1,27 +1,33 @@
 #!/bin/sh
+# $Id: build.sh.sample,v 1.4 2003/05/31 07:07:09 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
 PKG_TOPDIR=`pwd`
 
 DISTFILES='URL_for_distfiles'
-WRKSRC=${WRKDIR}/distname
+WRKSRC="${WRKDIR}/distname"
 #PATCHFILES='If you have some official patch, write them'
+USE_EMACS=true
 ELC_SHAREABLE=false
 EMACSEN='emacs-20.7 emacs-21.3.50 emacs-21.2'
 
 . ../target.sh
 
-#patch-dist () {
-#	# write how to apply official patches
-#}
-
 build_emacs () {
-	# write how to build package
+    : write how to build package
 }
 
 install_emacs () {
-	# write how to install package
+    : write how to install package
+}
+
+build_target () {
+    : targets for non-Emacsen ports
+}
+
+install_target () {
+    : install targets for non-Emacsen ports
 }
 
 init

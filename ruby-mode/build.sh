@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='ftp://ftp.ruby-lang.org/pub/ruby/stable/ruby-1.6.7.tar.gz'
-WRKSRC="${WRKDIR}/ruby-1.6.7/misc"
+DISTFILES='ftp://ftp.ruby-lang.org/pub/ruby/stable/ruby-1.6.8.tar.gz'
+WRKSRC="${WRKDIR}/ruby-1.6.8/misc"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
