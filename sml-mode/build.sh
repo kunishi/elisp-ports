@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='ftp://ftp.research.bell-labs.com/dist/smlnj/contrib/emacs/sml-mode-3.9.3.tar.gz'
-WRKSRC=${WRKDIR}/sml-mode-3.9.3
+DISTFILES='ftp://ftp.research.bell-labs.com/dist/smlnj/contrib/emacs/sml-mode-3.9.5.tar.gz'
+WRKSRC=${WRKDIR}/sml-mode-3.9.5
 ELC_SHAREABLE=true
 
 . ../target.sh
