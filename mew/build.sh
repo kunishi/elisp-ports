@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='ftp://ftp.mew.org/pub/Mew/alpha/mew-4.0.55.tar.gz'
-WRKSRC="${WRKDIR}/mew-4.0.55"
+DISTFILES='ftp://ftp.mew.org/pub/Mew/alpha/mew-4.0.56.tar.gz'
+WRKSRC="${WRKDIR}/mew-4.0.56"
 USE_EMACS=true
 ELC_SHAREABLE=true
 EMACS_BUILD_TARGET=''
