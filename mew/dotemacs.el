@@ -7,12 +7,18 @@
 (autoload-if-found 'mew-user-agent-compose "mew" nil t)
 
 ;; SPAM filtering using bogofilter
+(setq mew-spam "X-Bogosity:")
 (setq mew-spam-prog "ssh")
 (setq mew-spam-prog-args
       '("imap.chorusroom.org" "bogofilter" "-s" "-v"))
 (setq mew-ham-prog "ssh")
 (setq mew-ham-prog-args
       '("imap.chorusroom.org" "bogofilter" "-n" "-v"))
+(defun mew-spam-bogofilter (val)
+  (let ((case-fold-search t))
+    (if (string-match "yes" val) ?D)))
+(setq mew-inbox-action-alist
+      '(("X-Bogosity:" mew-spam-bogofilter)))
 
 ;; Optional setup (Read Mail menu for Emacs 21)
 (if (boundp 'read-mail-command)
