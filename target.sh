@@ -1,5 +1,5 @@
 #
-# $Id: target.sh,v 1.12 2003/06/02 13:26:48 kunishi Exp $
+# $Id: target.sh,v 1.13 2003/06/11 09:26:13 kunishi Exp $
 #
 
 ### common targets
@@ -169,5 +169,17 @@ install_java () {
     if [ "$2" != '' ]; then
 	rm -rf ${javabase}/$2
 	ln -s $1 ${javabase}/$2
+    fi
+}
+
+### targets for XML libraries
+
+install_xml () {
+    local basedir="${BASEDIR}/share/xml"
+    mkdir -p ${basedir}/$1
+    (cd ${WRKSRC}; ${GTAR} cvf - .) | (cd ${basedir}/$1; ${GTAR} xfBp -)
+    if [ "$2" != '' ]; then
+	rm -rf ${basedir}/$2
+	ln -s $1 ${basedir}/$2
     fi
 }
