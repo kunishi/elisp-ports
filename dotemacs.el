@@ -22,7 +22,7 @@
 (load-safe "~/.emacs.d/init.d/ddskk-init.el")
 
 ;; semi
-(load-safe "~/.emacs.d/init.d/semi-init.el")
+;; (load-safe "~/.emacs.d/init.d/semi-init.el")
 
 ;; Mew
 ;;; http://www.mew.org/
@@ -31,7 +31,7 @@
 
 ;;; Wanderlust
 ;;; http://www.gohome.org/wl/
-(load-safe "~/.emacs.d/init.d/wl-init.el")
+;; (load-safe "~/.emacs.d/init.d/wl-init.el")
 
 ;;; x-face-e21
 ;;; ftp://ftp.jpl.org/pub/elisp/
@@ -70,7 +70,7 @@
 ;;; psgml
 ;;; ftp://ftp.lysator.liu.se/pub/sgml/
 ;;; from http://www.oasis-open.org/cover/psgml-fonts.html
-(load-safe "~/.emacs.d/init.d/psgml-init.el")
+;; (load-safe "~/.emacs.d/init.d/psgml-init.el")
 
 ;;; css-mode
 (load-safe "~/.emacs.d/init.d/css-mode-init.el")
