@@ -70,7 +70,7 @@
 ;;; psgml
 ;;; ftp://ftp.lysator.liu.se/pub/sgml/
 ;;; from http://www.oasis-open.org/cover/psgml-fonts.html
-(load-safe "~/.emacs.d/init.d/psgml-mode-init.el")
+(load-safe "~/.emacs.d/init.d/psgml-init.el")
 
 ;;; css-mode
 (load-safe "~/.emacs.d/init.d/css-mode-init.el")
@@ -83,7 +83,7 @@
 
 ;;; xslt-process
 ;;; http://xslt-process.sourceforge.net/
-(load-safe "~/.emacs.d/init.d/xslt-proces-init.el")
+(load-safe "~/.emacs.d/init.d/xslt-process-init.el")
 
 ;;; SmartDoc
 (load-safe "~/.emacs.d/init.d/sdoc-mode-init.el")
