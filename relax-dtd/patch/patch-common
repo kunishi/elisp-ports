@@ -1,0 +1,30 @@
+--- datatypes.dtd.orig	Wed Sep 17 11:31:40 2003
++++ datatypes.dtd	Wed Sep 17 11:36:55 2003
+@@ -140,17 +140,24 @@
+ <!-- By having these here they are available for datatypes as well
+      as all the structures elements -->
+ 
++<!--
+ <!ELEMENT %annotation; (%appinfo; | %documentation;)*>
++-->
+ 
+ <!-- User must define annotation elements in internal subset for this
+      to work -->
+-<!ELEMENT %appinfo; ANY>   <!-- too restrictive -->
++<!--
++<!ELEMENT %appinfo; ANY> -->   <!-- too restrictive -->
++<!--
+ <!ATTLIST %appinfo;
+           source     %URIref;      #IMPLIED
+           %appinfoAttrs;>
+-<!ELEMENT %documentation; ANY>   <!-- too restrictive -->
++-->
++<!--
++<!ELEMENT %documentation; ANY> -->  <!-- too restrictive -->
++<!--
+ <!ATTLIST %documentation;
+           source     %URIref;   #IMPLIED
+           xml:lang   CDATA      #IMPLIED
+           %documentationAttrs;>
+-
++-->
