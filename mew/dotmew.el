@@ -181,6 +181,8 @@
 	 ("xalan-dev" . "%comp.xml.apache.xalan-dev")
 	 ("xindice-dev" . "%comp.xml.apache.xindice-dev")
 	 ("xml-dev" . "%comp.xml.xml-dev"))
+	("list-id"
+	 ("dbworld" . "%research.dbworld"))
 	("Mailing-List:"
 	 ("solarisonintel" . "%comp.sun.solarisonintel"))
 	("Resent-From:"
