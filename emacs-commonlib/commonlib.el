@@ -259,7 +259,7 @@
 
 ;;; xml-mode
 ;; now used nxml-mode for editing most of the XML documents.
-(add-to-list 'auto-mode-alist '("\\.sdoc\\'" . xml-mode))
+;; (add-to-list 'auto-mode-alist '("\\.sdoc\\'" . xml-mode))
 
 ;;; my Elisp libraries
 (if (file-exists-p "~/Documents/modules/private/src/elisp/utils/")

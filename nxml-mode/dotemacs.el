@@ -1,7 +1,7 @@
 (load-safe "rng-auto")
 (setq auto-mode-alist
       (cons
-       '("\\.\\(xml\\|xsl\\|rng\\|rxm\\|rxg\\|rss\\|xhtml\\)\\'" . nxml-mode)
+       '("\\.\\(xml\\|xsl\\|rng\\|rxm\\|rxg\\|rss\\|sdoc\\|xhtml\\)\\'" . nxml-mode)
        auto-mode-alist))
 (if (file-exists-p "/usr/local/share/xml/relaxDtd/relaxCore.rnc")
     (add-to-list 'rng-auto-file-name-alist-default
@@ -19,3 +19,8 @@
 	   '((t t "project")
 	     . "/usr/local/share/xml/ant-dtd/project.rnc")
 	   rng-auto-element-alist-default)))
+
+(if (file-exists-p "/usr/local/share/xml/smartdoc.rnc")
+    (add-to-list 'rng-auto-file-name-alist-default
+		 '(".*\\.sdoc\\'" "/usr/local/share/xml/smartdoc.rnc")))
+
