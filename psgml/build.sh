@@ -24,7 +24,8 @@ build_emacs () {
 install_emacs () {
     (cd ${WRKSRC}; \
 	make lispdir=${SITELISPDIR}/psgml \
-	     infodir=${INFODIR} EMACS=${emacs} install install-info)
+	     infodir=${INFODIR} EMACS=${emacs} INSTALL_INFO=${INSTALL_INFO} \
+	     install install-info)
     cp -p ${WRKSRC}/*.el ${SITELISPDIR}/psgml
 }
 

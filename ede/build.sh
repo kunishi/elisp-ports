@@ -19,7 +19,7 @@ install_emacs () {
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${sitelispdir}
     cp -p ${WRKSRC}/ede.info* ${INFODIR}
-    install-info ${INFODIR}/ede.info ${INFODIR}/dir
+    ${INSTALL_INFO} ${INFODIR}/ede.info ${INFODIR}/dir
 }
 
 install_init () {

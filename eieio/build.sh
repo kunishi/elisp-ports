@@ -18,7 +18,7 @@ install_emacs () {
     mkdir -p ${SITELISPDIR}/eieio
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${SITELISPDIR}/eieio
     cp -p ${WRKSRC}/eieio.info ${INFODIR}
-    install-info ${INFODIR}/eieio.info ${INFODIR}/dir
+    ${INSTALL_INFO} ${INFODIR}/eieio.info ${INFODIR}/dir
 }
 
 init

@@ -19,7 +19,7 @@ install_emacs () {
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${WRKSRC}/*.xpm ${sitelispdir}
     cp -p ${WRKSRC}/speedbar.info ${INFODIR}
-    install-info ${INFODIR}/speedbar.info ${INFODIR}/dir
+    ${INSTALL_INFO} ${INFODIR}/speedbar.info ${INFODIR}/dir
 }
 
 install_init () {

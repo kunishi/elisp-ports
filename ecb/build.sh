@@ -20,7 +20,7 @@ install_emacs () {
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${sitelispdir}
     cp -p ${WRKSRC}/info-help/ecb.info* ${INFODIR}
-    install-info ${INFODIR}/ecb.info ${INFODIR}/dir
+    ${INSTALL_INFO} ${INFODIR}/ecb.info ${INFODIR}/dir
 }
 
 init

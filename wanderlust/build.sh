@@ -21,8 +21,8 @@ install_emacs () {
 	     PIXMAPDIR=${EMACS_ETCDIR}/wl \
 	     INFODIR=${INFODIR} \
 	     LISPDIR=${SITELISPDIR} install install-info)
-    install-info --dir-file=${INFODIR}/dir --info-file=${INFODIR}/wl-ja.info
-    install-info --dir-file=${INFODIR}/dir --info-file=${INFODIR}/wl.info
+     --dir-file=${INFODIR}/dir --info-file=${INFODIR}/wl-ja.info
+     --dir-file=${INFODIR}/dir --info-file=${INFODIR}/wl.info
 }
 
 install_init () {

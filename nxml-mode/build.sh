@@ -6,8 +6,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.thaiopensource.com/download/nxml-mode-20040910.tar.gz'
-WRKSRC="${WRKDIR}/nxml-mode-20040910"
+DISTFILES='http://www.thaiopensource.com/download/nxml-mode-20041004.tar.gz'
+WRKSRC="${WRKDIR}/nxml-mode-20041004"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=true
 ELC_SHAREABLE=true
@@ -26,7 +26,7 @@ install_emacs () {
     cp -rp ${WRKSRC}/schema ${SITELISPDIR}/nxml-mode
     cp -rp ${WRKSRC}/char-name ${SITELISPDIR}/nxml-mode
     cp -p ${WRKSRC}/nxml-mode.info ${INFODIR}
-    install-info --info-dir=${INFODIR} ${INFODIR}/nxml-mode.info
+    ${INSTALL_INFO} --info-dir=${INFODIR} ${INFODIR}/nxml-mode.info
 }
 
 install_init () {

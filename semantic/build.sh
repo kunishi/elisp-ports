@@ -19,7 +19,7 @@ install_emacs () {
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${WRKSRC}/*.bnf ${sitelispdir}
     cp -p ${WRKSRC}/semantic.info* ${INFODIR}
-    install-info ${INFODIR}/semantic.info ${INFODIR}/dir
+    ${INSTALL_INFO} ${INFODIR}/semantic.info ${INFODIR}/dir
 }
 
 install_init () {

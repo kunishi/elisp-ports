@@ -3,6 +3,7 @@ SYSTEM=unix
 GMAKE=make
 GTAR=gnutar
 GZCAT=gzcat
+INSTALL_INFO=/usr/bin/install-info
 PATCH=/usr/bin/patch
 EMACS_PREFIX=${BASEDIR}
 EMACS_VERSION=21.2
