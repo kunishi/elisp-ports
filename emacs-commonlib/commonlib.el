@@ -105,13 +105,16 @@
     "katakana-jisx0201:-apple-osaka-medium-r-normal-*-140-*-jisx0201*-*,"
     "latin-jisx0201:-apple-osaka-medium-r-normal-*-140-*-jisx0201*-*,"
     "japanese-jisx0208-1978:-apple-osaka-medium-r-normal-*-140-*-jisx0208.1978-*,"
-    "latin-1:-etl-fixed-*-140-*-iso8859-1"))
+`    "latin-1:-etl-fixed-*-140-*-iso8859-1"))
   (create-fontset-from-fontset-spec
    (concat
     "-*-fixed-medium-r-normal-*-16-*-*-*-*-*-fontset-osaka16,"
     "japanese-jisx0208:-apple-osaka-medium-r-normal--16-160-75-75-m-160-jisx0208.1983-sjis,"
-    "latin-1:-etl-fixed-*-160-*-iso8859-1"))
-  (set-default-font "fontset-osaka16")
+    "katakana-jisx0201:-apple-osaka-medium-r-normal-*-160-*-jisx0201*-*,"
+    "latin-jisx0201:-apple-osaka-medium-r-normal-*-160-*-jisx0201*-*,"
+    "japanese-jisx0208-1978:-apple-osaka-medium-r-normal-*-160-*-jisx0208.1978-*,"
+`   "latin-1:-etl-fixed--16-*-iso8859-1"))
+  (set-default-font "fontset-osaka14")
   (setq mew-cs-samba 'utf-8))
 ;; Windows (NTEmacs)
 (when (and (eq system-type 'windows-nt)
