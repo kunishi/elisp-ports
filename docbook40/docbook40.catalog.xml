@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <group xml:base="http://www.oasis-open.org/docbook/xml/4.0/">
+    <public publicId="-//USA-DOD//DTD Table Model 951010//EN" uri="calstblx.mod"/>
+    <public publicId="-//OASIS//ENTITIES DocBook XML Character Entities V4.0//EN" uri="dbcentx.mod"></public>
+    <public publicId="-//OASIS//ENTITIES DocBook Additional General Entities V4.0//EN" uri="dbgenent.ent"></public>
+    <public publicId="-//OASIS//ELEMENTS DocBook XML Document Hierarchy V4.0//EN" uri="dbhierx.mod"></public>
+    <public publicId="-//OASIS//ENTITIES DocBook XML Notations V4.0//EN" uri="dbnotnx.mod"></public>
+    <public publicId="-//OASIS//ELEMENTS DocBook XML Information Pool V4.0//EN" uri="dbpoolx.mod"></public>
+    <public publicId="-//OASIS//DTD DocBook XML V4.0//EN" uri="docbookx.dtd"></public>
+    <public publicId="-//OASIS//DTD XML Exchange Table Model 19990315//EN" uri="soextblx.dtd"></public>
+  </group>
+</catalog>
