@@ -8,8 +8,8 @@
    (substring emacs-version (match-beginning 1) (match-end 1))))
 ;;; borrowed from install.el in APEL
 (defvar my-install-prefix
-  (if (string= system-configuration-options "NT")
-      (expand-file-name "../.." exec-directory)
+  (if (eq system-type 'windows-nt)
+      (expand-file-name ".." exec-directory)
     (if (or (<= emacs-major-version 18)
 	    (featurep 'xemacs)
 	(expand-file-name "../../.." exec-directory))
@@ -17,10 +17,14 @@
 (defmacro my-emacs-expand-prefix (path)
   `(concat my-install-prefix "/" ,path))
 (defvar my-emacs-lispdir
-  (my-emacs-expand-prefix "share/emacs/site-lisp"))
+  (if (eq system-type 'windows-nt)
+      (my-emacs-expand-prefix "../site-lisp")
+    (my-emacs-expand-prefix "share/emacs/site-lisp")))
 (defvar my-emacs-version-specific-lispdir
-  (my-emacs-expand-prefix
-   (concat "share/emacs/" my-emacs-version "/site-lisp")))
+  (if (eq system-type 'windows-nt)
+      (my-emacs-expand-prefix "site-lisp")
+    (my-emacs-expand-prefix
+     (concat "share/emacs/" my-emacs-version "/site-lisp"))))
 
 ;;; from http://www.sodan.org/~knagano/emacs/dotemacs.html
 (defmacro exec-if-bound (sexplist)

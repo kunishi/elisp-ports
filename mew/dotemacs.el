@@ -1,6 +1,6 @@
 ;; all the settings are included in ~/.mew.el.
-(if (featurep 'meadow)
-    (setq mew-icon-directory (concat my-install-prefix "/2.00b2/etc/mew"))
+(if (eq system-type 'windows-nt)
+    (setq mew-icon-directory (concat my-install-prefix "/etc/mew"))
   (setq mew-icon-directory (concat my-install-prefix "/share/mew")))
 (autoload-if-found 'mew "mew" nil t)
 (autoload-if-found 'mew-send "mew" nil t)
