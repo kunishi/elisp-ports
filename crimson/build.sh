@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/06/02 02:35:11 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/06/02 03:10:47 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
@@ -18,11 +18,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    mkdir -p ${BASEDIR}/share/java/crimson-1.1.3
-    (cd ${WRKSRC}; tar cvf - .) | \
-	(cd ${BASEDIR}/share/java/crimson-1.1.3; tar xfBp -)
-    rm -f ${BASEDIR}/share/java/crimson
-    ln -s crimson-1.1.3 ${BASEDIR}/share/java/crimson
+    install_java crimson-1.1.3 crimson
 }
 
 init

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/06/01 14:38:51 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/06/02 03:10:46 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
@@ -18,10 +18,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    (cd ${WRKDIR}; tar cf - apache-ant-1.5.3-1) | \
-	(cd ${BASEDIR}/share/java; tar xfBp -)
-    rm -f ${BASEDIR}/share/java/apache-ant && \
-	ln -s apache-ant-1.5.3-1 ${BASEDIR}/share/java/apache-ant
+    install_java apache-ant-1.5.3-1 apache-ant
     rm -f ${BASEDIR}/bin/ant && \
 	ln -s ${BASEDIR}/share/java/apache-ant/bin/ant ${BASEDIR}/bin/ant
 }

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/06/02 02:29:52 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/06/02 03:10:48 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
@@ -18,11 +18,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    mkdir -p ${BASEDIR}/share/java/xalan-j-2.5.0
-    (cd ${WRKSRC}; tar cvf - .) | \
-	(cd ${BASEDIR}/share/java/xalan-j-2.5.0; tar xfBp -)
-    rm -f ${BASEDIR}/share/java/xalan-j
-    ln -s xalan-j-2.5.0 ${BASEDIR}/share/java/xalan-j
+    install_java xalan-j-2.5.0 xalan-j
 }
 
 init

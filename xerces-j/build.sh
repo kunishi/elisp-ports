@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/06/02 00:27:37 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/06/02 03:10:49 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
@@ -18,11 +18,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    mkdir -p ${BASEDIR}/share/java/xerces-j-2.4.0
-    (cd ${WRKSRC}; tar cvf - .) | \
-	(cd ${BASEDIR}/share/java/xerces-j-2.4.0; tar xfBp -)
-    rm -f ${BASEDIR}/share/java/xerces-j
-    ln -s xerces-j-2.4.0 ${BASEDIR}/share/java/xerces-j
+    install_java xerces-j-2.4.0 xerces-j
 }
 
 init

@@ -1,5 +1,5 @@
 #
-# $Id: target.sh,v 1.10 2003/06/01 12:34:25 kunishi Exp $
+# $Id: target.sh,v 1.11 2003/06/02 03:10:45 kunishi Exp $
 #
 
 ### common targets
@@ -157,5 +157,17 @@ install_emacsen () {
 	    version_num=`echo ${emacs_ver} | sed -e 's|.*-\(.*\)|\1|'`
 	    install_emacs
 	done
+    fi
+}
+
+### targets for Java Libraries
+
+install_java () {
+    local javabase="${BASEDIR}/share/java"
+    mkdir -p ${javabase}/$1
+    (cd ${WRKSRC}; tar cvf - .) | (cd ${javabase}/$1; tar xfBp -)
+    if [ "$2" != '' ]; then
+	rm -rf ${javabase}/$2
+	ln -s $1 ${javabase}/$2
     fi
 }
