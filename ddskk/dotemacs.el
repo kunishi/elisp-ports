@@ -13,6 +13,5 @@
       ((eq system-type 'windows-nt)
        (setq skk-large-jisyo "C:/usr/local/share/skk/SKK-JISYO.L"))
       (t
-       (setq skk-large-jisyo
-	     (concat install-prefix "/share/skk/SKK-JISYO.L"))))
+       (setq skk-large-jisyo "/usr/local/share/skk/SKK-JISYO.L"))))
 
