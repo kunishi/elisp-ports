@@ -171,7 +171,7 @@
 
 ;;; browse-url
 (cond ((eq system-type 'windows-nt)
-       (setq browse-url-browser-function 'browse-url-default-windows-browse))
+       (setq browse-url-browser-function 'browse-url-default-windows-browser))
       ((eq system-type 'darwin)
        (setq browse-url-browser-function 'browse-url-default-macosx-browser))
       ((boundp 'browse-url-mozilla)
