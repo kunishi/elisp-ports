@@ -16,7 +16,7 @@
 (autoload-if-found 'mew-user-agent-compose "mew" nil t)
 
 ;;; Spam filter for IMAP server
-(setq mew-imap-spam-field "X-Spam-Flag")
+(setq mew-imap-spam-field "X-Spam-Status")
 (setq mew-imap-spam-word "Yes")
 (setq mew-imap-trash-folder "%Trash")
 
