@@ -5,8 +5,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES=http://quimby.gnus.org/gnus/dist/gnus-5.10.5.tar.gz
-WRKSRC="${WRKDIR}/gnus-5.10.5"
+DISTFILES=http://quimby.gnus.org/gnus/dist/ngnus-0.1.tar.gz
+WRKSRC="${WRKDIR}/ngnus-0.1"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
