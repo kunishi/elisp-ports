@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/06/30 09:03:15 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/06/30 09:19:53 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
@@ -19,6 +19,9 @@ build_target () {
 install_target () {
     : install targets for non-Emacsen ports
     install_java xmloperator-2.2.1 xmloperator
+    sed -e "s|%%XMLOPERATOR_HOME%%|${BASEDIR}/share/java/xmloperator|" \
+	< xmloperator.in > ${BASEDIR}/bin/xmloperator
+    chmod 755 ${BASEDIR}/bin/xmloperator
 }
 
 init
