@@ -6,8 +6,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://us.dl.sourceforge.net/clisp/clisp-2.30.tar.bz2'
-WRKSRC="${WRKDIR}/clisp-2.30"
+DISTFILES='http://us.dl.sourceforge.net/clisp/clisp-2.31.tar.bz2'
+WRKSRC="${WRKDIR}/clisp-2.31"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
 
