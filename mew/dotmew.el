@@ -5,7 +5,7 @@
 (setq mew-proto "%")
 
 (setq mew-fcc "+outbox")
-(setq mew-dcc "kunishi-sent@chorusroom.org")
+(setq mew-dcc "kunishi@c.oka-pu.ac.jp")
 (setq mew-mail-domain-list
       '("c.oka-pu.ac.jp"
 	"acm.org"
