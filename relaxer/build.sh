@@ -6,7 +6,7 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.relaxer.org/download/relaxer-1.0.zip'
+DISTFILES='http://www.relaxer.org/download/beta.zip'
 WRKSRC="${WRKDIR}"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
@@ -21,7 +21,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    java -jar ${DISTDIR}/relaxer-1.0.zip setup
+    java -jar ${DISTDIR}/beta.zip setup
     chmod 755 ${BASEDIR}/bin/relaxer
 }
 
