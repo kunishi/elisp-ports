@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for pkg in `cat default-packages`
+for pkg in `cat $1`
 do
     echo Installing $pkg
     (cd $pkg; \
