@@ -15,7 +15,7 @@ build_emacs () {
 }
 
 install_emacs () {
-    (cd ${WRKSRC}; make EMACS=${emacs} install_el install)
+    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${BASEDIR} install_el install)
 }
 
 init
