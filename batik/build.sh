@@ -6,7 +6,7 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://xml.apache.org/dist/batik/batik-1.5.zip'
+DISTFILES='http://www.apache.org/dist/xml/batik/batik-1.5.zip'
 WRKSRC="${WRKDIR}/batik-1.5"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
