@@ -17,7 +17,7 @@ build_emacs () {
 }
 
 install_emacs () {
-    (cd ${WRKSRC}; make emacs=${emacs} ${EMACS_INSTALL_TARGET})
+    (cd ${WRKSRC}; make emacs=${emacs} prefix=${BASEDIR} ${EMACS_INSTALL_TARGET})
 }
 
 init
