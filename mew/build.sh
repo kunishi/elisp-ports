@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='ftp://ftp.mew.org/pub/Mew/beta/mew-3.0.69.tar.gz'
-WRKSRC=${WRKDIR}/mew-3.0.69
+DISTFILES='ftp://ftp.mew.org/pub/Mew/beta/mew-3.0.70.tar.gz'
+WRKSRC=${WRKDIR}/mew-3.0.70
 ELC_SHAREABLE=true
 EMACS_BUILD_TARGET=''
 EMACS_INSTALL_TARGET='install install-info install-jinfo install-etc'
