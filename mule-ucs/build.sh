@@ -6,13 +6,13 @@ PKG_TOPDIR=`pwd`
 
 DISTFILES='ftp://ftp.m17n.org/pub/mule/Mule-UCS/Mule-UCS-0.84.tar.gz'
 WRKSRC=${WRKDIR}/Mule-UCS-0.84
-PATCHFILES='http://alpha.c.oka-pu.ac.jp/~kunishi/tmp/mule-ucs-0.84+tats20020724.diff.gz'
+PATCHFILES='http://tats.iris.ne.jp/mule-ucs/mule-ucs-0.84+tats20021104.diff.gz'
 ELC_SHAREABLE=false
 
 . ../target.sh
 
 patch_dist () {
-    local tats_patch='mule-ucs-0.84+tats20020724.diff'
+    local tats_patch='mule-ucs-0.84+tats20021104.diff'
     cp ${DISTDIR}/${tats_patch}.gz ${WRKSRC}
     gunzip ${WRKSRC}/${tats_patch}.gz
     (cd ${WRKSRC}; patch -p1 -N < ${tats_patch})
