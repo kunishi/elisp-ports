@@ -12,6 +12,8 @@
        (setq skk-server-host "localhost"))
       ((eq system-type 'windows-nt)
        (setq skk-large-jisyo "C:/usr/local/share/skk/SKK-JISYO.L"))
+      ((string= my-install-prefix "/sw")
+       (setq skk-large-jisyo "/sw/share/ddskk/SKK-JISYO.L"))
       (t
        (setq skk-large-jisyo "/usr/local/share/skk/SKK-JISYO.L")))
 
