@@ -7,7 +7,6 @@ PKG_TOPDIR=`pwd`
 DISTFILES='ftp://ftp.jpl.org/pub/elisp/x-face-e21.el.gz'
 WRKSRC=${WRKDIR}
 ELC_SHAREABLE=false
-EMACSEN='emacs-21.3.50 emacs-21.2'
 
 . ../target.sh
 

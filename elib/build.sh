@@ -7,7 +7,6 @@ PKG_TOPDIR=`pwd`
 DISTFILES='ftp://ftp.gnu.org/pub/emacs/elib-1.0.tar.gz'
 WRKSRC=${WRKDIR}/elib-1.0
 ELC_SHAREABLE=true
-EMACSEN='emacs-21.2'
 
 . ../target.sh
 

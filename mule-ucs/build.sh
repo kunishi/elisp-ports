@@ -8,7 +8,6 @@ DISTFILES='ftp://ftp.m17n.org/pub/mule/Mule-UCS/Mule-UCS-0.84.tar.gz'
 WRKSRC=${WRKDIR}/Mule-UCS-0.84
 PATCHFILES='http://alpha.c.oka-pu.ac.jp/~kunishi/tmp/mule-ucs-0.84+tats20020724.diff.gz'
 ELC_SHAREABLE=false
-EMACSEN='emacs-20.7 emacs-21.2 emacs-21.3.50'
 
 . ../target.sh
 

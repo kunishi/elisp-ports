@@ -79,7 +79,7 @@ build () {
     local emacs_ver version_num
     fetch
     if [ "${ELC_SHAREABLE}" = 'true' ]; then
-	emacs_ver="${EMACSEN}"
+	emacs_ver="${PREFERRED_FSF_EMACS}"
 	version_num=`echo ${emacs_ver} | sed -e 's|.*-\(.*\)|\1|'`
 	clean-workdir
 	extract
@@ -91,7 +91,7 @@ build () {
 	    install-emacs
 	fi
     else
-	for emacs in ${EMACSEN}
+	for emacs in ${FSF_EMACSEN}
 	  do
 	  emacs_ver="${emacs}"
 	  version_num=`echo ${emacs_ver} | sed -e 's|.*-\(.*\)|\1|'`

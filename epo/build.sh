@@ -8,7 +8,6 @@ DISTFILES='http://www.yatex.org/epo/epo-1.4e.tar.gz'
 WRKSRC=${WRKDIR}/epo-1.4e
 #PATCHFILES='If you have some official patch, write them'
 ELC_SHAREABLE=true
-EMACSEN='emacs-21.2'
 
 . ../target.sh
 

@@ -7,7 +7,6 @@ PKG_TOPDIR=`pwd`
 DISTFILES='http://www.haskell.org/haskell-mode/haskell-mode-1.43.tar.gz'
 WRKSRC=${WRKDIR}
 ELC_SHAREABLE=true
-EMACSEN='emacs-21.2'
 
 . ../target.sh
 

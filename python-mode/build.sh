@@ -8,7 +8,6 @@ DISTFILES='http://www.python.org/ftp/python/2.2.1/Python-2.2.1.tgz'
 WRKSRC=${WRKDIR}/Python-2.2.1/Misc
 #PATCHFILES='If you have some official patch, write them'
 ELC_SHAREABLE=true
-EMACSEN='emacs-21.2'
 
 . ../target.sh
 

@@ -8,7 +8,6 @@ DISTFILES='http://us.dl.sourceforge.net/xslt-process/xslt-process-2.1.tar.gz'
 WRKSRC=${WRKDIR}/xslt-process-2.1
 #PATCHFILES='If you have some official patch, write them'
 ELC_SHAREABLE=true
-EMACSEN='emacs-21.2'
 
 . ../target.sh
 

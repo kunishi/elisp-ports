@@ -8,7 +8,6 @@ DISTFILES='http://jdee.sunsite.dk/jde-beta.tar.gz'
 WRKSRC=${WRKDIR}/jde-2.2.9beta10
 #PATCHFILES='If you have some official patch, write them'
 ELC_SHAREABLE=true
-EMACSEN='emacs-21.2'
 
 . ../target.sh
 
@@ -24,9 +23,9 @@ build-emacs () {
 
 install-emacs () {
     local sitelispdir=${BASEDIR}/share/emacs/site-lisp/jde
-    mkdir -p ${sitelispdir}
-    cp -p ${WRKSRC}/lisp/*.el ${WRKSRC}/lisp/*.elc ${sitelispdir}
-    cp -p ${WRKSRC}/lisp/*.bnf ${sitelispdir}
+    mkdir -p ${sitelispdir}/lisp
+    cp -p ${WRKSRC}/lisp/*.el ${WRKSRC}/lisp/*.elc ${sitelispdir}/lisp
+    cp -p ${WRKSRC}/lisp/*.bnf ${sitelispdir}/lisp
     cp -pR ${WRKSRC}/java ${sitelispdir}/java
     cp -pR ${WRKSRC}/doc ${sitelispdir}/doc
     cp -p ${WRKSRC}/lisp/ReleaseNotes.txt ${sitelispdir}/doc

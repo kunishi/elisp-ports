@@ -7,7 +7,6 @@ PKG_TOPDIR=`pwd`
 DISTFILES='http://us.dl.sourceforge.net/cedet/speedbar-0.14beta4.tar.gz'
 WRKSRC=${WRKDIR}/speedbar-0.14beta4
 ELC_SHAREABLE=true
-EMACSEN='emacs-21.2'
 
 . ../target.sh
 

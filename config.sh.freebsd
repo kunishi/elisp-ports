@@ -4,3 +4,5 @@ WRKDIR=work
 PATCHDIR=patch
 EMACS_COMPILE_ARGS='-q --no-site-file -batch'
 GMAKE=gmake
+FSF_EMACSEN='emacs-20.7 emacs-21.2 emacs-21.3.50'
+PREFERRED_FSF_EMACS='emacs-21.2'

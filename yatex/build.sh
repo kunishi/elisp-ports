@@ -7,7 +7,6 @@ PKG_TOPDIR=`pwd`
 DISTFILES='http://www.yatex.org/yatex1.70.tar.gz'
 WRKSRC=${WRKDIR}/yatex1.70
 ELC_SHAREABLE=true
-EMACSEN='emacs-21.2'
 
 . ../target.sh
 

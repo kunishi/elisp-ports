@@ -7,7 +7,6 @@ PKG_TOPDIR=`pwd`
 DISTFILES='ftp://ftp.gohome.org/wl/stable/wl-2.8.1.tar.gz'
 WRKSRC=${WRKDIR}/wl-2.8.1
 ELC_SHAREABLE=true
-EMACSEN='emacs-21.2'
 
 . ../target.sh
 

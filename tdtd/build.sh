@@ -7,7 +7,6 @@ PKG_TOPDIR=`pwd`
 DISTFILES='http://www.menteith.com/tdtd/data/tdtd071.zip'
 WRKSRC=${WRKDIR}
 ELC_SHAREABLE=true
-EMACSEN='emacs-21.2'
 
 . ../target.sh
 

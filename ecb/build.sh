@@ -7,7 +7,6 @@ PKG_TOPDIR=`pwd`
 DISTFILES='http://us.dl.sourceforge.net/ecb/ecb-1.80.tar.gz'
 WRKSRC=${WRKDIR}/ecb-1.80
 ELC_SHAREABLE=true
-EMACSEN='emacs-21.2'
 
 . ../target.sh
 
