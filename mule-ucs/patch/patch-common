@@ -3,8 +3,8 @@ Index: mucs-ccl.el
 RCS file: /cvsroot/mule-ucs/lisp/mucs-ccl.el,v
 retrieving revision 1.25
 diff -u -r1.25 mucs-ccl.el
---- mucs-ccl.el	3 Oct 2000 14:50:16 -0000	1.25
-+++ mucs-ccl.el	5 Dec 2002 16:21:08 -0000
+--- Mule-UCS-0.84/lisp/mucs-ccl.el	3 Oct 2000 14:50:16 -0000	1.25
++++ Mule-UCS-0.84/lisp/mucs-ccl.el	5 Dec 2002 16:21:08 -0000
 @@ -639,10 +639,9 @@
        (mucs-notify-embedment 'mucs-ccl-required name)
        (setq ccl-pgm-list (cdr ccl-pgm-list)))
