@@ -11,7 +11,8 @@
 (load-safe "~/.emacs.d/init.d/apel-init.el")
 
 ;; mule-ucs
-(load-safe "~/.emacs.d/init.d/mule-ucs-init.el")
+(and (not (boundp 'utf-translate-cjk))
+     (load-safe "~/.emacs.d/init.d/mule-ucs-init.el"))
 
 ;; SKK
 (load-safe "~/.emacs.d/init.d/ddskk-init.el")
