@@ -271,6 +271,6 @@
 ;; (add-to-list 'auto-mode-alist '("\\.sdoc\\'" . xml-mode))
 
 ;;; my Elisp libraries
-(if (file-exists-p "~/Documents/modules/private/src/elisp/utils/")
-    (add-to-list 'load-path "~/Documents/modules/private/src/elisp/utils/"))
+(if (file-exists-p "~/Documents/svn/private/src/elisp/utils/")
+    (add-to-list 'load-path "~/Documents/svn/private/src/elisp/utils/"))
 (load-safe "my-japan-util")
