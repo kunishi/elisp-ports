@@ -21,9 +21,14 @@
       (t
        (setq w3m-icon-directory
 	     (concat my-install-prefix "/share/emacs/etc/w3m/"))))
-(setq w3m-type 'w3m-m17n)
-(cond ((eq system-type 'freebsd)
-       (setq w3m-command "w3m")))
+(cond ((eq system-type 'darwin) ;; use darwinports
+       (setq w3m-type 'w3m))
+      ((eq system-type 'freebsd)
+       (setq w3m-type 'w3m-m17n)
+       (setq w3m-command "w3m"))
+      (t
+       (setq w3m-type 'w3m-m17n)))
+
 ;; mew-w3m.el
 (load-safe "mew-w3m")
 (setq mew-use-w3m-minor-mode t)
