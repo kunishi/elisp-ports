@@ -140,7 +140,8 @@
     "koi8-r:-etl-fixed-medium-r-normal-*-16-*-koi8-r,"
     "ascii:-etl-fixed-medium-r-normal-*-16-*-iso8859-1"))
   (set-default-font "fontset-osaka16")
-  (setq mew-cs-samba 'utf-8))
+  (setq mew-cs-samba 'utf-8)
+  (setq mac-transparency-alpha 80))
 ;; Windows (NTEmacs)
 (when (and (eq system-type 'windows-nt)
 	   (not (featurep 'meadow)))
