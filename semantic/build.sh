@@ -4,7 +4,7 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://us.dl.sourceforge.net/cedet/semantic-1.4.3.tar.gz'
+DISTFILES='http://telia.dl.sourceforge.net/cedet/semantic-1.4.3.tar.gz'
 WRKSRC=${WRKDIR}/semantic-1.4.3
 ELC_SHAREABLE=true
 
