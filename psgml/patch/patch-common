@@ -1,0 +1,14 @@
+diff -ruN psgml-1.3.0.orig/psgml.el psgml-1.3.0/psgml.el
+--- psgml-1.3.0.orig/psgml.el	Wed May  8 15:56:22 2002
++++ psgml-1.3.0/psgml.el	Sun Sep 22 20:54:08 2002
+@@ -614,8 +614,8 @@
+ (defun sgml-variable-description (var)
+   (or (get var 'sgml-desc)
+       (let ((desc (symbol-name var)))
+-	(if (string= "sgml-" (substring desc 0 5))
+-	    (setq desc (substring desc 5)))
++	(if (string= "sgml-" (substring desc 0 (length "sgml-")))
++	    (setq desc (substring desc (length "sgml-"))))
+ 	(loop for c across-ref desc
+ 	      do (if (eq c ?-) (setf c ? )))
+ 	(capitalize desc))))

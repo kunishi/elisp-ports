@@ -1,0 +1,17 @@
+--- css-mode.el.orig	Mon Sep 23 00:30:15 2002
++++ css-mode.el	Mon Sep 23 00:31:03 2002
+@@ -58,7 +58,7 @@
+ 
+ (require 'apropos)
+ (require 'font-lock)
+-(require 'cl)
++(eval-when-compile (require 'cl))
+ 
+ ;;; The code itself
+ 
+@@ -467,4 +467,4 @@
+ 
+ (provide 'css-mode)
+ 
+-;; CSS-mode ends here
++;; CSS-mode ends here

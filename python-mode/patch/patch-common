@@ -1,0 +1,13 @@
+diff -ruN Misc.orig/python-mode.el Misc/python-mode.el
+--- Misc.orig/python-mode.el	Mon Mar 25 21:24:24 2002
++++ Misc/python-mode.el	Mon Sep 23 00:20:13 2002
+@@ -64,7 +64,8 @@
+ 
+ (require 'comint)
+ (require 'custom)
+-(require 'cl)
++(eval-when-compile
++  (require 'cl))
+ 
+ 
+ ;; user definable variables

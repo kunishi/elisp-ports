@@ -1,0 +1,28 @@
+#!/bin/sh
+
+. ../config.sh
+
+PKG_TOPDIR=`pwd`
+
+DISTFILES='URL_for_distfiles'
+WRKSRC=${WRKDIR}/distname
+#PATCHFILES='If you have some official patch, write them'
+ELC_SHAREABLE=false
+EMACSEN='emacs-20.7 emacs-21.3.50 emacs-21.2'
+
+. ../target.sh
+
+#patch-dist () {
+#	# write how to apply official patches
+#}
+
+build-emacs () {
+	# write how to build package
+}
+
+install-emacs () {
+	# write how to install package
+}
+
+init
+eval $1
