@@ -18,7 +18,7 @@ build_emacs () {
 	(cd ${WRKSRC}; jar xvf archive.jar etc)
 	(cd ${WRKSRC}; patch -p0 -N < ${PKG_TOPDIR}/patch/patch-emacs)
 	(cd ${WRKSRC}/etc; \
-	  ${emacs} ${EMACS_COMPILE_ARGS} -f batch-byte-compile *.el)
+	  ${emacs} ${EMACS_COMPILE_ARGS} -l ./sdoc-helper.el -f batch-byte-compile *.el)
 }
 
 install_emacs () {
