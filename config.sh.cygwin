@@ -4,6 +4,7 @@ WRKDIR=work
 PATCHDIR=patch
 EMACS_COMPILE_ARGS='-q --no-site-file -batch'
 GMAKE=make
+GTAR=tar
 GZCAT=zcat
 PATCH=/usr/bin/patch
 FSF_EMACSEN='/usr/bin/emacs-21.2'

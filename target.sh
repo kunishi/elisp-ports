@@ -1,5 +1,5 @@
 #
-# $Id: target.sh,v 1.11 2003/06/02 03:10:45 kunishi Exp $
+# $Id: target.sh,v 1.12 2003/06/02 13:26:48 kunishi Exp $
 #
 
 ### common targets
@@ -52,11 +52,11 @@ extract () {
       do
       case `basename ${file}` in
 	  *.tar.gz|*.tgz)
-	      (cd ${WRKDIR}; zcat ${DISTDIR}/${file} | tar xvf -)
+	      (cd ${WRKDIR}; zcat ${DISTDIR}/${file} | ${GTAR} xvf -)
 	      continue
 	      ;;
 	  *.tar.bz2)
-	      (cd ${WRKDIR}; bzcat ${DISTDIR}/${file} | tar xvf -)
+	      (cd ${WRKDIR}; bzcat ${DISTDIR}/${file} | ${GTAR} xvf -)
 	      continue
 	      ;;
 	  *.zip)
@@ -165,7 +165,7 @@ install_emacsen () {
 install_java () {
     local javabase="${BASEDIR}/share/java"
     mkdir -p ${javabase}/$1
-    (cd ${WRKSRC}; tar cvf - .) | (cd ${javabase}/$1; tar xfBp -)
+    (cd ${WRKSRC}; ${GTAR} cvf - .) | (cd ${javabase}/$1; ${GTAR} xfBp -)
     if [ "$2" != '' ]; then
 	rm -rf ${javabase}/$2
 	ln -s $1 ${javabase}/$2
