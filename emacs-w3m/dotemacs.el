@@ -11,11 +11,16 @@
 (autoload-if-found 'w3m-antenna "w3m-antenna"
 		   "Report change of WEB sites." t)
 
-(if (featurep 'meadow)
-    (setq w3m-icon-directory
-	  (concat my-install-prefix "/etc/w3m/icons/"))
-  (setq w3m-icon-directory
-	(concat my-install-prefix "/share/emacs/etc/w3m/")))
+(cond ((featurep 'meadow)
+       (setq w3m-icon-directory
+	     (concat my-install-prefix "/etc/w3m/icons/")))
+      ((and (eq system-type 'windows-nt)
+	    (not (featurep 'meadow)))
+       (setq w3m-icon-directory
+	     (concat my-install-prefix "/etc/w3m/")))
+      (t
+       (setq w3m-icon-directory
+	     (concat my-install-prefix "/share/emacs/etc/w3m/"))))
 (setq w3m-type 'w3m-m17n)
 (cond ((eq system-type 'freebsd)
        (setq w3m-command "w3m")))
