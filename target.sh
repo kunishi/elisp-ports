@@ -13,7 +13,7 @@ fetch () {
     do
       file=`echo ${url} | sed -e 's|.*/||g'`
       if [ ! -f ${DISTDIR}/${file} ]; then
-	  wget ${url}
+	  (cd ${DISTDIR}; wget ${url})
       fi
     done
     if [ "${PATCHFILES}" != '' ]; then
@@ -21,7 +21,7 @@ fetch () {
 	do
 	  file=`echo ${url} | sed -e 's|.*/||g'`
 	  if [ ! -f ${DISTDIR}/${file} ]; then
-	      wget ${url}
+	      (cd ${DISTDIR}; wget ${url})
 	  fi
 	done
     fi
