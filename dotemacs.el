@@ -7,6 +7,10 @@
 
 ;;; settings specific for Elisp packages
 
+;; utf-8m
+(and (eq window-system 'mac)
+     (load-safe "~/.emacs.d/init.d/utf-8m-init.el"))
+
 ;; apel
 (load-safe "~/.emacs.d/init.d/apel-init.el")
 
