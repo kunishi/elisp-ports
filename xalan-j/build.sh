@@ -6,8 +6,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.apache.org/dist/xml/xalan-j/binaries/xalan-j_2_5_2-bin.zip'
-WRKSRC="${WRKDIR}/xalan-j_2_5_2"
+DISTFILES='http://www.apache.org/dist/xml/xalan-j/binaries/xalan-j_2_6_0-bin.zip'
+WRKSRC="${WRKDIR}/xalan-j_2_6_0"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
 
@@ -17,7 +17,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    install_java xalan-j-2.5.2 xalan-j
+    install_java xalan-j-2.6.0 xalan-j
 }
 
 init
