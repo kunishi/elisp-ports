@@ -10,6 +10,9 @@
 (setq mew-spam-prog "ssh")
 (setq mew-spam-prog-args
       '("imap.chorusroom.org" "bogofilter" "-s" "-v"))
+(setq mew-ham-prog "ssh")
+(setq mew-ham-prog-args
+      '("imap.chorusroom.org" "bogofilter" "-n" "-v"))
 
 ;; Optional setup (Read Mail menu for Emacs 21)
 (if (boundp 'read-mail-command)
