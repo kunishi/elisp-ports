@@ -8,6 +8,7 @@ DISTDIR=${HOME}/distfiles
 WRKDIR=work
 PATCHDIR=patch
 EMACS_COMPILE_ARGS='-q --no-site-file -batch'
+EMACS_INIT_D=${HOME}/.emacs.d/init.d
 
 ### common targets
 

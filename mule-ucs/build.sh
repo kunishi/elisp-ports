@@ -41,5 +41,10 @@ install_emacs () {
     rm ${sitelispdir}/mule-ucs/jisx0213/x0213-comp.el
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/mule-ucs-init.el
+}
+
 init
 eval $1

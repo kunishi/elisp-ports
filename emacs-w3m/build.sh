@@ -22,5 +22,10 @@ install_emacs () {
     (cd ${WRKSRC}; ${GMAKE} install install-icons)
 }
 
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/emacs-w3m-init.el
+}
+
 init
 eval $1
