@@ -1,0 +1,8 @@
+BASEDIR=/sw
+DISTDIR=/Users/kunishi/Documents/src/elisp
+WRKDIR=work
+PATCHDIR=patch
+EMACS_COMPILE_ARGS='-q --no-site-file -batch'
+GMAKE=gmake
+FSF_EMACSEN='/sw/bin/emacs-21.2'
+PREFERRED_FSF_EMACS='/sw/bin/emacs-21.2'
