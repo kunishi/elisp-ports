@@ -7,6 +7,7 @@ CYGWIN*)
 *)
 	SUDO=sudo
 	EXEC_SHELL=/bin/sh
+	;;
 esac
 
 for pkg in `cat $1`
