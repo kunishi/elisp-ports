@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='ftp://ftp.lysator.liu.se/pub/sgml/ALPHA/psgml-1.3.0.tar.gz'
-WRKSRC=${WRKDIR}/psgml-1.3.0
+DISTFILES='ftp://ftp.lysator.liu.se/pub/sgml/ALPHA/psgml-1.3.1.tar.gz'
+WRKSRC=${WRKDIR}/psgml-1.3.1
 ELC_SHAREABLE=true
 
 . ../target.sh
