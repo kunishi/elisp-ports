@@ -6,7 +6,7 @@ diff -ru mew-3.0.66.orig/Makefile mew-3.0.66/Makefile
  ##
  
 -EMACS = emacs
-+EMACS = $(prefix)/$(emacs_ver)/bin/emacs
++EMACS = $(emacs)
  #EMACS = xemacs
  #EMACS = mule
  
