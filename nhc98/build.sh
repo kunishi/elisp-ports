@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/06/01 22:45:34 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/07/05 04:58:13 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
@@ -14,7 +14,7 @@ USE_EMACS=false
 
 build_target () {
     : targets for non-Emacsen ports
-    (cd ${WRKSRC}; ./configure)
+    (cd ${WRKSRC}; ./configure --buildwith=gcc)
     (cd ${WRKSRC}; make)
 }
 
