@@ -11,26 +11,23 @@ ELC_SHAREABLE=false
 
 . ../target.sh
 
-patch-dist () {
+patch_dist () {
     local tats_patch='mule-ucs-0.84+tats20020724.diff'
     cp ${DISTDIR}/${tats_patch}.gz ${WRKSRC}
     gunzip ${WRKSRC}/${tats_patch}.gz
     (cd ${WRKSRC}; patch -p1 -N < ${tats_patch})
 }
 
-build-emacs () {
+build_emacs () {
     (cd ${WRKSRC}/lisp/big5conv; \
-	${BASEDIR}/${emacs_ver}/bin/emacs ${EMACS_COMPILE_ARGS} \
-	-l big5-comp.el)
+	${emacs} ${EMACS_COMPILE_ARGS} -l big5-comp.el)
     (cd ${WRKSRC}/lisp/jisx0213; \
-	${BASEDIR}/${emacs_ver}/bin/emacs ${EMACS_COMPILE_ARGS} \
-	-l x0213-comp.el)
+	${emacs} ${EMACS_COMPILE_ARGS} -l x0213-comp.el)
     (cd ${WRKSRC}; \
-	${BASEDIR}/${emacs_ver}/bin/emacs ${EMACS_COMPILE_ARGS} \
-	-l mucs-comp.el)
+	${emacs} ${EMACS_COMPILE_ARGS} -l mucs-comp.el)
 }
 
-install-emacs () {
+install_emacs () {
     local sitelispdir=${BASEDIR}/share/emacs/${version_num}/site-lisp
     mkdir -p ${sitelispdir}/mule-ucs
     (cd ${WRKSRC}/lisp; \

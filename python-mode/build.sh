@@ -11,13 +11,12 @@ ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
+build_emacs () {
     (cd ${WRKSRC}; \
-	${BASEDIR}/${emacs_ver}/bin/emacs ${EMACS_COMPILE_ARGS} \
-	  -f batch-byte-compile python-mode.el)
+	${emacs} ${EMACS_COMPILE_ARGS} -f batch-byte-compile python-mode.el)
 }
 
-install-emacs () {
+install_emacs () {
     cp -p ${WRKSRC}/python-mode.el ${WRKSRC}/python-mode.elc \
 	${BASEDIR}/share/emacs/site-lisp
 }

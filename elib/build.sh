@@ -4,18 +4,18 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='ftp://ftp.gnu.org/pub/emacs/elib-1.0.tar.gz'
+DISTFILES='ftp://ftp.gnu.org/pub/gnu/emacs/elib-1.0.tar.gz'
 WRKSRC=${WRKDIR}/elib-1.0
 ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
-    (cd ${WRKSRC}; make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs)
+build_emacs () {
+    (cd ${WRKSRC}; make EMACS=${emacs})
 }
 
-install-emacs () {
-    (cd ${WRKSRC}; make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs install)
+install_emacs () {
+    (cd ${WRKSRC}; make EMACS=${emacs} install)
 }
 
 init

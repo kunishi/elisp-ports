@@ -10,14 +10,13 @@ ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
-# do nothing
+build_emacs () {
+:
 }
 
-install-emacs () {
+install_emacs () {
     (cd ${WRKSRC}; \
-	make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs \
-	     EMACSDIR=${BASEDIR}/share/emacs/ install)
+	make EMACS=${emacs} EMACSDIR=${BASEDIR}/share/emacs/ install)
     install-info --dir-file=${BASEDIR}/info/dir \
 	--info-file=${BASEDIR}/info/yatexj \
 	--entry='* YaTeX: (yatexj).	Yet Another tex-mode for Emacs. (Japanese).' \

@@ -12,11 +12,11 @@ EMACS_INSTALL_TARGET='install install-info install-jinfo install-etc'
 
 . ../target.sh
 
-build-emacs () {
+build_emacs () {
     (cd ${WRKSRC}; make emacs_ver=${emacs_ver} ${EMACS_BUILD_TARGET})
 }
 
-install-emacs () {
+install_emacs () {
     (cd ${WRKSRC}; make emacs_ver=${emacs_ver} ${EMACS_INSTALL_TARGET})
 }
 

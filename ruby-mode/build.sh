@@ -10,15 +10,14 @@ ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
+build_emacs () {
     (cd ${WRKSRC}; \
 	for file in *.el; do \
-	${BASEDIR}/${emacs_ver}/bin/emacs ${EMACS_COMPILE_ARGS} \
-	   -f batch-byte-compile ${file}; \
+	${emacs} ${EMACS_COMPILE_ARGS} -f batch-byte-compile ${file}; \
 	done)
 }
 
-install-emacs () {
+install_emacs () {
     local sitelispdir=${BASEDIR}/share/emacs/site-lisp/ruby-mode
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${sitelispdir}

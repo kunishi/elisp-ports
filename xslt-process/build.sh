@@ -11,11 +11,11 @@ ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
-# do nothing
+build_emacs () {
+:
 }
 
-install-emacs () {
+install_emacs () {
     local sitelispdir=${BASEDIR}/share/emacs/site-lisp/xslt-process
     mkdir -p ${sitelispdir}
     cp -pR ${WRKSRC}/* ${sitelispdir}

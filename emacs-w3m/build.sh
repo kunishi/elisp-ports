@@ -10,15 +10,15 @@ ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
+build_emacs () {
     (cd ${WRKSRC}; \
 	./configure --prefix=${BASEDIR} \
 	            --with-icondir=${BASEDIR}/share/emacs-w3m \
-	            --with-emacs=${BASEDIR}/${emacs_ver}/bin/emacs)
+	            --with-emacs=${emacs})
     (cd ${WRKSRC}; ${GMAKE})
 }
 
-install-emacs () {
+install_emacs () {
     (cd ${WRKSRC}; ${GMAKE} install install-icons)
 }
 

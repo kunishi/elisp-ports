@@ -10,13 +10,12 @@ ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
+build_emacs () {
     (cd ${WRKSRC}; \
-	${BASEDIR}/${emacs_ver}/bin/emacs ${EMACS_COMPILE_ARGS} \
-	  -f batch-byte-compile css-mode.el)
+	${emacs} ${EMACS_COMPILE_ARGS} -f batch-byte-compile css-mode.el)
 }
 
-install-emacs () {
+install_emacs () {
     cp -p ${WRKSRC}/css-mode.el ${BASEDIR}/share/emacs/site-lisp
     cp -p ${WRKSRC}/css-mode.elc ${BASEDIR}/share/emacs/site-lisp
 }

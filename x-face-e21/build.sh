@@ -10,15 +10,14 @@ ELC_SHAREABLE=false
 
 . ../target.sh
 
-build-emacs () {
+build_emacs () {
     cp ${DISTDIR}/x-face-e21.el.gz ${WRKSRC}
     gunzip ${WRKSRC}/x-face-e21.el.gz
     (cd ${WRKSRC}; \
-	${BASEDIR}/${emacs_ver}/bin/emacs ${EMACS_COMPILE_ARGS} \
-	    -f batch-byte-compile x-face-e21.el)
+	${emacs} ${EMACS_COMPILE_ARGS} -f batch-byte-compile x-face-e21.el)
 }
 
-install-emacs () {
+install_emacs () {
     cp -p ${WRKSRC}/x-face-e21.el ${BASEDIR}/share/emacs/${version_num}/site-lisp
     cp -p ${WRKSRC}/x-face-e21.elc ${BASEDIR}/share/emacs/${version_num}/site-lisp
 }

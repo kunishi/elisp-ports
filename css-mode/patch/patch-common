@@ -9,9 +9,3 @@
  
  ;;; The code itself
  
-@@ -467,4 +467,4 @@
- 
- (provide 'css-mode)
- 
--;; CSS-mode ends here
-+;; CSS-mode ends here

@@ -10,15 +10,14 @@ ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
+build_emacs () {
     (cd ${WRKSRC}; \
-	make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs \
-	     PIXMAPDIR=${BASEDIR}/share/wanderlust elc info)
+	make EMACS=${emacs} PIXMAPDIR=${BASEDIR}/share/wanderlust elc info)
 }
 
-install-emacs () {
+install_emacs () {
     (cd ${WRKSRC}; \
-	make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs \
+	make EMACS=${emacs} \
 	     PIXMAPDIR=${BASEDIR}/share/wanderlust \
 	     INFODIR=${BASEDIR}/info install install-info)
     install-info --dir-file=${BASEDIR}/info/dir --info-file=${BASEDIR}/info/wl-ja.info

@@ -10,7 +10,7 @@ ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
+build_emacs () {
     (cd ${WRKSRC}; \
 	for file in *.el *.info *.texi; do \
 	    mv ${file} ${file}.bak; \
@@ -18,10 +18,10 @@ build-emacs () {
 	        -e 's|\([^-p]\)xml-|\1pxml-|g' ${file}.bak > ${file}; \
 	done)
     (cd ${WRKSRC}; ./configure --prefix=${BASEDIR})
-    (cd ${WRKSRC}; make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs)
+    (cd ${WRKSRC}; ${GMAKE} EMACS=${emacs})
 }
 
-install-emacs () {
+install_emacs () {
     (cd ${WRKSRC}; \
 	make lispdir=${BASEDIR}/share/emacs/site-lisp/psgml \
 	     infodir=${BASEDIR}/info install install-info)

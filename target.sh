@@ -61,7 +61,7 @@ extract () {
 
 patch_emacs () {
     if [ "${PATCHFILES}" != '' ]; then
-	patch-dist
+	patch_dist
     fi
     if [ -f ${PKG_TOPDIR}/${PATCHDIR}/patch-common ]; then
 	(cd ${WRKSRC}; patch -p1 -N < ${PKG_TOPDIR}/${PATCHDIR}/patch-common)

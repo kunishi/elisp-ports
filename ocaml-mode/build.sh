@@ -10,13 +10,13 @@ ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
-# do nothing
+build_emacs () {
+:
 }
 
-install-emacs () {
+install_emacs () {
     (cd ${WRKSRC}; \
-	make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs \
+	make EMACS=${emacs} \
 	     EMACSDIR=${BASEDIR}/share/emacs/site-lisp/ocaml-mode \
 	     install install-ocamltags)
 }

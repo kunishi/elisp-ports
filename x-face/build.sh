@@ -10,14 +10,13 @@ ELC_SHAREABLE=false
 
 . ../target.sh
 
-build-emacs () {
-    (cd ${WRKSRC}; \
-	make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs all)
+build_emacs () {
+    (cd ${WRKSRC}; make EMACS=${emacs} all)
 }
 
-install-emacs () {
+install_emacs () {
     (cd ${WRKSRC}; \
-	make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs \
+	make EMACS=${emacs} \
 	     LISPDIR=${BASEDIR}/share/emacs/${version_num}/site-lisp \
 	     install)
 }

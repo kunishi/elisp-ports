@@ -10,11 +10,11 @@ ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
-    (cd ${WRKSRC}; ${GMAKE} EMACS=${BASEDIR}/${emacs_ver}/bin/emacs)
+build_emacs () {
+    (cd ${WRKSRC}; ${GMAKE} EMACS=${emacs})
 }
 
-install-emacs () {
+install_emacs () {
     local sitelispdir=${BASEDIR}/share/emacs/site-lisp/ecb
     mkdir -p ${sitelispdir}
     cp -p ${WRKSRC}/*.el ${WRKSRC}/*.elc ${sitelispdir}

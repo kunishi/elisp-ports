@@ -5,23 +5,23 @@
 PKG_TOPDIR=`pwd`
 
 DISTFILES='http://jdee.sunsite.dk/jde-beta.tar.gz'
-WRKSRC=${WRKDIR}/jde-2.2.9beta10
+WRKSRC=${WRKDIR}/jde-2.2.9beta12
 #PATCHFILES='If you have some official patch, write them'
 ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
+build_emacs () {
     local sitelispbase=${BASEDIR}/share/emacs/site-lisp
     (cd ${WRKSRC}/lisp; \
-	make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs \
+	make EMACS=${emacs} \
 	     EIEIO=${sitelispbase}/eieio \
 	     ELIB=${sitelispbase}/elib \
 	     SEMANTIC=${sitelispbase}/semantic \
 	     SPEEDBAR=${sitelispbase}/speedbar)
 }
 
-install-emacs () {
+install_emacs () {
     local sitelispdir=${BASEDIR}/share/emacs/site-lisp/jde
     mkdir -p ${sitelispdir}/lisp
     cp -p ${WRKSRC}/lisp/*.el ${WRKSRC}/lisp/*.elc ${sitelispdir}/lisp

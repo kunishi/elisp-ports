@@ -11,14 +11,13 @@ ELC_SHAREABLE=true
 
 . ../target.sh
 
-build-emacs () {
-# do nothing
+build_emacs () {
+:
 }
 
-install-emacs () {
+install_emacs () {
     (cd ${WRKSRC}; \
-	make EMACS=${BASEDIR}/${emacs_ver}/bin/emacs \
-	     EMACSDIR=${BASEDIR}/share/emacs install)
+	make EMACS=${emacs} EMACSDIR=${BASEDIR}/share/emacs install)
     install-info --section='Miscellaneous' \
 	--entry='* EPO: (epoj).	EPO - Editing Process Organizer (Japanese).' \
 	${BASEDIR}/info/epoj ${BASEDIR}/info/dir
