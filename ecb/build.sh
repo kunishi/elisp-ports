@@ -4,14 +4,14 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://us.dl.sourceforge.net/ecb/ecb-1.80.tar.gz'
-WRKSRC=${WRKDIR}/ecb-1.80
+DISTFILES='http://us.dl.sourceforge.net/ecb/ecb-1.90.tar.gz'
+WRKSRC=${WRKDIR}/ecb-1.90
 ELC_SHAREABLE=true
 
 . ../target.sh
 
 build_emacs () {
-    (cd ${WRKSRC}; ${GMAKE} EMACS=${emacs} \
+    (cd ${WRKSRC}; ${GMAKE} all qEMACS=${emacs} \
 	LOADPATH="${BASEDIR}/share/emacs/site-lisp/eieio ${BASEDIR}/share/emacs/site-lisp/semantic ${BASEDIR}/share/emacs/site-lisp/jde/lisp")
 }
 
