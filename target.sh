@@ -66,8 +66,8 @@ patch_emacs () {
     if [ -f ${PKG_TOPDIR}/${PATCHDIR}/patch-common ]; then
 	(cd ${WRKSRC}; patch -p1 -N < ${PKG_TOPDIR}/${PATCHDIR}/patch-common)
     fi
-    if [ -f ${PKG_TOPDIR}/${PATCHDIR}/patch_emacs ]; then
-	(cd ${WRKSRC}; patch -p1 -N < ${PKG_TOPDIR}/${PATCHDIR}/patch_emacs)
+    if [ -f ${PKG_TOPDIR}/${PATCHDIR}/patch-emacs ]; then
+	(cd ${WRKSRC}; patch -p1 -N < ${PKG_TOPDIR}/${PATCHDIR}/patch-emacs)
     fi
 }
 
