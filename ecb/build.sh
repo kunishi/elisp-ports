@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://us.dl.sourceforge.net/ecb/ecb-1.92.tar.gz'
-WRKSRC="${WRKDIR}/ecb-1.92"
+DISTFILES='http://us.dl.sourceforge.net/ecb/ecb-1.92.1.tar.gz'
+WRKSRC=${WRKDIR}/ecb-1.92.1
 USE_EMACS=true
 ELC_SHAREABLE=true
 
