@@ -1,7 +1,7 @@
 ;; all the settings are included in ~/.mew.el.
 (cond ((eq system-type 'windows-nt)
        (setq mew-icon-directory (concat my-install-prefix "/etc/mew")))
-      ((eq my-install-prefix "/sw")
+      ((string= my-install-prefix "/sw")
        (setq mew-icon-directory
 	     (concat my-install-prefix "/share/pixmaps/mew")))
       (t
