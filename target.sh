@@ -1,5 +1,5 @@
 #
-# $Id: target.sh,v 1.7 2002/12/10 14:19:05 kunishi Exp $
+# $Id: target.sh,v 1.8 2002/12/10 14:19:55 kunishi Exp $
 #
 
 init () {
@@ -86,7 +86,7 @@ build () {
 	emacs="${PREFERRED_FSF_EMACS}"
 	emacs_ver=`basename "${emacs}"`
 	version_num=`echo ${emacs_ver} | sed -e 's|.*-\(.*\)|\1|'`
-	clean_workdir
+	clean
 	extract
 	patch_emacs
 	echo "Building with emacs_ver=${emacs_ver} version_num=${version_num}"
@@ -100,7 +100,7 @@ build () {
 	  do
 	  emacs_ver=`basename "${emacs}"`
 	  version_num=`echo ${emacs_ver} | sed -e 's|.*-\(.*\)|\1|'`
-	  clean_workdir
+	  clean
 	  extract
 	  patch_emacs
 	  echo "Building with emacs_ver=${emacs_ver} version_num=${version_num}"
