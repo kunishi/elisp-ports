@@ -16,9 +16,9 @@
 	"kunishi@[a-zA-Z0-9]*.c.oka-pu.ac.jp"
 	"kunishi@chorusroom.org"
 	"kunishi@acm.org"
-	"kunishi@land.linkclub.or.jp"
 	"kunishi@[a-zA-Z0-9]*.chorusroom.org"
-	"QYG06054@nifty.ne.jp"
+	"t.kunishi@mac.com"
+	"t.kunishi@nifty.com"
 	"hamoru@www16t.sakura.ne.jp"))
 (setq mew-pop-server "dbmail.c.oka-pu.ac.jp")
 (setq mew-smtp-server "dbmail.c.oka-pu.ac.jp")
@@ -181,7 +181,8 @@
 	 ("xerces-j-dev" . "%comp.xml.apache.xerces-j-dev")
 	 ("xalan-dev" . "%comp.xml.apache.xalan-dev")
 	 ("xindice-dev" . "%comp.xml.apache.xindice-dev")
-	 ("xml-dev" . "%comp.xml.xml-dev"))
+	 ("xml-dev" . "%comp.xml.xml-dev")
+	 ("relaxng-user" . "%comp.xml.relaxng-user"))
 	("list-id"
 	 ("members.sigmodj.org" . "%assoc.acm.sigmodj.members")
 	 ("dbworld.cs.wisc.edu" . "%research.dbworld")
