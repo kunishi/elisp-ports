@@ -5,7 +5,7 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://xml.apache.org/dist/batik/batik-1.5beta5.zip'
+DISTFILES='http://xml.apache.org/dist/batik/batik-1.5.zip'
 WRKSRC="${WRKDIR}/batik-1.5"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
@@ -18,7 +18,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    install_java batik-1.5beta5 batik
+    install_java batik-1.5 batik
 }
 
 init
