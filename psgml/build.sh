@@ -24,7 +24,7 @@ build_emacs () {
 install_emacs () {
     (cd ${WRKSRC}; \
 	make lispdir=${BASEDIR}/share/emacs/site-lisp/psgml \
-	     infodir=${BASEDIR}/info install install-info)
+	     infodir=${BASEDIR}/info EMACS=${emacs} install install-info)
     cp -p ${WRKSRC}/*.el ${BASEDIR}/share/emacs/site-lisp/psgml
 }
 
