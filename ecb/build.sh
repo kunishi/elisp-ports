@@ -5,13 +5,13 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://us.dl.sourceforge.net/ecb/ecb-1.96.tar.gz'
-WRKSRC=${WRKDIR}/ecb-1.96
+DISTFILES='http://us.dl.sourceforge.net/ecb/ecb-2.21.tar.gz'
+WRKSRC=${WRKDIR}/ecb-2.21
 USE_EMACS=true
 ELC_SHAREABLE=true
 
 build_emacs () {
-    (cd ${WRKSRC}; ${GMAKE} all EMACS=${emacs} \
+    (cd ${WRKSRC}; ${GMAKE} all EMACS=${emacs} CEDET="" \
 	LOADPATH="${SITELISPDIR}/eieio ${SITELISPDIR}/semantic ${SITELISPDIR}/jde/lisp")
 }
 
