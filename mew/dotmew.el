@@ -20,8 +20,8 @@
 	"t.kunishi@mac.com"
 	"t.kunishi@nifty.com"
 	"hamoru@www16t.sakura.ne.jp"))
-(setq mew-pop-server "dbmail.c.oka-pu.ac.jp")
-(setq mew-smtp-server "dbmail.c.oka-pu.ac.jp")
+(setq mew-pop-server "aquamarine.c.oka-pu.ac.jp")
+(setq mew-smtp-server "aquamarine.c.oka-pu.ac.jp")
 (setq mew-imap-trash-folder "%Trash")
 
 (setq mew-use-folders-file-p t)
@@ -48,7 +48,7 @@
 	 ("nntp-server" . "news.nifty.com"))
 	("acm"
 	 ("mail-domain" . "acm.org")
-	 ("msgid-domain" . "dbmail.c.oka-pu.ac.jp")
+	 ("msgid-domain" . "aquamarine.c.oka-pu.ac.jp")
 	 ("organization" . "Okayama Prefectural University")
 	 ("signature-file" . "~/.signature-acm"))
 	("dbjapan-desk"
@@ -63,12 +63,6 @@
 	 ("mail-domain" . "bsd.chorusroom.org"))
 	("xml"
 	 ("mail-domain" . "xml.chorusroom.org"))
-	("hamoru"
-	 ("name" . "Hamoru KOBE WWW maintainer")
-	 ("user" . "hamoru")
-	 ("organization" . "Hamoru KOBE")
-	 ("mail-domain" . "www16t.sakura.ne.jp")
-	 ("signature-file" . "~/.signature-hamoru"))
 	("chorusroom"
 	 ("name" . "KUNISHIMA Takeo")
 	 ("proto" . "%")
@@ -76,32 +70,24 @@
 	 ("msgid-domain" . "chorusroom.org")
 	 ("organization" . "ChorusRoom Org.")
 	 ("signature-file" . "~/.signature-chorusroom")
-	 ("imap-server" . "alto.chorusroom.org")
+	 ("imap-server" . "sakura.chorusroom.org")
 	 ("imap-user" . "kunishi")
 	 ("imap-auth" . nil)
-	 ("imap-ssh-server" . "alto.chorusroom.org")
-	 ("smtp-server" . "alto.chorusroom.org")
-	 ("smtp-ssh-server" . "alto.chorusroom.org")
-	 ("spam-prog" . "ssh")
-	 ("spam-prog-args" . ("alto.chorusroom.org" "bogofilter" "-s" "-v"))
-	 ("ham-prog" . "ssh")
-	 ("ham-prog-args" . ("alto.chorusroom.org" "bogofilter" "-n" "-v")))
+	 ("imap-ssh-server" . "sakura.chorusroom.org")
+	 ("smtp-server" . "sakura.chorusroom.org")
+	 ("smtp-ssh-server" . "sakura.chorusroom.org"))
 	("default"
 	 ("proto" . "%")
 	 ("mail-domain" . "c.oka-pu.ac.jp")
-	 ("msgid-domain" . "dbmail.c.oka-pu.ac.jp")
+	 ("msgid-domain" . "aquamarine.c.oka-pu.ac.jp")
 	 ("organization" . "Okayama Prefectural University")
 	 ("signature-file" . "~/.signature-office")
-	 ("imap-server" . "dbmail.c.oka-pu.ac.jp")
+	 ("imap-server" . "aquamarine.c.oka-pu.ac.jp")
 	 ("imap-user" . "kunishi")
 	 ("imap-auth" . nil)
-	 ("imap-ssh-server" . "dbmail.c.oka-pu.ac.jp")
-	 ("smtp-server" . "dbmail.c.oka-pu.ac.jp")
-	 ("smtp-ssh-server" . "dbmail.c.oka-pu.ac.jp")
-	 ("spam-prog" . "ssh")
-	 ("spam-prog-args" . ("dbmail.c.oka-pu.ac.jp" "bogofilter" "-s" "-v"))
-	 ("ham-prog" . "ssh")
-	 ("ham-prog-args" . ("dbmail.c.oka-pu.ac.jp" "bogofilter" "-n" "-v")))))
+	 ("imap-ssh-server" . "aquamarine.c.oka-pu.ac.jp")
+	 ("smtp-server" . "aquamarine.c.oka-pu.ac.jp")
+	 ("smtp-ssh-server" . "aquamarine.c.oka-pu.ac.jp"))))
 
 ;; refile
 (setq mew-refile-guess-from-me-is-special t)
