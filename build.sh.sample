@@ -16,11 +16,11 @@ EMACSEN='emacs-20.7 emacs-21.3.50 emacs-21.2'
 #	# write how to apply official patches
 #}
 
-build-emacs () {
+build_emacs () {
 	# write how to build package
 }
 
-install-emacs () {
+install_emacs () {
 	# write how to install package
 }
 
