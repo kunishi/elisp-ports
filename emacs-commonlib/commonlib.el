@@ -57,28 +57,37 @@
 
 ;;; settigs specific for Emacs version.
 ;; Various parameters
-(when my-xemacs-p
-  (set-specifier minimum-line-ascent 4)
-  (set-specifier minimum-line-descent 4))
-(when my-fsf-emacs-p
-  (setq next-line-add-newlines nil)
-  (setq require-final-newline t)
-  (cond ((= emacs-major-version 21) ;; Emacs21
-	 (set-language-environment 'japanese)
-	 (setq menu-coding-system 'euc-jp)
-	 (set-terminal-coding-system 'japanese-iso-8bit-with-esc)
-	 (set-keyboard-coding-system 'japanese-iso-8bit-with-esc)
-	 (modify-coding-system-alist 'process "" 'japanese-iso-8bit-with-esc)
-	 (setq recursive-load-depth-limit nil)
-	 (load-safe "font-lock"))
-	((= emacs-major-version 20) ;; Emacs20
-	 (set-language-environment 'japanese)
-	 (setq auto-save-list-file-prefix (expand-file-name "~/.saves/"))
-	 (load-safe "font-lock"))
-	((= emacs-major-version 19) ;; Emacs19
-	 (load-safe "hilit19"))))
+(setq next-line-add-newlines nil)
+(setq require-final-newline t)
+(cond ((= emacs-major-version 21) ;; Emacs21
+       (setq recursive-load-depth-limit nil))
+      ((= emacs-major-version 20)
+       (setq auto-save-list-file-prefix (expand-file-name "~/.saves/"))))
+(transient-mark-mode)
+
+;; coding-system
+(set-language-environment 'Japanese)
+(cond ((eq system-type 'darwin)
+       (set-default-coding-systems 'sjis-mac)
+       (set-buffer-file-coding-system 'sjis-mac)
+       (set-clipboard-coding-system 'sjis-mac)
+       (set-file-name-coding-system 'utf-8)
+       (if (eq window-system 'mac)
+	   (set-keyboard-coding-system 'sjis-mac)
+	 (progn
+	   (set-keyboard-coding-system 'utf-8)
+	   (set-terminal-coding-system 'utf-8))))
+      ((eq system-type 'windows-nt)
+       (set-default-coding-systems 'sjis-dos)
+       (set-terminal-coding-system 'sjis)
+       (set-clipboard-coding-system 'sjis-dos))
+      (t
+       (set-terminal-coding-system 'japanese-iso-8bit-with-esc)
+       (set-keyboard-coding-system 'japanese-iso-8bit-with-esc)
+       (modify-coding-system-alist 'process "" 'japanese-iso-8bit-with-esc)))
 
 ;;; font-lock
+(load-safe "font-lock")
 (if (featurep 'font-lock)
     (global-font-lock-mode t))
 
@@ -87,7 +96,8 @@
     (cond ((file-exists-p (concat my-emacs-lispdir "/apel"))
 	   (add-to-list 'load-path (concat my-emacs-lispdir "/apel")))
 	  ((file-exists-p (concat my-emacs-version-specific-lispdir "/apel"))
-	   (add-to-list 'load-path (concat my-emacs-version-specific-lispdir "/apel")))))
+	   (add-to-list 'load-path
+			(concat my-emacs-version-specific-lispdir "/apel")))))
 
 ;; Info path.
 (add-to-list 'Info-default-directory-list 
@@ -120,8 +130,6 @@
 ;; Windows (NTEmacs)
 (when (and (eq system-type 'windows-nt)
 	   (not (featurep 'meadow)))
-  (set-terminal-coding-system 'sjis)
-  (set-clipboard-coding-system 'sjis-dos)
   (setq shell-file-name "c:/cygwin/bin/bash.exe")
   (setq shell-command-switch "-c")
   (setq bdf-directory-list
