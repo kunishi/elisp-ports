@@ -14,12 +14,12 @@ USE_EMACS=false
 build_target () {
     : targets for non-Emacsen ports
     (cd ${WRKSRC}; ./configure --buildwith=gcc)
-    (cd ${WRKSRC}; make)
+    (cd ${WRKSRC}; ${GMAKE})
 }
 
 install_target () {
     : install targets for non-Emacsen ports
-    (cd ${WRKSRC}; make install)
+    (cd ${WRKSRC}; ${GMAKE} install)
 }
 
 init
