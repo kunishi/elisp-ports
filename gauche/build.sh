@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/05/31 07:07:09 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/06/01 12:34:25 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
@@ -10,11 +10,15 @@ WRKSRC="${WRKDIR}/Gauche-0.6.8"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
 
+if [ `uname -s` = 'Darwin' ]; then
+    CONFIGURE_ARGS='--with-iconv=/usr/local --with-iconv-lib=iconv'
+fi
+
 . ../target.sh
 
 build_target () {
     : targets for non-Emacsen ports
-    (cd ${WRKSRC}; ./configure --enable-threads=pthreads)
+    (cd ${WRKSRC}; ./configure --enable-threads=pthreads ${CONFIGURE_ARGS})
     (cd ${WRKSRC}; make)
     (cd ${WRKSRC}; make test)
 }

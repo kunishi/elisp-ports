@@ -1,11 +1,11 @@
 BASEDIR=/usr/local
-DISTDIR=/home/kunishi/distfiles
+DISTDIR=/Users/kunishi/distfiles
 WRKDIR=work
 PATCHDIR=patch
 EMACS_COMPILE_ARGS='-q --no-site-file -batch'
-GMAKE=gmake
+GMAKE=make
 GZCAT=gzcat
 PATCH=/usr/bin/patch
-FSF_EMACSEN='/usr/local/bin/emacs-21.3'
-PREFERRED_FSF_EMACS='/usr/local/bin/emacs-21.3'
+FSF_EMACSEN='/usr/local/bin/emacs-21.3.50'
+PREFERRED_FSF_EMACS='/usr/local/bin/emacs-21.3.50'
 SITELISPDIR='/usr/local/share/emacs/site-lisp'

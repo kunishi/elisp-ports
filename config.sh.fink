@@ -5,5 +5,7 @@ PATCHDIR=patch
 EMACS_COMPILE_ARGS='-q --no-site-file -batch'
 GMAKE=make
 GZCAT=gzcat
+PATCH=/sw/bin/patch
 FSF_EMACSEN='/sw/bin/emacs-21.2'
 PREFERRED_FSF_EMACS='/sw/bin/emacs-21.2'
+SITELISPDIR='/sw/share/emacs/site-lisp'

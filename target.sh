@@ -1,5 +1,5 @@
 #
-# $Id: target.sh,v 1.9 2003/05/31 04:43:50 kunishi Exp $
+# $Id: target.sh,v 1.10 2003/06/01 12:34:25 kunishi Exp $
 #
 
 ### common targets
@@ -15,7 +15,7 @@ init () {
 	for url in ${PATCHFILES}
 	  do
 	  file=`echo ${url} | sed -e 's|.*/||g'`
-	  distpatch="${patch} ${file}"
+	  distpatch="${distpatch} ${file}"
 	done
     fi
 }      
@@ -72,12 +72,12 @@ extract () {
 }
 
 patch () {
-    if [ "${PATCHFILES}" != '' ]; then
+    if [ "${distpatch}" != '' ]; then
 	patch_dist
     fi
-    for patch in ${PKG_TOPDIR}/${PATCHDIR}/patch*; do
+    for patch in 'patch-common' 'patch-emacs'; do
 	[ -f ${PKG_TOPDIR}/${PATCHDIR}/${patch} ] && \
-	    (cd ${WRKSRC}; patch -p0 -N < ${PKG_TOPDIR}/${PATCHDIR}/${patch})
+	    (cd ${WRKSRC}; ${PATCH} -p0 -N < ${PKG_TOPDIR}/${PATCHDIR}/${patch})
     done
 }
 

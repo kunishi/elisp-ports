@@ -9,14 +9,27 @@ DISTFILES="${DISTURL}/ocaml-3.06.tar.gz ${DISTURL}/ocaml-3.06-refman.pdf \
 ${DISTURL}/ocaml-3.06-refman.ps.gz ${DISTURL}/ocaml-3.06-refman.dvi.gz \
 ${DISTURL}/ocaml-3.06-refman.html.tar.gz"
 WRKSRC="${WRKDIR}/ocaml-3.06"
-#PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
+
+if [ `uname -s` = 'Darwin' ]; then
+    PATCHFILES="${DISTURL}/ocaml-3.06-macosx-5.patch"
+fi
 
 . ../target.sh
 
+if [ `uname -s` = 'Darwin' ]; then
+    patch_dist () {
+	(cd ${WRKSRC}; ${PATCH} -p0 -N < ${DISTDIR}/ocaml-3.06-macosx-5.patch)
+    }
+fi
+
 build_target () {
     (cd ${WRKSRC}; ./configure)
-    (cd ${WRKSRC}; make world.opt)
+    if [ `uname -s` = 'Darwin' ]; then
+	(cd ${WRKSRC}; ulimit -s 1536; make world.opt)
+    else
+	(cd ${WRKSRC}; make world.opt)
+    fi
 }
 
 install_target () {
