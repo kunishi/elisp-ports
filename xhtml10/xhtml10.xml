@@ -5,17 +5,17 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
   prefer="public">
   <group xml:base="http://www.w3.org/TR/xhtml1/DTD/">
-    <public publicid="-//W3C//DTD XHTML 1.0 Strict//EN"
+    <public publicId="-//W3C//DTD XHTML 1.0 Strict//EN"
       uri="xhtml1-strict.dtd" />
-    <public publicid="-//W3C//DTD XHTML 1.0 Transitional//EN"
+    <public publicId="-//W3C//DTD XHTML 1.0 Transitional//EN"
       uri="xhtml1-transitional.dtd"/>
-    <public publicid="-//W3C//DTD XHTML 1.0 Frameset//EN"
+    <public publicId="-//W3C//DTD XHTML 1.0 Frameset//EN"
       uri="xhtml1-frameset.dtd"/>
-    <public publicid="-//W3C//ENTITIES Latin 1 for XHTML//EN"
+    <public publicId="-//W3C//ENTITIES Latin 1 for XHTML//EN"
       uri="xhtml-lat1.ent"/>
-    <public publicid="-//W3C//ENTITIES Symbols for XHTML//EN"
+    <public publicId="-//W3C//ENTITIES Symbols for XHTML//EN"
       uri="xhtml-symbol.ent"/>
-    <public publicid="-//W3C//ENTITIES Special for XHTML//EN"
+    <public publicId="-//W3C//ENTITIES Special for XHTML//EN"
       uri="xhtml-special.ent"/>
   </group>
 </catalog>
