@@ -15,22 +15,8 @@
 (autoload-if-found 'mew-send "mew" nil t)
 (autoload-if-found 'mew-user-agent-compose "mew" nil t)
 
-;; SPAM filtering using bogofilter
-(setq mew-spam "X-Bogosity:")
-(setq mew-spam-prog "ssh")
-(setq mew-spam-prog-args
-      '("imap.chorusroom.org" "bogofilter" "-s" "-v"))
-(setq mew-ham-prog "ssh")
-(setq mew-ham-prog-args
-      '("imap.chorusroom.org" "bogofilter" "-n" "-v"))
-(defun mew-spam-bogofilter (val)
-  (let ((case-fold-search t))
-    (if (string-match "yes" val) ?D)))
-(setq mew-inbox-action-alist
-      '(("X-Bogosity:" mew-spam-bogofilter)))
-
-;;; [mew-dist 24219]
-(setq mew-imap-spam-field "X-Bogosity")
+;;; Spam filter for IMAP server
+(setq mew-imap-spam-field "X-Spam-Flag")
 (setq mew-imap-spam-word "Yes")
 (setq mew-imap-trash-folder "%Trash")
 
