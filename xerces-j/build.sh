@@ -6,8 +6,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://xml.apache.org/dist/xerces-j/Xerces-J-bin.2.5.0.zip'
-WRKSRC="${WRKDIR}/xerces-2_5_0"
+DISTFILES='http://www.apache.org/dist/xml/xerces-j/Xerces-J-bin.2.6.0.zip'
+WRKSRC="${WRKDIR}/xerces-2_6_0"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
 
@@ -17,7 +17,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    install_java xerces-j-2.5.0 xerces-j
+    install_java xerces-j-2.6.0 xerces-j
 }
 
 init
