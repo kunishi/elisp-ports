@@ -97,7 +97,8 @@
 
 ;;; OS specific settings
 ;; MacOS X
-(when (eq system-type 'darwin)
+(when (and (eq system-type 'darwin)
+	   (eq window-system 'mac))
   (create-fontset-from-fontset-spec
    (concat
     "-*-fixed-medium-r-normal-*-14-*-*-*-*-*-fontset-osaka14,"
