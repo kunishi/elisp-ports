@@ -100,9 +100,17 @@
 (when (eq system-type 'darwin)
   (create-fontset-from-fontset-spec
    (concat
+    "-*-fixed-medium-r-normal-*-14-*-*-*-*-*-fontset-osaka14,"
+    "japanese-jisx0208:-apple-osaka-medium-r-normal-*-140-*-jisx0208.1983-sjis,"
+    "katakana-jisx0201:-apple-osaka-medium-r-normal-*-140-*-jisx0201*-*,"
+    "latin-jisx0201:-apple-osaka-medium-r-normal-*-140-*-jisx0201*-*,"
+    "japanese-jisx0208-1978:-apple-osaka-medium-r-normal-*-140-*-jisx0208.1978-*,"
+    "latin-1:-etl-fixed-*-140-*-iso8859-1"))
+  (create-fontset-from-fontset-spec
+   (concat
     "-*-fixed-medium-r-normal-*-16-*-*-*-*-*-fontset-osaka16,"
     "japanese-jisx0208:-apple-osaka-medium-r-normal--16-160-75-75-m-160-jisx0208.1983-sjis,"
-    "ascii:-apple-monaco-medium-r-normal--14-*-*-*-*-*-mac-roman"))
+    "latin-1:-etl-fixed-*-160-*-iso8859-1"))
   (set-default-font "fontset-osaka16")
   (setq mew-cs-samba 'utf-8))
 ;; Windows (NTEmacs)
