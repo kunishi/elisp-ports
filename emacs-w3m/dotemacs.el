@@ -18,7 +18,7 @@
 	    (not (featurep 'meadow)))
        (setq w3m-icon-directory
 	     (concat my-install-prefix "/etc/w3m/")))
-      (t
+      ((not (eq my-install-prefix "/sw"))
        (setq w3m-icon-directory
 	     (concat my-install-prefix "/share/emacs/etc/w3m/"))))
 (cond ((eq system-type 'darwin) ;; use darwinports
