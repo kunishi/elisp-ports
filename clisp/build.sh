@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/06/01 12:34:25 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/06/01 14:23:45 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
@@ -12,33 +12,27 @@ USE_EMACS=false
 
 . ../target.sh
 
-if [ `uname -s` = 'Darwin' ]; then
-    CONFIG_SHELL=/bin/bash
-    CONFIGURE_ARGS='--without-dynamic-ffi'
-fi
-
 build_target () {
     : targets for non-Emacsen ports
-    (cd ${WRKSRC}; ${CONFIG_SHELL} ./configure ${CONFIGURE_ARGS})
+    (cd ${WRKSRC}; ./configure build)
     if [ `uname -s` = 'Darwin' ]; then
-	(cd ${WRKSRC}/src; ./makemake \
-	    | sed -e 's|-O2|-no-cpp-precomp|' -e 's|--traditional-cpp||' \
-	    > Makefile)
+	(cd ${WRKSRC}/build; ./makemake debug \
+	    | sed -e 's|--traditional-cpp|-no-cpp-precomp|' > Makefile)
     else
-	(cd ${WRKSRC}/src; ./makemake > Makefile)
+	(cd ${WRKSRC}/build; ./makemake > Makefile)
     fi
     (cd ${WRKSRC}/src; make config.lisp)
     if [ `uname -s` = 'Darwin' ]; then
-	(cd ${WRKSRC}/src; ulimit -S -s 8192; make)
+	(cd ${WRKSRC}/build; ulimit -S -s 8192; make)
     else
-	(cd ${WRKSRC}/src; make)
+	(cd ${WRKSRC}/build; make)
     fi
-    (cd ${WRKSRC}/src; make check)
+    (cd ${WRKSRC}/build; make check)
 }
 
 install_target () {
     : install targets for non-Emacsen ports
-    (cd ${WRKSRC}/src; make install)
+    (cd ${WRKSRC}/build; make install)
 }
 
 init
