@@ -28,7 +28,7 @@ diff -ru mew-3.0.66.orig/Makefile mew-3.0.66/Makefile
 -INSTALLINFO = `which install-info`
 -#INSTALLINFO = /usr/local/bin/install-info
 +#INSTALLINFO = `which install-info`
-+INSTALLINFO = /usr/local/bin/install-info
++INSTALLINFO = /usr/bin/install-info
  
  #INSTALLINFO_OPTIONS = --section Emacs Emacs
  #INSTALLINFO_JOPTIONS =
