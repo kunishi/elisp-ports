@@ -1,11 +1,11 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/06/03 15:28:26 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/07/05 05:09:48 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://swissnet.ai.mit.edu/ftpdir/scm/slib2d5.zip'
+DISTFILES='http://swissnet.ai.mit.edu/ftpdir/scm/slib2d6.zip'
 WRKSRC="${WRKDIR}/slib"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
