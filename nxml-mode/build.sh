@@ -24,6 +24,7 @@ install_emacs () {
     (cd ${WRKSRC}; \
       cp -p COPYING NEWS README TODO VERSION ${SITELISPDIR}/nxml-mode)
     cp -rp ${WRKSRC}/schema ${SITELISPDIR}/nxml-mode
+    cp -rp ${WRKSRC}/char-name ${SITELISPDIR}/nxml-mode
     cp -p ${WRKSRC}/nxml-mode.info ${INFODIR}
     install-info --info-dir=${INFODIR} ${INFODIR}/nxml-mode.info
 }
