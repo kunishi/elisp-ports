@@ -32,3 +32,18 @@ diff -ru ../mew-3.0.66.orig/Makefile Makefile
  
  #INSTALLINFO_OPTIONS = --section Emacs Emacs
  #INSTALLINFO_JOPTIONS =
+Index: mew-scan.el
+===================================================================
+RCS file: /cvsmew/mew/mew-scan.el,v
+retrieving revision 1.201
+diff -u -r1.201 mew-scan.el
+--- mew-scan.el	25 Dec 2003 01:46:32 -0000	1.201
++++ mew-scan.el	28 Dec 2003 05:45:55 -0000
+@@ -420,6 +420,7 @@
+ 	  (setq med (match-end 0))
+ 	  ;; Three lines should be enough for Summary mode.
+ 	  (forward-line)
++	  (setq i 0)
+ 	  (while (and (< i lim) (looking-at mew-lwsp))
+ 	    (forward-line)
+ 	    (setq i (1+ i)))
