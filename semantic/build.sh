@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://us.dl.sourceforge.net/cedet/semantic-1.4.2.tar.gz'
-WRKSRC=${WRKDIR}/semantic-1.4.2
+DISTFILES='http://us.dl.sourceforge.net/cedet/semantic-1.4.3.tar.gz'
+WRKSRC=${WRKDIR}/semantic-1.4.3
 ELC_SHAREABLE=true
 
 . ../target.sh
