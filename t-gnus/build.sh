@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.jpl.org/elips/t-gnus-6.15/snapshots/t-gnus-6_15_8-05-quimby.tar.gz'
-WRKSRC=${WRKDIR}/t-gnus-6_15_8-05-quimby
+DISTFILES='http://www.jpl.org/elips/t-gnus-6.15/snapshots/t-gnus-6_15_11-00-quimby.tar.gz'
+WRKSRC=${WRKDIR}/t-gnus-6_15_11-00-quimby
 ELC_SHAREABLE=true
 
 . ../target.sh
