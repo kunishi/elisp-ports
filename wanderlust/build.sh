@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='ftp://ftp.gohome.org/wl/beta/wl-2.10.0pre4.tar.gz'
-WRKSRC=${WRKDIR}/wl-2.10.0pre4
+DISTFILES='ftp://ftp.gohome.org/wl/stable/wl-2.10.0.tar.gz'
+WRKSRC=${WRKDIR}/wl-2.10.0
 ELC_SHAREABLE=true
 
 . ../target.sh
