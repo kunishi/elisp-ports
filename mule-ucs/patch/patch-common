@@ -1,20 +1,11 @@
-*** Mule-UCS-0.84/lisp/mucs.el	2002/12/05 07:53:41	1.1
---- Mule-UCS-0.84/lisp/mucs.el	2002/12/05 07:55:59
-***************
-*** 196,203 ****
-  		    (funcall (car hookval))
-  		    result)
-  	    hookval (cdr hookval)))
-!     (cons 'progn
-! 	  result)))
-  
-  (defmacro mucs-define-package (package &rest form)
-    "Enclose a unit of package with this.
---- 196,202 ----
-  		    (funcall (car hookval))
-  		    result)
-  	    hookval (cdr hookval)))
-!     result))
-  
-  (defmacro mucs-define-package (package &rest form)
-    "Enclose a unit of package with this.
+--- Mule-UCS-0.84/lisp/mucs.el	2002/12/05 10:43:28	1.1
++++ Mule-UCS-0.84/lisp/mucs.el	2002/12/05 12:15:29
+@@ -192,7 +192,7 @@ In order to embed data or lisp code, use
+       (if (not (listp hookval))
+ 	  (error "Invalid hook:%S" hooksym)))
+     (while hookval
+-      (setq result (append
++      (setq result (cons
+ 		    (funcall (car hookval))
+ 		    result)
+ 	    hookval (cdr hookval)))
