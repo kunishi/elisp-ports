@@ -11,7 +11,7 @@ ELC_SHAREABLE=true
 . ../target.sh
 
 build_emacs () {
-    (cd ${WRKSRC}; make EMACS=${emacs} elcfiles)
+    (cd ${WRKSRC}; make EMACS=${emacs} prefix=${BASEDIR} elcfiles)
 }
 
 install_emacs () {
