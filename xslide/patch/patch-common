@@ -1,0 +1,12 @@
+--- xslide.el~	Wed Sep  5 17:39:04 2001
++++ xslide.el	Sun Dec  8 16:16:43 2002
+@@ -42,7 +42,8 @@
+ ;;;; Code:
+ (provide 'xslide)
+ 
+-(require 'cl)
++(eval-when-compile
++  (require 'cl))
+ (require 'compile)
+ (require 'font-lock)
+ ;; XEmacs users don't always have imenu.el installed, so use
