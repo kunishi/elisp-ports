@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: build.sh,v 1.1 2003/06/02 00:07:36 kunishi Exp $
+# $Id: build.sh,v 1.2 2003/06/02 14:05:14 kunishi Exp $
 
 . ../${CONFIG_SH:-config.sh}
 
@@ -12,15 +12,20 @@ USE_EMACS=false
 
 . ../target.sh
 
+build () {
+    : all build process are done by install_target phase.
+}
+
 build_target () {
     : targets for non-Emacsen ports
-    (cd ${WRKSRC}; config/install.sh)
 }
 
 install_target () {
     : install targets for non-Emacsen ports
     mkdir -p ${BASEDIR}/smlnj-110.42
-    (cd ${WRKSRC}; tar cf - .) | (cd ${BASEDIR}/smlnj-110.42; tar xfBp -)
+    (cd ${BASEDIR}/smlnj-110.42; \
+	${GZCAT} ${DISTDIR}/config.tgz | ${GTAR} xvf -; \
+	config/install.sh)
     rm -f ${BASEDIR}/bin/sml
     ln -s ${BASEDIR}/smlnj-110.42/bin/sml ${BASEDIR}/bin/sml
 }
