@@ -5,8 +5,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://xml.apache.org/dist/fop/fop-0.20.5rc3a-bin.tar.gz'
-WRKSRC="${WRKDIR}/fop-0.20.5rc3a"
+DISTFILES='http://xml.apache.org/dist/fop/fop-0.20.5-bin.tar.gz'
+WRKSRC="${WRKDIR}/fop-0.20.5"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=false
 
@@ -18,7 +18,7 @@ build_target () {
 
 install_target () {
     : install targets for non-Emacsen ports
-    install_java fop-0.20.5rc3a fop
+    install_java fop-0.20.5 fop
 }
 
 init
