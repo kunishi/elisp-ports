@@ -4,8 +4,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='ftp://ftp.m17n.org/pub/mule/flim/flim-1.14/flim-1.14.4.tar.gz'
-WRKSRC=${WRKDIR}/flim-1.14.4
+DISTFILES='http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/flim/flim-1.14/flim-1.14.5.tar.gz'
+WRKSRC=${WRKDIR}/flim-1.14.5
 ELC_SHAREABLE=false
 
 . ../target.sh
