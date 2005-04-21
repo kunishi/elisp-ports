@@ -3,7 +3,12 @@
 ;; maybe a bug.
 (setq nxml-syntax-hightlight-flag nil)
 
-(setq auto-mode-alist
-      (cons
-       '("\\.\\(xml\\|xsl\\|rng\\|rxm\\|rxg\\|rss\\|sdoc\\|xhtml\\)\\'" . nxml-mode)
-       auto-mode-alist))
+;; disable xml-mode
+
+(add-to-list 'auto-mode-alist (cons "\\.xml\\'" 'nxml-mode))
+(add-to-list 'auto-mode-alist (cons "\\.xsl\\'" 'nxml-mode))
+(add-to-list 'auto-mode-alist (cons "\\.rng\\'" 'nxml-mode))
+(add-to-list 'auto-mode-alist (cons "\\.rxm\\'" 'nxml-mode))
+(add-to-list 'auto-mode-alist (cons "\\.rxg\\'" 'nxml-mode))
+(add-to-list 'auto-mode-alist (cons "\\.xhtml\\'" 'nxml-mode))
+(setq magic-mode-alist (cons '("<\\?xml " . nxml-mode) magic-mode-alist))
