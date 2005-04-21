@@ -5,8 +5,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://openlab.ring.gr.jp/skk/maintrunk/ddskk-12.2.0.tar.gz'
-WRKSRC="${WRKDIR}/ddskk-12.2.0"
+DISTFILES='http://openlab.jp/skk/maintrunk/ddskk-20050417.tar.gz'
+WRKSRC="${WRKDIR}/ddskk-20050417"
 USE_EMACS=true
 ELC_SHAREABLE=false
 
