@@ -5,14 +5,16 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.mew.org/Beta/mew-4.0.69.tar.gz'
-WRKSRC="${WRKDIR}/mew-4.0.69"
+DISTFILES='http://www.mew.org/Release/mew-4.2.tar.gz'
+WRKSRC="${WRKDIR}/mew-4.2"
 USE_EMACS=true
 ELC_SHAREABLE=true
 EMACS_BUILD_TARGET=''
 EMACS_INSTALL_TARGET='install install-info install-jinfo install-etc'
 
 build_emacs () {
+    (cd ${WRKSRC}; ./configure --prefix=${EMACS_PREFIX} \
+			--infodir=${EMACS_PREFIX}/info)
     (cd ${WRKSRC}; make emacs=${emacs} prefix=${EMACS_PREFIX} ${EMACS_BUILD_TARGET})
 }
 
