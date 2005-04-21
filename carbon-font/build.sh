@@ -6,7 +6,7 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://keihanna.dl.sourceforge.jp/macemacsjp/9433/carbon_font-20040509.tar.gz'
+DISTFILES='http://keihanna.dl.sourceforge.jp/macemacsjp/13533/carbon_font-1.1.1.tar.gz'
 WRKSRC="${WRKDIR}/carbon_font"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=true
