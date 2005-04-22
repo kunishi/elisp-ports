@@ -141,7 +141,9 @@
     "ascii:-etl-fixed-medium-r-normal-*-16-*-iso8859-1"))
   (set-default-font "fontset-osaka16")
   (setq mew-cs-samba 'utf-8)
-  (setq mac-transparency-alpha 80))
+  (setq mac-transparency-alpha 80)
+  (if mac-use-inline-input-method
+      (setq default-input-method "MacOSX-IM-JP")))
 ;; Windows (NTEmacs)
 (when (and (eq system-type 'windows-nt)
 	   (not (featurep 'meadow)))
