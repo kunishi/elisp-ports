@@ -5,8 +5,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/ocaml-mode-3.01.tar.gz'
-WRKSRC="${WRKDIR}/ocaml-mode-3.01"
+DISTFILES='http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/ocaml-mode-3.05.tar.gz'
+WRKSRC="${WRKDIR}/ocaml-mode-3.05"
 USE_EMACS=true
 ELC_SHAREABLE=true
 

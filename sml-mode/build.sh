@@ -5,8 +5,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='ftp://ftp.research.bell-labs.com/dist/smlnj/contrib/emacs/sml-mode-3.9.5.tar.gz'
-WRKSRC="${WRKDIR}/sml-mode-3.9.5"
+DISTFILES='http://www.iro.umontreal.ca/~monnier/elisp/sml-mode-4.0.tar.gz'
+WRKSRC="${WRKDIR}/sml-mode-4.0"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
@@ -19,7 +19,8 @@ build_emacs () {
 install_emacs () {
     (cd ${WRKSRC}; \
 	make EMACS=${emacs} prefix=${EMACS_PREFIX} \
-	    lispdir=${SITELISPDIR} install_el install)
+	    lispdir=${SITELISPDIR} install)
+    install-info --info-dir=${INFODIR} ${INFODIR}/sml-mode.info
 }
 
 install_init () {
