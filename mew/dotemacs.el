@@ -1,10 +1,10 @@
 ;; all the settings are included in ~/.mew.el.
 (cond ((eq system-type 'windows-nt)
        (setq mew-icon-directory (concat my-install-prefix "/etc/mew")))
-      ((eq window-system 'mac)
-       (setq mew-icon-directory
-	     (concat my-install-prefix
-		     "/Emacs.app/Contents/Resources/etc/Mew")))
+;;       ((eq window-system 'mac)
+;;        (setq mew-icon-directory
+;; 	     (concat my-install-prefix
+;; 		     "/Emacs.app/Contents/Resources/etc/Mew")))
       ((string= my-install-prefix "/sw")
        (setq mew-icon-directory
 	     (concat my-install-prefix "/share/pixmaps/mew")))
