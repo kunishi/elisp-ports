@@ -99,6 +99,13 @@
 	   (add-to-list 'load-path
 			(concat my-emacs-version-specific-lispdir "/apel")))))
 
+;; AquaMacs Emacs
+(cond ((featurep 'osx_defaults)
+       (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/")
+       (add-to-list 'load-path (concat "/usr/local/share/emacs/"
+				       my-emacs-version
+				       "/site-lisp/"))))
+
 ;; Info path.
 (add-to-list 'Info-default-directory-list 
 	     (concat my-install-prefix "/info/"))
