@@ -149,7 +149,7 @@
   (set-default-font "fontset-osaka16")
   (setq mew-cs-samba 'utf-8)
   (setq mac-transparency-alpha 80)
-  (if (not (nil (assoc "MacOSX-IM-JP" input-method-alist)))
+  (if (not (eq (assoc "MacOSX-IM-JP" input-method-alist) nil))
       (setq default-input-method "MacOSX-IM-JP")))
 ;; Windows (NTEmacs)
 (when (and (eq system-type 'windows-nt)
