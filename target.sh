@@ -60,7 +60,7 @@ extract () {
       do
       case `basename ${file}` in
 	  *.tar.gz|*.tgz)
-	      (cd ${WRKDIR}; zcat ${DISTDIR}/${file} | ${GTAR} xvf -)
+	      (cd ${WRKDIR}; gzcat ${DISTDIR}/${file} | ${GTAR} xvf -)
 	      continue
 	      ;;
 	  *.tar.bz2)
