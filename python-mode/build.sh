@@ -5,19 +5,20 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='ftp://ftp.python.org/pub/python/2.3.3/Python-2.3.3.tgz'
-WRKSRC="${WRKDIR}/Python-2.3.3/Misc"
-#PATCHFILES='If you have some official patch, write them'
+DISTFILES='http://keihanna.dl.sourceforge.net/sourceforge/python-mode/python-mode-1.0alpha.tar.gz'
+WRKSRC="${WRKDIR}/python-mode-1.0alpha"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
 build_emacs () {
     (cd ${WRKSRC}; \
-	${emacs} ${EMACS_COMPILE_ARGS} -f batch-byte-compile python-mode.el)
+	${emacs} ${EMACS_COMPILE_ARGS} -f batch-byte-compile *.el)
 }
 
 install_emacs () {
-    cp -p ${WRKSRC}/python-mode.el ${WRKSRC}/python-mode.elc ${SITELISPDIR}
+    local sitelispdir=${SITELISPDIR}/python-mode
+    mkdir -p ${sitelispdir}
+    cp -p ${WRKSRC}/* ${sitelispdir}
 }
 
 install_init () {
