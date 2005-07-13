@@ -6,13 +6,12 @@ emacs-w3m
 ddskk
 mew
 yatex
-epo
 nxml-mode
 rnc-mode
 tdtd
 css-mode
 haskell-mode
-ocaml-mode
+tuareg-mode
 python-mode
 ruby-mode
 sml-mode

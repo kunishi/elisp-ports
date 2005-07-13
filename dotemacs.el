@@ -41,7 +41,7 @@
 
 ;;; x-face-e21
 ;;; ftp://ftp.jpl.org/pub/elisp/
-;; (load-safe "~/.emacs.d/init.d/x-face-e21-init.el")
+(load-safe "~/.emacs.d/init.d/x-face-e21-init.el")
 
 ;; emacs-w3m
 (load-safe "~/.emacs.d/init.d/emacs-w3m-init.el")
