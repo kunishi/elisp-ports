@@ -115,7 +115,8 @@
 ;;; OS specific settings
 ;; MacOS X
 (when (and (eq system-type 'darwin)
-	   (eq window-system 'mac))
+	   (eq window-system 'mac)
+	   (not (boundp 'aquamacs-version-id)))
   (create-fontset-from-fontset-spec
    (concat
     "-*-fixed-medium-r-normal-*-14-*-*-*-*-*-fontset-osaka14,"
@@ -151,6 +152,8 @@
   (setq mac-transparency-alpha 80)
   (if (not (eq (assoc "MacOSX-IM-JP" input-method-alist) nil))
       (setq default-input-method "MacOSX-IM-JP")))
+(when (boundp 'aquamacs-version-id)
+  (setq mew-cs-samba 'utf-8))
 ;; Windows (NTEmacs)
 (when (and (eq system-type 'windows-nt)
 	   (not (featurep 'meadow)))
