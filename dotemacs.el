@@ -11,6 +11,9 @@
 ;; (and (eq window-system 'mac)
 ;;      (load-safe "~/.emacs.d/init.d/utf-8m-init.el"))
 
+;; subst-jisx0208ex
+(load-safe "~/.emacs.d/init.d/subst-jisx0208ex-init.el"))
+
 ;; apel
 (load-safe "~/.emacs.d/init.d/apel-init.el")
 
