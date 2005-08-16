@@ -6,7 +6,7 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://keihanna.dl.sourceforge.jp/macemacsjp/13533/carbon_font-1.1.1.tar.gz'
+DISTFILES='http://keihanna.dl.sourceforge.jp/macemacsjp/15829/carbon_font-1.4.1.tar.gz'
 WRKSRC="${WRKDIR}/carbon_font"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=true
@@ -20,6 +20,11 @@ install_emacs () {
     : write how to install package
     [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
     cp -p ${WRKSRC}/carbon-font.el ${EMACS_INIT_D}
+    cp -p dotemacs.el ${EMACS_INIT_D}/carbon-font-init.el
+}
+
+install_init () {
+    [ ! -d ${EMACS_INIT_D} ] && mkdir -p ${EMACS_INIT_D}
     cp -p dotemacs.el ${EMACS_INIT_D}/carbon-font-init.el
 }
 

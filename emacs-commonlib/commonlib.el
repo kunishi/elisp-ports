@@ -147,9 +147,9 @@
     "vietnamese-viscii-upper:-etl-fixed-medium-r-normal-*-16-*-viscii1.1*-*,"
     "koi8-r:-etl-fixed-medium-r-normal-*-16-*-koi8-r,"
     "ascii:-etl-fixed-medium-r-normal-*-16-*-iso8859-1"))
-  (set-default-font "fontset-osaka16")
+;;  (set-default-font "fontset-osaka16")
   (setq mew-cs-samba 'utf-8)
-  (setq mac-transparency-alpha 80)
+;;  (setq mac-transparency-alpha 80)
   (if (not (eq (assoc "MacOSX-IM-JP" input-method-alist) nil))
       (setq default-input-method "MacOSX-IM-JP")))
 (when (boundp 'aquamacs-version-id)
