@@ -10,7 +10,7 @@
 	     (concat my-install-prefix "/share/pixmaps/mew")))
       (t
        (setq mew-icon-directory
-	     (concat my-install-prefix "/share/emacs/etc/mew"))))
+	     (concat my-install-prefix "/share/emacs/site-lisp/mew/etc"))))
 (autoload-if-found 'mew "mew" nil t)
 (autoload-if-found 'mew-send "mew" nil t)
 (autoload-if-found 'mew-user-agent-compose "mew" nil t)
