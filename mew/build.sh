@@ -23,7 +23,7 @@ install_emacs () {
 	prefix=${EMACS_PREFIX} \
 	elispdir=${SITELISPDIR}/mew \
 	infodir=${EMACS_PREFIX}/info \
-	etcdir=${EMACS_ETCDIR}/mew ${EMACS_INSTALL_TARGET})
+	${EMACS_INSTALL_TARGET})
 }
 
 install_init () {
