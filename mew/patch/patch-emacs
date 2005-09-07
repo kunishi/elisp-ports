@@ -1,24 +1,4 @@
 diff -ru ../mew-3.0.66.orig/Makefile Makefile
---- ../mew-3.0.66.orig/Makefile	Tue Aug 20 16:43:57 2002
-+++ Makefile	Sun Sep 22 11:11:12 2002
-@@ -26,7 +26,7 @@
- ## Compile engines
- ##
- 
--EMACS = emacs
-+EMACS = $(emacs)
- #EMACS = xemacs
- #EMACS = mule
- 
-@@ -42,7 +42,7 @@
- ## A directory where etc file will be installed.
- ##
- 
--etcdir = $(prefix)/lib/$(EMACS)/etc/Mew
-+etcdir = $(prefix)/share/mew
- 
- ################################################################
- ##
 --- ../mew-3.0.51/info/Makefile.orig	Wed Dec  4 17:07:50 2002
 +++ info/Makefile	Mon Jan 20 13:53:30 2003
 @@ -22,8 +22,8 @@
