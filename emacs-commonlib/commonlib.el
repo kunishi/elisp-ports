@@ -256,7 +256,7 @@
 (defun my-c-mode-common-hook ()
   (c-add-style "PERSONAL" my-c-style t)
   (c-set-offset 'member-init-intro '++)
-  (setq tab-width 8
+  (setq tab-width 4
 	indent-tabs-mode t)
   (c-toggle-auto-hungry-state 1)
   (define-key c-mode-base-map "\C-m" 'newline-and-indent))
