@@ -254,11 +254,13 @@
   "My C Programming Style")
 ;; Customizations for all of c-mode, c++-mode, and objc-mode
 (defun my-c-mode-common-hook ()
-  (c-add-style "PERSONAL" my-c-style t)
-  (c-set-offset 'member-init-intro '++)
+  ;; (c-add-style "PERSONAL" my-c-style t)
+  (c-set-style "k&r")
+  (setq c-basic-offset 2)
+;;  (c-set-offset 'member-init-intro '++)
   (setq tab-width 4
-	indent-tabs-mode t)
-  (c-toggle-auto-hungry-state 1)
+	indent-tabs-mode nil)
+;;  (c-toggle-auto-hungry-state 1)
   (define-key c-mode-base-map "\C-m" 'newline-and-indent))
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
