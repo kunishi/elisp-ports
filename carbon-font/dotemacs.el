@@ -1,4 +1,4 @@
 (when (and (eq system-type 'darwin)
 	   (eq window-system 'mac))
-  (load "~/.emacs.d/init.d/carbon-font.el")
+  (require 'carbon-font)
   (set-default-font "fontset-hiraginomaru"))

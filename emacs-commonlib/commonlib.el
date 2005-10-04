@@ -117,43 +117,16 @@
 (when (and (eq system-type 'darwin)
 	   (eq window-system 'mac)
 	   (not (boundp 'aquamacs-version-id)))
-  (create-fontset-from-fontset-spec
-   (concat
-    "-*-fixed-medium-r-normal-*-14-*-*-*-*-*-fontset-osaka14,"
-    "japanese-jisx0208:-apple-osaka-medium-r-normal-*-140-*-jisx0208.1983-sjis,"
-    "katakana-jisx0201:-apple-osaka-medium-r-normal-*-140-*-jisx0201*-*,"
-    "latin-jisx0201:-apple-osaka-medium-r-normal-*-140-*-jisx0201*-*,"
-    "japanese-jisx0208-1978:-apple-osaka-medium-r-normal-*-140-*-jisx0208.1978-*,"
-    "latin-1:-etl-fixed-*-140-*-iso8859-1"))
-  (create-fontset-from-fontset-spec
-   (concat
-    "-*-fixed-medium-r-normal-*-16-*-*-*-*-*-fontset-osaka16,"
-    "japanese-jisx0208:-apple-osaka-medium-r-normal--16-160-75-75-m-160-jisx0208.1983-sjis,"
-    "katakana-jisx0201:-apple-osaka-medium-r-normal-*-160-*-jisx0201*-*,"
-    "latin-jisx0201:-apple-osaka-medium-r-normal-*-160-*-jisx0201*-*,"
-    "japanese-jisx0208-1978:-apple-osaka-medium-r-normal-*-160-*-jisx0208.1978-*,"
-    "chinese-gb2312:-apple-hei-medium-r-normal--16-160-75-75-m-160-gb2312.1980-0," 
-    "chinese-big5-1:-apple-apple ligothic medium-medium-r-normal--16-160-75-75-m-160-big5-0," 
-    "korean-ksc5601:-apple-applegothic-medium-r-normal--16-160-75-75-m-160-ksc5601.1989-0," 
-    "latin-1:-etl-fixed-medium-r-normal-*-16-*-iso8859-1,"
-    "latin-2:-etl-fixed-medium-r-normal-*-16-*-iso8859-2,"
-    "latin-3:-etl-fixed-medium-r-normal-*-16-*-iso8859-3,"
-    "latin-4:-etl-fixed-medium-r-normal-*-16-*-iso8859-4,"
-    "latin-5:-etl-fixed-medium-r-normal-*-16-*-iso8859-5,"
-    "latin-7:-etl-fixed-medium-r-normal-*-16-*-iso8859-7,"
-    "latin-8:-etl-fixed-medium-r-normal-*-16-*-iso8859-8,"
-    "latin-9:-etl-fixed-medium-r-normal-*-16-*-iso8859-9,"
-    "vietnamese-viscii-lower:-etl-fixed-medium-r-normal-*-16-*-viscii1.1*-*,"
-    "vietnamese-viscii-upper:-etl-fixed-medium-r-normal-*-16-*-viscii1.1*-*,"
-    "koi8-r:-etl-fixed-medium-r-normal-*-16-*-koi8-r,"
-    "ascii:-etl-fixed-medium-r-normal-*-16-*-iso8859-1"))
-;;  (set-default-font "fontset-osaka16")
   (setq mew-cs-samba 'utf-8)
-;;  (setq mac-transparency-alpha 80)
+  (define-translation-hash-table
+    'ucs-mule-cjk-to-unicode ucs-mule-cjk-to-unicode)
   (if (not (eq (assoc "MacOSX-IM-JP" input-method-alist) nil))
       (setq default-input-method "MacOSX-IM-JP")))
+
+;; Aquamacs
 (when (boundp 'aquamacs-version-id)
   (setq mew-cs-samba 'utf-8))
+
 ;; Windows (NTEmacs)
 (when (and (eq system-type 'windows-nt)
 	   (not (featurep 'meadow)))
