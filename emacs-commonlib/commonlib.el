@@ -117,6 +117,8 @@
 (when (and (eq system-type 'darwin)
 	   (eq window-system 'mac)
 	   (not (boundp 'aquamacs-version-id)))
+  (setenv "PATH" (concat "/usr/local/teTeX3/bin:/opt/local/bin:"
+			 (getenv "PATH")))
   (setq mew-cs-samba 'utf-8)
   (define-translation-hash-table
     'ucs-mule-cjk-to-unicode ucs-mule-cjk-to-unicode)
