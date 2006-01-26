@@ -5,8 +5,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www-perso.iro.umontreal.ca/~monnier/elisp/haskell-mode-2.0.tar.gz'
-WRKSRC="${WRKDIR}/haskell-mode-2.0"
+DISTFILES='http://www-perso.iro.umontreal.ca/~monnier/elisp/haskell-mode-2.1.tar.gz'
+WRKSRC="${WRKDIR}/haskell-mode-2.1"
 USE_EMACS=true
 ELC_SHAREABLE=true
 
