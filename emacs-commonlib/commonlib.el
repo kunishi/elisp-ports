@@ -122,8 +122,8 @@
   (setq mew-cs-samba 'utf-8)
   (define-translation-hash-table
     'ucs-mule-cjk-to-unicode ucs-mule-cjk-to-unicode)
-  (if (not (eq (assoc "MacOSX-IM-JP" input-method-alist) nil))
-      (setq default-input-method "MacOSX-IM-JP")))
+  (if (not (eq (assoc "MacOSX" input-method-alist) nil))
+      (mac-setup-inline-input-method)))
 
 ;; Aquamacs
 (when (boundp 'aquamacs-version-id)
