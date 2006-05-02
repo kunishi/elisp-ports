@@ -53,7 +53,7 @@
 ;;; common settings for all Emacs.
 (setq mail-host-address "mail.chorusroom.org")
 (setq user-full-name "KUNISHIMA Takeo")
-(setq user-mail-address "kunishi@chorusroom.org")
+(setq user-mail-address "kunishi@acm.org")
 
 ;;; settigs specific for Emacs version.
 ;; Various parameters
