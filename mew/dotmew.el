@@ -23,6 +23,7 @@
 (setq mew-pop-server "aquamarine.c.oka-pu.ac.jp")
 (setq mew-smtp-server "aquamarine.c.oka-pu.ac.jp")
 (setq mew-imap-trash-folder "%Trash")
+(setq mew-nntp-server "news.gmane.org")
 
 (setq mew-use-folders-file-p t)
 (setq mew-decode-quoted t)
@@ -79,14 +80,14 @@
 	("default"
 	 ("proto" . "%")
 	 ("mail-domain" . "c.oka-pu.ac.jp")
-	 ("msgid-domain" . "aquamarine.c.oka-pu.ac.jp")
+	 ("msgid-domain" . "dbmail.c.oka-pu.ac.jp")
 	 ("organization" . "Okayama Prefectural University")
 	 ("signature-file" . "~/.signature-office")
-	 ("imap-server" . "aquamarine.c.oka-pu.ac.jp")
+	 ("imap-server" . "dbmail.c.oka-pu.ac.jp")
 	 ("imap-user" . "kunishi")
 	 ("imap-auth" . nil)
 	 ("imap-ssh-server" . "aquamarine.c.oka-pu.ac.jp")
-	 ("smtp-server" . "aquamarine.c.oka-pu.ac.jp")
+	 ("smtp-server" . "dbmail.c.oka-pu.ac.jp")
 	 ("smtp-ssh-server" . "aquamarine.c.oka-pu.ac.jp"))))
 
 ;; refile
@@ -210,6 +211,12 @@
 
 ;;; [mew-dist 24466]
 (setq mew-connection-type-for-scan nil)
+
+;;; Spam
+(setq mew-spam-prog "bogofilter")
+(setq mew-spam-prog-args '("-s" "-N" "-v"))
+(setq mew-ham-prog "bogofilter")
+(setq mew-ham-prog-args '("-n" "-S" "-v"))
 
 (cond
  ((and (string-match "XEmacs" emacs-version))

@@ -117,7 +117,10 @@
 (when (and (eq system-type 'darwin)
 	   (eq window-system 'mac)
 	   (not (boundp 'aquamacs-version-id)))
-  (setenv "PATH" (concat "/usr/local/teTeX3/bin:/opt/local/bin:"
+  (setq exec-path
+	(append '("~/godi/bin" "~/godi/sbin" "/opt/local/bin" "/usr/local/bin")
+		exec-path))
+  (setenv "PATH" (concat "/opt/local/bin:/usr/local/bin:"
 			 (getenv "PATH")))
   (setq mew-cs-samba 'utf-8)
   (define-translation-hash-table
