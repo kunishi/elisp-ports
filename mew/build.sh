@@ -5,8 +5,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.mew.org/Beta/mew-5.0.50.tar.gz'
-WRKSRC="${WRKDIR}/mew-5.0.50"
+DISTFILES='http://www.mew.org/Beta/mew-5.0.51.tar.gz'
+WRKSRC="${WRKDIR}/mew-5.0.51"
 USE_EMACS=true
 ELC_SHAREABLE=true
 EMACS_BUILD_TARGET=''
