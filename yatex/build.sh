@@ -5,8 +5,8 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://www.gentei.org/~yuuji/tmp/yatex10508251600.tar.gz'
-WRKSRC=${WRKDIR}/yatex1.72.zn
+DISTFILES='http://www.gentei.org/~yuuji/tmp/yatex10607061118.tar.gz'
+WRKSRC=${WRKDIR}/yatex1.72.zv
 USE_EMACS=true
 ELC_SHAREABLE=true
 
