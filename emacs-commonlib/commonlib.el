@@ -76,7 +76,12 @@
 	   (set-keyboard-coding-system 'sjis-mac)
 	 (progn
 	   (set-keyboard-coding-system 'utf-8)
-	   (set-terminal-coding-system 'utf-8))))
+	   (set-terminal-coding-system 'utf-8)))
+       (define-key key-translation-map [?\x8a5] [?\\])
+       (define-key key-translation-map [?\xd5c] [?\\])
+       (define-key key-translation-map [?\x40008a5] [?\C-\\])
+       (define-key key-translation-map [?\x80008a5] [?\M-\\])
+       (define-key key-translation-map [?\xc0008a5] [?\C-\M-\\]))
       ((eq system-type 'windows-nt)
        (set-default-coding-systems 'sjis-dos)
        (set-terminal-coding-system 'sjis)
