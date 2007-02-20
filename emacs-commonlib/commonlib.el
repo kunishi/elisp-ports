@@ -131,8 +131,8 @@
   (define-translation-hash-table
     'ucs-mule-cjk-to-unicode ucs-mule-cjk-to-unicode)
   (when (not (eq (assoc "MacOSX" input-method-alist) nil))
-    (mac-setup-inline-input-method)
-    (mac-add-ignore-shortcut '(control))))
+;;    (mac-setup-inline-input-method)
+    (mac-add-ignore-shortcut '(control ?\ ))))
 
 ;; Aquamacs
 (when (boundp 'aquamacs-version-id)
