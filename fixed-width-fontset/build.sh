@@ -6,7 +6,7 @@
 
 PKG_TOPDIR=`pwd`
 
-DISTFILES='http://keihanna.dl.sourceforge.jp/macemacsjp/16789/fixed-width-fontset-0.9.0.tar.gz'
+DISTFILES='http://keihanna.dl.sourceforge.jp/macemacsjp/25668/fixed-width-fontset-1.0.0.tar.gz'
 WRKSRC="${WRKDIR}/fixed-width-fontset"
 #PATCHFILES='If you have some official patch, write them'
 USE_EMACS=true
